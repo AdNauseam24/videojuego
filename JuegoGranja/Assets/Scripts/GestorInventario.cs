@@ -5,6 +5,8 @@ public class GestorInventario : MonoBehaviour
     
     public GameObject MenuInventario;
     private bool menuAbierto;
+
+    public EspacioObjeto[] espacio;
     void Start()
     {
         
@@ -28,6 +30,20 @@ public class GestorInventario : MonoBehaviour
             Time.timeScale = 0;
             MenuInventario.SetActive(true);
             menuAbierto = true;
+        }
+    }
+
+    public void AddItem(string nombre, int cantidad, Sprite sprite)
+    {
+        Debug.Log(nombre + ", " + cantidad + ", " + sprite);
+
+        for (int i = 0; i < espacio.Length; i++)
+        {
+            if (!espacio[i].ocupado)
+            {
+                espacio[i].AddItem(nombre,cantidad,sprite);
+                break;
+            }
         }
     }
 }
