@@ -7,9 +7,11 @@ public class GestorInventario : MonoBehaviour
     private bool menuAbierto;
 
     public EspacioObjeto[] espacio;
+
+    public GameObject hotbar;
     void Start()
     {
-        
+        MenuInventario.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class GestorInventario : MonoBehaviour
         {
             //Reanudar juego
             Time.timeScale = 1;
+            hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
+            hotbar.transform.localPosition = new Vector3(-690,-300);
             MenuInventario.SetActive(false);
             menuAbierto = false;
         }
@@ -29,6 +33,10 @@ public class GestorInventario : MonoBehaviour
             //Pausar el juego
             Time.timeScale = 0;
             MenuInventario.SetActive(true);
+            hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Huecos").transform);
+
+            //para que sea la primera fila
+            hotbar.transform.SetSiblingIndex(0);
             menuAbierto = true;
         }
     }
