@@ -381,5 +381,6 @@ MonoBehaviour:
   cantidad: 0
   sprite: {fileID: 0}
   ocupado: 0
+  id: -1
   textoCantidad: {fileID: 7626239712360273886}
   imagenObjeto: {fileID: 464502596057414501}

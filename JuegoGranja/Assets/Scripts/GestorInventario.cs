@@ -41,17 +41,33 @@ public class GestorInventario : MonoBehaviour
         }
     }
 
-    public void AddItem(string nombre, int cantidad, Sprite sprite)
+    public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
     {
-        Debug.Log(nombre + ", " + cantidad + ", " + sprite);
+        Debug.Log(id + ", " + nombre + ", " + cantidad + ", " + sprite);
+
+        int indiceLibre = -1;
+        bool encontrado = false;
 
         for (int i = 0; i < espacio.Length; i++)
         {
-            if (!espacio[i].ocupado)
+            if(espacio[i].id == id)
             {
-                espacio[i].AddItem(nombre,cantidad,sprite);
+                espacio[i].incrementarCantidad(cantidad);
+                encontrado = true;
+              
                 break;
             }
+            if ( indiceLibre == -1 && !espacio[i].ocupado )
+            {
+                indiceLibre = i;
+                
+            }
+        }
+        if (!encontrado && indiceLibre !=-1)
+        {
+            Debug.Log("Añadiendo");
+            espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite);
+            Debug.Log("Añadido");
         }
     }
 }

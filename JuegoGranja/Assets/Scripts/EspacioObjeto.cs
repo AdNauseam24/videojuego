@@ -11,14 +11,19 @@ public class EspacioObjeto : MonoBehaviour
 
    public bool ocupado;
 
+   public int id;
+
    [SerializeField]
    private TMP_Text textoCantidad;
 
    [SerializeField]
    private Image imagenObjeto;
 
-   public void AddItem(string nombre, int cantidad, Sprite sprite)
+
+
+    public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
     {
+        this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.sprite = sprite;
@@ -30,4 +35,9 @@ public class EspacioObjeto : MonoBehaviour
         
     }
    
+   public void incrementarCantidad(int cantidad)
+    {
+         this.cantidad += cantidad;
+         textoCantidad.text = this.cantidad.ToString();
+    }
 }

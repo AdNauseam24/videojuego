@@ -35,7 +35,7 @@ public class ObjetoDrop : Objeto
     {
         if(collision.gameObject.tag == "Player")
         {
-            gestorInventario.AddItem(nombre,cantidad,sprite);
+            gestorInventario.AddItem(id,nombre,cantidad,sprite);
             Destroy(gameObject);
         }
     }
