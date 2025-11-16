@@ -5,26 +5,30 @@ public class Objeto : MonoBehaviour
 {
     //para poder cambiar el nombre desde el editor de Unity
     [SerializeField]
-    private string nombre;
+    protected string nombre;
+    /*
      [SerializeField]
     private int cantidad;
+    */
      [SerializeField]
-    private Sprite sprite;
+    protected Sprite sprite;
 
-    private GestorInventario gestorInventario;
+    [SerializeField]
+    protected int id;
+
+    public GestorInventario gestorInventario;
     void Start()
     {
         //buscar el gameobject inventario y acceder al componente del gestor
         gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
     }
 
-    //Cuando entra en contacto con
-    void OnCollisionEnter2D(Collision2D collision)
+    public string GetNombre()
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            gestorInventario.AddItem(nombre,cantidad,sprite);
-            Destroy(gameObject);
-        }
+        return nombre;
+    }
+    public Sprite GetSprite()
+    {
+        return sprite;
     }
 }
