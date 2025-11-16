@@ -2,8 +2,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
-public class EspacioObjeto : MonoBehaviour
+public class EspacioObjeto : MonoBehaviour, IPointerClickHandler
 {
    public string nombre;
    public int cantidad;
@@ -19,6 +20,15 @@ public class EspacioObjeto : MonoBehaviour
    [SerializeField]
    private Image imagenObjeto;
 
+   public GameObject marcoSeleccion;
+   public bool seleccionado;
+
+    private GestorInventario gestorInventario;
+
+    void Start()
+    {
+        gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
+    }
 
 
     public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
@@ -39,5 +49,20 @@ public class EspacioObjeto : MonoBehaviour
     {
          this.cantidad += cantidad;
          textoCantidad.text = this.cantidad.ToString();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Left && gestorInventario.menuAbierto)
+        {
+            ClickIzquierdo();
+        }
+    }
+
+    public void ClickIzquierdo()
+    {
+        gestorInventario.DeseleccionarTodo();
+        marcoSeleccion.SetActive(true);
+        seleccionado = true;
     }
 }

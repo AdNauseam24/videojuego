@@ -4,7 +4,7 @@ public class GestorInventario : MonoBehaviour
 {
     
     public GameObject MenuInventario;
-    private bool menuAbierto;
+    public bool menuAbierto;
 
     public EspacioObjeto[] espacio;
 
@@ -24,6 +24,7 @@ public class GestorInventario : MonoBehaviour
             Time.timeScale = 1;
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
             hotbar.transform.localPosition = new Vector3(-690,-300);
+            DeseleccionarTodo();
             MenuInventario.SetActive(false);
             menuAbierto = false;
         }
@@ -68,6 +69,15 @@ public class GestorInventario : MonoBehaviour
             Debug.Log("Añadiendo");
             espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite);
             Debug.Log("Añadido");
+        }
+    }
+
+    public void DeseleccionarTodo()
+    {
+        for (int i = 0; i < espacio.Length; i++)
+        {
+            espacio[i].marcoSeleccion.SetActive(false);
+            espacio[i].seleccionado = false;
         }
     }
 }
