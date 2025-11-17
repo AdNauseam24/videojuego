@@ -1,4 +1,5 @@
 using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
 
 public class GestorInventario : MonoBehaviour
 {
@@ -76,7 +77,7 @@ public class GestorInventario : MonoBehaviour
     {
         for (int i = 0; i < espacio.Length; i++)
         {
-            espacio[i].marcoSeleccion.SetActive(false);
+            espacio[i].marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = false;
             espacio[i].seleccionado = false;
         }
     }

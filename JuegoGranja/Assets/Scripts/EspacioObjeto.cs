@@ -4,11 +4,15 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 
-public class EspacioObjeto : MonoBehaviour, IPointerClickHandler
+public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 {
+    
+
    public string nombre;
    public int cantidad;
    public Sprite sprite;
+
+   public Sprite spriteVacio;
 
    public bool ocupado;
 
@@ -44,6 +48,20 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler
         imagenObjeto.sprite = sprite;
         
     }
+
+    public void RemoveItem()
+    {
+        this.id = -1;
+        this.nombre = null;
+        this.cantidad = 0;
+        this.sprite = null;
+        ocupado = false;
+
+        textoCantidad.text = cantidad.ToString();
+        textoCantidad.enabled = false;
+        imagenObjeto.sprite = spriteVacio;
+
+    }
    
    public void incrementarCantidad(int cantidad)
     {
@@ -62,7 +80,18 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler
     public void ClickIzquierdo()
     {
         gestorInventario.DeseleccionarTodo();
-        marcoSeleccion.SetActive(true);
+        marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;;
         seleccionado = true;
+    }
+
+
+    public void OnDrop(PointerEventData eventData)
+    {
+       GameObject dropped = eventData.pointerDrag;
+       DraggingObjetos objetoDrop = dropped.GetComponent<DraggingObjetos>();
+       EspacioObjeto datosRecibidos =  objetoDrop.parentAfterDrag.parent.GetComponent<EspacioObjeto>();
+       this.AddItem(datosRecibidos.id,datosRecibidos.nombre,datosRecibidos.cantidad,datosRecibidos.sprite);
+       datosRecibidos.RemoveItem();
+       
     }
 }
