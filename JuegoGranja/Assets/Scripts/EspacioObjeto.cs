@@ -80,7 +80,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
     public void ClickIzquierdo()
     {
         gestorInventario.DeseleccionarTodo();
-        marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;;
+        marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;
         seleccionado = true;
     }
 
@@ -90,8 +90,31 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
        GameObject dropped = eventData.pointerDrag;
        DraggingObjetos objetoDrop = dropped.GetComponent<DraggingObjetos>();
        EspacioObjeto datosRecibidos =  objetoDrop.parentAfterDrag.parent.GetComponent<EspacioObjeto>();
-       this.AddItem(datosRecibidos.id,datosRecibidos.nombre,datosRecibidos.cantidad,datosRecibidos.sprite);
-       datosRecibidos.RemoveItem();
+       if(!this.Equals(datosRecibidos)){
+        if(!this.ocupado)
+            {
+             this.AddItem(datosRecibidos.id,datosRecibidos.nombre,datosRecibidos.cantidad,datosRecibidos.sprite);
+             datosRecibidos.RemoveItem();
+             
+            }
+        else if (this.id == datosRecibidos.id)
+            {
+                this.incrementarCantidad(datosRecibidos.cantidad);
+                datosRecibidos.RemoveItem();
+            }
+            else
+            {
+                Sprite spritetemporal = datosRecibidos.sprite;
+                int idTemporal = datosRecibidos.id;
+                string nombreTemporal = datosRecibidos.nombre;
+                int cantidadTemporal = datosRecibidos.cantidad;
+                datosRecibidos.AddItem(this.id,this.nombre,this.cantidad,this.sprite);
+                this.AddItem(idTemporal,nombreTemporal,cantidadTemporal,spritetemporal);
+            }
+            gestorInventario.DeseleccionarTodo();
+            marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;
+            this.seleccionado = true;
+       }
        
     }
 }

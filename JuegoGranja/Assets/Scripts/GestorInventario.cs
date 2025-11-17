@@ -81,4 +81,9 @@ public class GestorInventario : MonoBehaviour
             espacio[i].seleccionado = false;
         }
     }
+
+    public bool GetMenuAbierto()
+    {
+        return menuAbierto;
+    }
 }

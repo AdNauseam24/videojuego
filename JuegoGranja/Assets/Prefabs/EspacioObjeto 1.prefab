@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   espacio: {fileID: 4282344584459930057}
+  gestorInventario: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   image: {fileID: 464502596057414501}
 --- !u!1 &1854179130067166567
