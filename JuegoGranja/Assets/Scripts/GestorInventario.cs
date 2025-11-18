@@ -3,19 +3,20 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class GestorInventario : MonoBehaviour
 {
-    
-    public GameObject MenuInventario;
-    public bool menuAbierto;
+    [SerializeField]
+    private GameObject MenuInventario;
+
+    private bool menuAbierto;
 
     public EspacioObjeto[] espacio;
 
     public GameObject hotbar;
+
     void Start()
     {
         MenuInventario.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         //comprobamos si el menú está abierto para actiavrlo o desactivarlo
@@ -23,8 +24,12 @@ public class GestorInventario : MonoBehaviour
         {
             //Reanudar juego
             Time.timeScale = 1;
+
+            //cambiamos el padre de la hotbar
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
             hotbar.transform.localPosition = new Vector3(-690,-300);
+
+            //desactivamos y cerramos
             DeseleccionarTodo();
             MenuInventario.SetActive(false);
             menuAbierto = false;
@@ -34,11 +39,14 @@ public class GestorInventario : MonoBehaviour
         {
             //Pausar el juego
             Time.timeScale = 0;
+
+            //movemos la hotbar al menú
             MenuInventario.SetActive(true);
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Huecos").transform);
 
             //para que sea la primera fila
             hotbar.transform.SetSiblingIndex(0);
+
             menuAbierto = true;
         }
     }
@@ -52,14 +60,14 @@ public class GestorInventario : MonoBehaviour
 
         for (int i = 0; i < espacio.Length; i++)
         {
-            if(espacio[i].id == id)
+            if(espacio[i].GetId() == id)
             {
                 espacio[i].incrementarCantidad(cantidad);
                 encontrado = true;
               
                 break;
             }
-            if ( indiceLibre == -1 && !espacio[i].ocupado )
+            if ( indiceLibre == -1 && !espacio[i].GetOcupado())
             {
                 indiceLibre = i;
                 
@@ -67,7 +75,6 @@ public class GestorInventario : MonoBehaviour
         }
         if (!encontrado && indiceLibre !=-1)
         {
-            Debug.Log("Añadiendo");
             espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite);
             Debug.Log("Añadido");
         }
@@ -77,8 +84,8 @@ public class GestorInventario : MonoBehaviour
     {
         for (int i = 0; i < espacio.Length; i++)
         {
-            espacio[i].marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = false;
-            espacio[i].seleccionado = false;
+            espacio[i].GetMarcoSeleccion().GetComponent<UnityEngine.UI.Image>().enabled = false;
+            espacio[i].SetSeleccionado(false);
         }
     }
 

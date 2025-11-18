@@ -6,10 +6,12 @@ public class Movimiento : MonoBehaviour
 
    //El punto al que queremos que el jugador se desplace en cada movimiento, 
    // con el fin de que siempre esté en los márgenes de una celda
-    public Transform movePoint;
+   [SerializeField]
+    private Transform movePoint;
 
     //La capa con la cual va a colisionar nuestro personaje
-    public LayerMask colisionar;
+    [SerializeField]
+    private LayerMask colisionar;
     
     void Start()
     {
@@ -17,7 +19,7 @@ public class Movimiento : MonoBehaviour
         movePoint.parent = null;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         //El jugador se mueve al movepoint según la velocidad

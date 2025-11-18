@@ -3,17 +3,13 @@ using UnityEngine;
 
 public class ObjetoDrop : Objeto 
 {
-    public Compendio compendio;
+    private Compendio compendio;
 
     [SerializeField]
     private int cantidad;
     [SerializeField]
     private SpriteRenderer imagen;
     
-    public ObjetoDrop()
-    {
-       
-    }
     void Start()
     {
         this.gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
@@ -22,14 +18,8 @@ public class ObjetoDrop : Objeto
         this.sprite = compendio.objetos[id].GetSprite();
         this.imagen.sprite = this.sprite;
         
-        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     //Cuando entra en contacto con
     void OnCollisionEnter2D(Collision2D collision)
     {
