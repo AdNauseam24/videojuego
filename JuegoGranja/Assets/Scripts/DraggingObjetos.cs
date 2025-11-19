@@ -33,7 +33,6 @@ public class DraggingObjetos : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
         {
             gestorInventario.DeseleccionarTodo();
             espacio.SetSeleccionado(true);
-            espacio.GetMarcoSeleccion().GetComponent<UnityEngine.UI.Image>().enabled = true;
 
             Debug.Log("Empezar");
             
@@ -61,9 +60,8 @@ public class DraggingObjetos : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
          if(gestorInventario.GetMenuAbierto())
          {
             Debug.Log("Terminar");
-            Debug.Log(parentAfterDrag);
             transform.SetParent(parentAfterDrag);
-            transform.SetAsLastSibling();
+            transform.SetAsFirstSibling();
             image.raycastTarget = true;
          }
     }

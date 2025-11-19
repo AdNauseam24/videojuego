@@ -148,7 +148,16 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
     }
 	 public void SetSeleccionado(bool seleccionado)
     {
-        this.seleccionado = seleccionado;
+		this.seleccionado = seleccionado;
+        if (seleccionado)
+        {
+            marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;
+        }
+        else
+        {
+            marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = false;
+        }
+        
     }
 
 	 public bool GetSeleccionado()

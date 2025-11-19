@@ -10,7 +10,7 @@ public class GestorInventario : MonoBehaviour
 
     public EspacioObjeto[] espacio;
 
-    public GameObject hotbar;
+    public Hotbar hotbar;
 
     void Start()
     {
@@ -28,11 +28,15 @@ public class GestorInventario : MonoBehaviour
             //cambiamos el padre de la hotbar
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
             hotbar.transform.localPosition = new Vector3(-690,-300);
+            hotbar.ActivarHuecos();
 
             //desactivamos y cerramos
             DeseleccionarTodo();
             MenuInventario.SetActive(false);
             menuAbierto = false;
+
+            //Al cerrar reactivamos la casilla de la hotbar que estaba activada
+            hotbar.GetEspacioObjeto(hotbar.getRememberSeleccionado()).SetSeleccionado(true);
         }
 
         else if (Input.GetButtonDown("Inventario") && !menuAbierto)
@@ -43,11 +47,14 @@ public class GestorInventario : MonoBehaviour
             //movemos la hotbar al menú
             MenuInventario.SetActive(true);
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Huecos").transform);
+            hotbar.DesactivarHUecos();
 
             //para que sea la primera fila
             hotbar.transform.SetSiblingIndex(0);
 
             menuAbierto = true;
+
+            DeseleccionarTodo();
         }
     }
 
@@ -84,7 +91,6 @@ public class GestorInventario : MonoBehaviour
     {
         for (int i = 0; i < espacio.Length; i++)
         {
-            espacio[i].GetMarcoSeleccion().GetComponent<UnityEngine.UI.Image>().enabled = false;
             espacio[i].SetSeleccionado(false);
         }
     }
