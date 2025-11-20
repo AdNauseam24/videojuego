@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movimiento : MonoBehaviour
@@ -6,12 +7,18 @@ public class Movimiento : MonoBehaviour
 
    //El punto al que queremos que el jugador se desplace en cada movimiento, 
    // con el fin de que siempre esté en los márgenes de una celda
-   [SerializeField]
+    [SerializeField]
     private Transform movePoint;
 
     //La capa con la cual va a colisionar nuestro personaje
     [SerializeField]
     private LayerMask colisionar;
+
+    [SerializeField]
+    private static string ultimaDireccion = "right";
+
+    [SerializeField]
+    private static Vector2 posicion = new Vector2(0,0);
     
     void Start()
     {
@@ -24,6 +31,7 @@ public class Movimiento : MonoBehaviour
     {
         //El jugador se mueve al movepoint según la velocidad
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, vMovimiento * Time.deltaTime);
+        posicion = transform.position;
 
         //Para limitar el movimiento del movepoint, que solo se podrá volver a mover cuando el jugador esté a punto
         //de alcanzarlo, evitando movimiento infinito
@@ -32,7 +40,16 @@ public class Movimiento : MonoBehaviour
 
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1 && Time.timeScale==1)
             {
-                /*Antes de realizar el movimeinto comprobamos que el punto al que nos queremos mover no es de colisión,
+                if (Input.GetAxisRaw("Horizontal") == 1)
+                {
+                    ultimaDireccion = "right";
+                }
+                else
+                {
+                    ultimaDireccion = "left";
+                }
+
+                /*Antes de realizar el movimiento comprobamos que el punto al que nos queremos mover no es de colisión,
                 Para ello dibujamos un círculo en el punto al que nos queremos desplazar y si está en la capa de colisiones no se 
                 realiza el movimiento
                 */
@@ -46,6 +63,14 @@ public class Movimiento : MonoBehaviour
             }
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1 && Time.timeScale==1)
             {
+                if (Input.GetAxisRaw("Vertical") == 1)
+                {
+                    ultimaDireccion = "up";
+                }
+                else
+                {
+                    ultimaDireccion = "down";
+                }
                  if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, colisionar))
                 {
 
@@ -56,5 +81,14 @@ public class Movimiento : MonoBehaviour
 
             }
         }
+    }
+
+    public static string GetUltimaDireccion()
+    {
+        return ultimaDireccion;
+    }
+    public static Vector2 GetPosicion()
+    {
+        return posicion;
     }
 }

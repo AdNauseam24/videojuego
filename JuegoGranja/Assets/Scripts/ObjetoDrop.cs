@@ -20,6 +20,11 @@ public class ObjetoDrop : Objeto
         
     }
 
+    public ObjetoDrop(int id)
+    {
+        this.id = id;
+    }
+
     //Cuando entra en contacto con
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,5 +33,14 @@ public class ObjetoDrop : Objeto
             gestorInventario.AddItem(id,nombre,cantidad,sprite);
             Destroy(gameObject);
         }
+    }
+
+    public void SetCantidad(int n)
+    {
+        cantidad = n;
+    }
+    public void SetId(int n)
+    {
+        this.id = n;
     }
 }

@@ -7499,6 +7499,10 @@ PrefabInstance:
       propertyPath: cantidad
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2734099304883516880, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: m_Name
       value: ObjetoDrop (1)
@@ -7715,6 +7719,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: cantidad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2734099304883516880, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
@@ -8308,7 +8316,7 @@ GameObject:
   - component: {fileID: 458823204}
   m_Layer: 0
   m_Name: ObjetosMapa
-  m_TagString: Untagged
+  m_TagString: ObjetosMapa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10995,6 +11003,7 @@ MonoBehaviour:
   - {fileID: 1534417062}
   - {fileID: 713316828}
   rememberSeleccionado: 0
+  tiempoPresion: 0
 --- !u!224 &1367870700 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4293410463091059514, guid: 63638efb83dbb114195190a96dff8184, type: 3}
@@ -12499,6 +12508,10 @@ PrefabInstance:
       propertyPath: cantidad
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2734099304883516880, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: m_Name
       value: ObjetoDrop (3)
@@ -12591,6 +12604,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: cantidad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2734099304883516880, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
@@ -13845,8 +13862,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8045954048280158554, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8045954048280158554, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3208522385575886785, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: cantidad
@@ -13855,6 +13880,10 @@ PrefabInstance:
     - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: compendio
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -1908254613037080514, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2382639629769348447, guid: 2669aa1551bfc6b4eb86dbf76e170271, type: 3}
       propertyPath: m_Sprite

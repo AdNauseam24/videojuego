@@ -88,7 +88,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2734099304883516880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0409905b7196cb45a3bcbbc05b52c20, type: 3}
   m_Name: 
@@ -96,8 +96,6 @@ MonoBehaviour:
   nombre: 
   sprite: {fileID: 0}
   id: 0
-  gestorInventario: {fileID: 0}
-  compendio: {fileID: 0}
   cantidad: 0
   imagen: {fileID: 2382639629769348447}
 --- !u!61 &-3208522385575886785
@@ -172,4 +170,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
