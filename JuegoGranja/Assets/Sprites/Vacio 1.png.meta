@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c6106ce82ed8d8648a25a35202c9c298
+guid: 49390458a52a0184b824c4942b31f9bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8495331014579164906
-    second: Vacio_0
+      213: 2821694404698374305
+    second: Vacio 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vacio_0
+      name: Vacio 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae6995d2c8a75e570800000000000000
-      internalID: 8495331014579164906
+      spriteID: 1a001c07c1ca82720800000000000000
+      internalID: 2821694404698374305
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vacio_0: 8495331014579164906
+      Vacio 1_0: 2821694404698374305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
