@@ -120,7 +120,7 @@ public class Hotbar : MonoBehaviour
 
 
 
-    public int getRememberSeleccionado()
+    public int GetRememberSeleccionado()
     {
         return rememberSeleccionado;
     }
@@ -128,6 +128,20 @@ public class Hotbar : MonoBehaviour
     public EspacioObjeto GetEspacioObjeto(int n)
     {
         return espacios[n];
+    }
+
+    public int GetIdSeleccionado()
+    {
+        if (espacios[rememberSeleccionado].GetOcupado())
+        {
+            return espacios[rememberSeleccionado].GetId();
+        }
+        return -1;
+    }
+
+    public bool SeleccionadoUsableDesdeMapa()
+    {
+        return espacios[rememberSeleccionado].GetOcupado() && espacios[rememberSeleccionado].GetUsableMapa();
     }
 
 }

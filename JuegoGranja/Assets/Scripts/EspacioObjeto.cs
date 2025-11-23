@@ -281,4 +281,14 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
     {
         return seleccionado;
     }
+
+    public bool GetConsumible()
+    {
+        return consumible;
+    }
+
+    public bool GetUsableMapa()
+    {
+        return usableDesdeMapa;
+    }
 }

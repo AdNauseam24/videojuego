@@ -3,11 +3,17 @@ using UnityEngine;
 
 public class Compendio : MonoBehaviour
 {
-    public Objeto[] objetos;
+    [SerializeField]
+    private Objeto[] objetos;
     
 
     public static explicit operator Compendio(GameObject v)
     {
         throw new NotImplementedException();
+    }
+
+    public Objeto GetObjeto(int id)
+    {
+        return objetos[id];
     }
 }

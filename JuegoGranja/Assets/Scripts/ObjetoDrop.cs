@@ -14,11 +14,11 @@ public class ObjetoDrop : Objeto
     {
         this.gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
         this.compendio = GameObject.FindAnyObjectByType<Compendio>();
-        this.nombre = compendio.objetos[id].GetNombre();
-        this.sprite = compendio.objetos[id].GetSprite();
+        this.nombre = compendio.GetObjeto(id).GetNombre();
+        this.sprite = compendio.GetObjeto(id).GetSprite();
         this.imagen.sprite = this.sprite;
-        this.usableDesdeMapa = compendio.objetos[id].GetUsableMapa();
-        this.consumible = compendio.objetos[id].GetConsumible();
+        this.usableDesdeMapa = compendio.GetObjeto(id).GetUsableMapa();
+        this.consumible = compendio.GetObjeto(id).GetConsumible();
         
     }
 

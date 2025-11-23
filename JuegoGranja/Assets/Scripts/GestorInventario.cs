@@ -12,6 +12,12 @@ public class GestorInventario : MonoBehaviour
 
     public Hotbar hotbar;
 
+    [SerializeField]
+    private Compendio compendio;
+
+    [SerializeField]
+    private HIghlight hIghlight;
+
     void Start()
     {
         MenuInventario.SetActive(false);
@@ -36,7 +42,7 @@ public class GestorInventario : MonoBehaviour
             menuAbierto = false;
 
             //Al cerrar reactivamos la casilla de la hotbar que estaba activada
-            hotbar.GetEspacioObjeto(hotbar.getRememberSeleccionado()).SetSeleccionado(true);
+            hotbar.GetEspacioObjeto(hotbar.GetRememberSeleccionado()).SetSeleccionado(true);
         }
 
         else if (Input.GetButtonDown("Inventario") && !menuAbierto)
@@ -55,6 +61,15 @@ public class GestorInventario : MonoBehaviour
             menuAbierto = true;
 
             DeseleccionarTodo();
+        }
+
+        //Usar herramienta desde la hotbar
+        if(!GetMenuAbierto() && Input.GetMouseButton(0))
+        {
+            if (hotbar.SeleccionadoUsableDesdeMapa() && hIghlight.GetPosicionValida())
+            {
+                compendio.GetObjeto(hotbar.GetIdSeleccionado()).UsarMapa(hIghlight.GetPosicion());
+            }
         }
     }
 

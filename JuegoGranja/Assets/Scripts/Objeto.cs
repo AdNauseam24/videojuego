@@ -26,6 +26,26 @@ public class Objeto : MonoBehaviour
         gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
     }
 
+    public void UsarMapa(Vector2 posicion)
+    {
+        switch (this.id)
+        {
+            case 2:
+                UsarPico(posicion);
+                break;
+
+        }
+    }
+
+    public void UsarPico(Vector2 posicion)
+    {
+        Debug.Log(posicion);
+    }
+    public void UsarHacha(Vector2 psoicion)
+    {
+        
+    }
+
     public string GetNombre()
     {
         return nombre;
