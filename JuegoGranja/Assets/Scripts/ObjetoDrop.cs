@@ -17,6 +17,8 @@ public class ObjetoDrop : Objeto
         this.nombre = compendio.objetos[id].GetNombre();
         this.sprite = compendio.objetos[id].GetSprite();
         this.imagen.sprite = this.sprite;
+        this.usableDesdeMapa = compendio.objetos[id].GetUsableMapa();
+        this.consumible = compendio.objetos[id].GetConsumible();
         
     }
 
@@ -30,7 +32,7 @@ public class ObjetoDrop : Objeto
     {
         if(collision.gameObject.tag == "Player")
         {
-            gestorInventario.AddItem(id,nombre,cantidad,sprite);
+            gestorInventario.AddItem(id,nombre,cantidad,sprite, consumible, usableDesdeMapa);
             Destroy(gameObject);
         }
     }

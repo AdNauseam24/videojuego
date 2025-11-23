@@ -19,11 +19,31 @@ public class Movimiento : MonoBehaviour
 
     [SerializeField]
     private static Vector2 posicion = new Vector2(0,0);
+
+    int filtroLayerMask;
     
     void Start()
     {
         //para que se mueva el movepoint y el jugador lo siga, si no al moverse pj se movería movepoint
         movePoint.parent = null;
+
+        
+        int colisionLayer = LayerMask.NameToLayer("Colision");
+        int aguaLayer = LayerMask.NameToLayer("Agua");
+        int arbolesLayer = LayerMask.NameToLayer("Arboles");
+        int piedrasLayer = LayerMask.NameToLayer("Piedras");
+        int otrosLayer = LayerMask.NameToLayer("Otros");
+
+        int colisionMask = 1 << colisionLayer;
+        int aguaMask = 1 << aguaLayer;
+        int arbolesMask = 1 << arbolesLayer;
+        int piedrasMask = 1 << piedrasLayer;
+        int otrosMask = 1 << otrosLayer;
+
+        filtroLayerMask = colisionMask | aguaMask | arbolesMask | piedrasMask | otrosMask;
+        
+
+
     }
 
     
@@ -53,7 +73,7 @@ public class Movimiento : MonoBehaviour
                 Para ello dibujamos un círculo en el punto al que nos queremos desplazar y si está en la capa de colisiones no se 
                 realiza el movimiento
                 */
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, colisionar))
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, filtroLayerMask))
                 {
 
                 //movemos el movepoint por si el botón está presionado
@@ -71,7 +91,7 @@ public class Movimiento : MonoBehaviour
                 {
                     ultimaDireccion = "down";
                 }
-                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, colisionar))
+                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, filtroLayerMask))
                 {
 
                 //movemos el movepoint por si el botón está presionado

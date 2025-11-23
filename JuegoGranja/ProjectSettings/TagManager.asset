@@ -12,18 +12,18 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Colision
+  - 
   - Water
   - UI
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Colision
+  - Agua
+  - Arboles
+  - Piedras
+  - Otros
   - 
   - 
   - 

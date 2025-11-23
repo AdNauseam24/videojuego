@@ -13,6 +13,12 @@ public class Objeto : MonoBehaviour
     [SerializeField]
     protected int id;
 
+    [SerializeField]
+    protected bool usableDesdeMapa;
+
+     [SerializeField]
+    protected bool consumible;
+
     protected GestorInventario gestorInventario;
     void Start()
     {
@@ -27,5 +33,15 @@ public class Objeto : MonoBehaviour
     public Sprite GetSprite()
     {
         return sprite;
+    }
+
+    public bool GetConsumible()
+    {
+        return this.consumible;
+    }
+
+    public bool GetUsableMapa()
+    {
+        return this.usableDesdeMapa;
     }
 }

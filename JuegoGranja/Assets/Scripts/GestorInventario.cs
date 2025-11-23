@@ -58,7 +58,7 @@ public class GestorInventario : MonoBehaviour
         }
     }
 
-    public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
+    public void AddItem(int id,string nombre, int cantidad, Sprite sprite, bool consumible, bool usableMapa)
     {
         Debug.Log(id + ", " + nombre + ", " + cantidad + ", " + sprite);
 
@@ -82,7 +82,7 @@ public class GestorInventario : MonoBehaviour
         }
         if (!encontrado && indiceLibre !=-1)
         {
-            espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite);
+            espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite, consumible, usableMapa);
             Debug.Log("Añadido");
         }
     }
