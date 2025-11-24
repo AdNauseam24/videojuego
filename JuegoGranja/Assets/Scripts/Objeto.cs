@@ -30,7 +30,11 @@ public class Objeto : MonoBehaviour
         switch (this.id)
         {
             case 2:
-                CoroutineWithData cd = new CoroutineWithData(this, UsarPico(posicion));
+            CoroutineWithData cd = new CoroutineWithData(this, UsarPico(posicion));
+                break;
+
+            case 3:
+             cd = new CoroutineWithData(this, UsarHacha(posicion));
                 break;
                 
                 
@@ -57,10 +61,26 @@ public class Objeto : MonoBehaviour
         }
        yield return -1;
     }
-    private void UsarHacha(Vector2 psoicion)
+
+    IEnumerator UsarHacha(Vector2 posicion)
     {
-        
+        if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arboles")))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arboles"));
+            Arboles arbol = hit.transform.gameObject.GetComponent<Arboles>();
+            Time.timeScale = 0;
+            arbol.ActivarMinijuego();
+            yield return new WaitForSecondsRealtime(1f);
+            arbol.desactivarCanvas();
+            arbol.RecibirDaño();
+
+            Time.timeScale = 1;
+            
+           yield return 1;
+        }
+       yield return -1;
     }
+    
 
     public string GetNombre()
     {
