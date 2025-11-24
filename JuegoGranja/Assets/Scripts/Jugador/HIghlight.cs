@@ -5,9 +5,11 @@ public class HIghlight : MonoBehaviour
     [SerializeField]
     private Transform player;
 
-    public Vector2 mouse;
+    private Vector2 mouse;
 
-    public Vector2 worldPos;
+    private Vector2 worldPos;
+
+    private float contador;
 
     private bool activado;
     void Start()
@@ -18,7 +20,17 @@ public class HIghlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         mouse = Input.mousePosition;
+
+        if(contador > 0)
+        {
+            contador -= Time.unscaledDeltaTime;
+        }
+        else
+        {
+            activado = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+         /*mouse = Input.mousePosition;
 
          worldPos = Camera.main.ScreenToWorldPoint(mouse);
 
@@ -56,7 +68,7 @@ public class HIghlight : MonoBehaviour
         {
             transform.position = playerPos + new Vector2(0,-1);
         }
-        /*
+        
         else if(x>0 && y > 0)
         {
             transform.position = playerPos + new Vector2(1,1);
@@ -126,5 +138,26 @@ public class HIghlight : MonoBehaviour
         }
         else return playerPos;
 
+    }
+
+    public void VisibleValido(Vector2 posicion)
+    {
+        transform.position = posicion;
+        activado = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+        contador = 1;
+                Debug.Log("valido");
+
+    }
+
+    public void VisibleNoValido(Vector2 posicion)
+    {
+        transform.position = posicion;
+        activado = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1,0,0,0.5f);
+        contador = 1;
+        Debug.Log("NO valido");
     }
 }

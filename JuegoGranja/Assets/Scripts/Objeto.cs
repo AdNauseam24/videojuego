@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static TipoObjetoEnum;
 
 public class Objeto : MonoBehaviour
 {
@@ -14,10 +15,7 @@ public class Objeto : MonoBehaviour
     protected int id;
 
     [SerializeField]
-    protected bool usableDesdeMapa;
-
-     [SerializeField]
-    protected bool consumible;
+    protected TipoObjeto tipoObjeto;
 
     protected GestorInventario gestorInventario;
     void Start()
@@ -26,22 +24,31 @@ public class Objeto : MonoBehaviour
         gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
     }
 
-    public void UsarMapa(Vector2 posicion)
+    public int UsarMapa(Vector2 posicion)
     {
         switch (this.id)
         {
             case 2:
-                UsarPico(posicion);
-                break;
+                return UsarPico(posicion);
+                
 
         }
+        return -1;
     }
 
-    public void UsarPico(Vector2 posicion)
+    private int UsarPico(Vector2 posicion)
     {
-        Debug.Log(posicion);
+        if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Piedras")))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Piedras"));
+            Rocas roca = hit.transform.gameObject.GetComponent<Rocas>();
+            Debug.Log(roca.GetVida());
+            roca.Romperse();
+            return 1;
+        }
+        return -1;
     }
-    public void UsarHacha(Vector2 psoicion)
+    private void UsarHacha(Vector2 psoicion)
     {
         
     }
@@ -55,13 +62,8 @@ public class Objeto : MonoBehaviour
         return sprite;
     }
 
-    public bool GetConsumible()
+    public int GetTipoObjeto()
     {
-        return this.consumible;
-    }
-
-    public bool GetUsableMapa()
-    {
-        return this.usableDesdeMapa;
+        return (int)tipoObjeto;
     }
 }

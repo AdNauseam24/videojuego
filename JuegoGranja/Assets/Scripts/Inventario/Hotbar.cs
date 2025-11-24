@@ -138,10 +138,4 @@ public class Hotbar : MonoBehaviour
         }
         return -1;
     }
-
-    public bool SeleccionadoUsableDesdeMapa()
-    {
-        return espacios[rememberSeleccionado].GetOcupado() && espacios[rememberSeleccionado].GetUsableMapa();
-    }
-
 }

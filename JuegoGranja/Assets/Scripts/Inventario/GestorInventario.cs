@@ -62,18 +62,9 @@ public class GestorInventario : MonoBehaviour
 
             DeseleccionarTodo();
         }
-
-        //Usar herramienta desde la hotbar
-        if(!GetMenuAbierto() && Input.GetMouseButton(0))
-        {
-            if (hotbar.SeleccionadoUsableDesdeMapa() && hIghlight.GetPosicionValida())
-            {
-                compendio.GetObjeto(hotbar.GetIdSeleccionado()).UsarMapa(hIghlight.GetPosicion());
-            }
-        }
     }
 
-    public void AddItem(int id,string nombre, int cantidad, Sprite sprite, bool consumible, bool usableMapa)
+    public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
     {
         Debug.Log(id + ", " + nombre + ", " + cantidad + ", " + sprite);
 
@@ -97,7 +88,7 @@ public class GestorInventario : MonoBehaviour
         }
         if (!encontrado && indiceLibre !=-1)
         {
-            espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite, consumible, usableMapa);
+            espacio[indiceLibre].AddItem(id,nombre,cantidad,sprite);
             Debug.Log("Añadido");
         }
     }
@@ -113,5 +104,10 @@ public class GestorInventario : MonoBehaviour
     public bool GetMenuAbierto()
     {
         return menuAbierto;
+    }
+
+    public int GetIdSeleccionadoHotbar()
+    {
+        return hotbar.GetIdSeleccionado();
     }
 }

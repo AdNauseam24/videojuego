@@ -45,11 +45,6 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 
     private GestorInventario gestorInventario;
 
-    [SerializeField]
-    private bool usableDesdeMapa;
-
-    [SerializeField]
-    private bool consumible;
 
     void Start()
     {
@@ -88,14 +83,12 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
     }
 
 
-    public void AddItem(int id,string nombre, int cantidad, Sprite sprite, bool consumible, bool usableDesdeMapa)
+    public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
     {
 		this.id = id;
 		this.nombre = nombre;
 		this.cantidad = cantidad;
 		this.sprite = sprite;
-        this.consumible = consumible;
-        this.usableDesdeMapa = usableDesdeMapa;
 		ocupado = true;
 
 		textoCantidad.text = cantidad.ToString();
@@ -153,7 +146,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 			{
 				if(!this.ocupado)
 					{
-						this.AddItem(datosRecibidos.id,datosRecibidos.nombre,datosRecibidos.cantidad,datosRecibidos.sprite, datosRecibidos.consumible, datosRecibidos.usableDesdeMapa);
+						this.AddItem(datosRecibidos.id,datosRecibidos.nombre,datosRecibidos.cantidad,datosRecibidos.sprite);
 						datosRecibidos.RemoveItem();
 					}
 
@@ -168,11 +161,9 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 						int idTemporal = datosRecibidos.id;
 						string nombreTemporal = datosRecibidos.nombre;
 						int cantidadTemporal = datosRecibidos.cantidad;
-                        bool consumibleTemporal = datosRecibidos.consumible;
-                        bool usableDesdeMapaTemporal = datosRecibidos.usableDesdeMapa;
 
-						datosRecibidos.AddItem(this.id,this.nombre,this.cantidad,this.sprite, this.consumible, this.usableDesdeMapa);
-						this.AddItem(idTemporal,nombreTemporal,cantidadTemporal,spritetemporal, consumibleTemporal, usableDesdeMapaTemporal);
+						datosRecibidos.AddItem(this.id,this.nombre,this.cantidad,this.sprite);
+						this.AddItem(idTemporal,nombreTemporal,cantidadTemporal,spritetemporal);
 					}
 
 				gestorInventario.DeseleccionarTodo();
@@ -280,15 +271,5 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 	 public bool GetSeleccionado()
     {
         return seleccionado;
-    }
-
-    public bool GetConsumible()
-    {
-        return consumible;
-    }
-
-    public bool GetUsableMapa()
-    {
-        return usableDesdeMapa;
     }
 }
