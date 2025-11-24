@@ -7,7 +7,10 @@ public class Rocas : MonoBehaviour
     private float vida;
 
     [SerializeField]
-    private Canvas canvas;
+    private GameObject canvas;
+
+    [SerializeField]
+    private SliderScript slider;
     void Start()
     {
         vida = Random.Range(8,12);
@@ -18,7 +21,10 @@ public class Rocas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(vida <= 0)
+        {
+            Romperse();
+        }
     }
 
     public void Romperse()
@@ -34,8 +40,22 @@ public class Rocas : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void ActivarMinijuego()
+    {
+        canvas.SetActive(true);
+        slider.Activar();
+    }
+    public void RecibirDaño()
+    {
+        vida -= 3.5f*slider.DevolverMultiplicador();
+    }
+
     public float GetVida()
     {
         return vida;
+    }
+    public void desactivarCanvas()
+    {
+        canvas.SetActive(false);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using static TipoObjetoEnum;
 
@@ -24,29 +25,37 @@ public class Objeto : MonoBehaviour
         gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
     }
 
-    public int UsarMapa(Vector2 posicion)
+    public void UsarMapa(Vector2 posicion)
     {
         switch (this.id)
         {
             case 2:
-                return UsarPico(posicion);
+                CoroutineWithData cd = new CoroutineWithData(this, UsarPico(posicion));
+                break;
+                
                 
 
         }
-        return -1;
+        
     }
 
-    private int UsarPico(Vector2 posicion)
+    IEnumerator UsarPico(Vector2 posicion)
     {
         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Piedras")))
         {
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Piedras"));
             Rocas roca = hit.transform.gameObject.GetComponent<Rocas>();
-            Debug.Log(roca.GetVida());
-            roca.Romperse();
-            return 1;
+            Time.timeScale = 0;
+            roca.ActivarMinijuego();
+            yield return new WaitForSecondsRealtime(1f);
+            roca.desactivarCanvas();
+            roca.RecibirDaño();
+
+            Time.timeScale = 1;
+            
+           yield return 1;
         }
-        return -1;
+       yield return -1;
     }
     private void UsarHacha(Vector2 psoicion)
     {
@@ -66,4 +75,22 @@ public class Objeto : MonoBehaviour
     {
         return (int)tipoObjeto;
     }
+
+    public class CoroutineWithData {
+    public Coroutine coroutine { get; private set; }
+    public object result;
+    private IEnumerator target;
+
+    public CoroutineWithData(MonoBehaviour owner, IEnumerator target) {
+	    this.target = target;
+	    this.coroutine = owner.StartCoroutine(Run());
+    }
+
+	private IEnumerator Run() {
+        while(target.MoveNext()) {
+            result = target.Current;
+            yield return result;
+        }
+    }
+}
 }

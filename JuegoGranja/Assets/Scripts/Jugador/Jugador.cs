@@ -30,20 +30,12 @@ public class Jugador : MonoBehaviour
             if(!inventario.GetMenuAbierto() && highlight.GetPosicionValida())
             {
                 int idTemp = inventario.GetIdSeleccionadoHotbar();
-                int exito = -1;
                 if (idTemp != -1 && compendio.GetObjeto(idTemp).GetTipoObjeto() == (int)TipoObjeto.Herramienta)
                 {
-                     exito = compendio.GetObjeto(idTemp).UsarMapa(highlight.GetPosicion());
+                     compendio.GetObjeto(idTemp).UsarMapa(highlight.GetPosicion());
                      contadorHerramienta = 1;
                 }
-                if(exito == -1)
-                {
-                    highlight.VisibleNoValido(highlight.GetPosicion());
-                }
-                else
-                {
-                    highlight.VisibleValido(highlight.GetPosicion());
-                }
+                
             }
         }
     }
