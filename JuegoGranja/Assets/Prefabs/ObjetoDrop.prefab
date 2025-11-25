@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4256398114876935735, guid: be88333a920a9a64f94b49a0e1bdff52, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4607302552725434040, guid: be88333a920a9a64f94b49a0e1bdff52, type: 3}
       propertyPath: m_Name
@@ -104,6 +104,7 @@ MonoBehaviour:
   nombre: 
   sprite: {fileID: 0}
   id: 0
+  tipoObjeto: 0
   cantidad: 0
   imagen: {fileID: 2382639629769348447}
 --- !u!61 &-3208522385575886785

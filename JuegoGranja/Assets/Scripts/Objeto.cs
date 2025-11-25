@@ -36,14 +36,36 @@ public class Objeto : MonoBehaviour
             case 3:
              cd = new CoroutineWithData(this, UsarHacha(posicion));
                 break;
+            
+            case 4: 
+                UsarAzada(posicion);
+                break;
+
+            case 5:
+                UsarRegadera(posicion);
+                break;
+
+            
+
+
                 
                 
 
         }
         
     }
+    public int UsarSemilla(Vector2 posicion)
+    {
+         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arable")))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arable"));
+            SueloArable suelo = hit.transform.gameObject.GetComponent<SueloArable>();
+            return suelo.Plantar();
+        }
+        return 0;
+    }
 
-    IEnumerator UsarPico(Vector2 posicion)
+   private  IEnumerator UsarPico(Vector2 posicion)
     {
         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Piedras")))
         {
@@ -62,7 +84,7 @@ public class Objeto : MonoBehaviour
        yield return -1;
     }
 
-    IEnumerator UsarHacha(Vector2 posicion)
+    private IEnumerator UsarHacha(Vector2 posicion)
     {
         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arboles")))
         {
@@ -80,6 +102,27 @@ public class Objeto : MonoBehaviour
         }
        yield return -1;
     }
+
+    private void UsarAzada(Vector2 posicion)
+    {
+         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arable")))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arable"));
+            SueloArable suelo = hit.transform.gameObject.GetComponent<SueloArable>();
+            suelo.Arar();
+        }
+    }
+     private void UsarRegadera(Vector2 posicion)
+    {
+         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arable")))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arable"));
+            SueloArable suelo = hit.transform.gameObject.GetComponent<SueloArable>();
+            suelo.Regar();
+        }
+    }
+
+
     
 
     public string GetNombre()

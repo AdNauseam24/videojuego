@@ -117,6 +117,16 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 		textoCantidad.text = this.cantidad.ToString();
     }
 
+    public void ReducirUno()
+    {
+        this.cantidad -=1;
+        this.textoCantidad.text = this.cantidad.ToString();
+		if(this.cantidad  < 1)
+        {
+            this.RemoveItem();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
 		if(eventData.button == PointerEventData.InputButton.Left && gestorInventario.GetMenuAbierto())
