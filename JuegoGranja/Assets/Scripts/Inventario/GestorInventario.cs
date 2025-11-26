@@ -18,6 +18,9 @@ public class GestorInventario : MonoBehaviour
     [SerializeField]
     private HIghlight hIghlight;
 
+    [SerializeField]
+    private GameObject hotbarGO;
+
     void Start()
     {
         MenuInventario.SetActive(false);
@@ -64,6 +67,15 @@ public class GestorInventario : MonoBehaviour
         }
     }
 
+    public void DesactivarHotbar()
+    {
+       hotbarGO.SetActive(false);
+    }
+
+    public void ActivarHotbar()
+    {
+       hotbarGO.SetActive(true);
+    }
     public void AddItem(int id,string nombre, int cantidad, Sprite sprite)
     {
         Debug.Log(id + ", " + nombre + ", " + cantidad + ", " + sprite);

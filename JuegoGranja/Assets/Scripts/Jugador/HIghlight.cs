@@ -91,7 +91,7 @@ public class HIghlight : MonoBehaviour
 
     public bool GetPosicionValida()
     {
-         mouse = Input.mousePosition;
+        mouse = Input.mousePosition;
 
         worldPos = Camera.main.ScreenToWorldPoint(mouse);
 

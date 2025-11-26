@@ -45,12 +45,9 @@ public class Objeto : MonoBehaviour
                 UsarRegadera(posicion);
                 break;
 
-            
-
-
-                
-                
-
+            case 6:
+                UsarCaña(posicion);
+                break;
         }
         
     }
@@ -119,6 +116,28 @@ public class Objeto : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arable"));
             SueloArable suelo = hit.transform.gameObject.GetComponent<SueloArable>();
             suelo.Regar();
+        }
+    }
+
+    async private void UsarCaña(Vector2 posicion)
+    {
+         if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Agua")))
+        {
+            Debug.Log("Pescar");
+            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Agua"));
+            Agua agua = hit.transform.gameObject.GetComponent<Agua>();
+
+            Time.timeScale = 0;
+            gestorInventario.DesactivarHotbar();
+            
+            float success = await agua.IniciarMinijuego(posicion);
+            agua.CerrarMinijuego();
+
+            gestorInventario.ActivarHotbar();
+            Time.timeScale = 1;
+            
+            
+
         }
     }
 

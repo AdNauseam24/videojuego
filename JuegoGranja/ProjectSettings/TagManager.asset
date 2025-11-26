@@ -8,6 +8,7 @@ TagManager:
   - Huecos
   - Inventario
   - ObjetosMapa
+  - Pez
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Piedras
   - Otros
   - Arable
-  - 
+  - Pez
   - 
   - 
   - 
