@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1372624824, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
+  m_Sprite: {fileID: 2990549803333357545, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -179,6 +179,25 @@ MonoBehaviour:
   vida: 0
   canvas: {fileID: 6747146474128724179}
   slider: {fileID: 1953147563194109976}
+  tipoRoca: 0
+  arraySprites:
+    filas:
+    - fila:
+      - {fileID: 2990549803333357545, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: -4014431301059932305, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: -2284023417419061751, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+    - fila:
+      - {fileID: -4383395722254624231, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: 4572061130431231566, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: -5999668717222096118, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+    - fila:
+      - {fileID: -4503243591552085932, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: 733764654431601521, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: -3786048089608606194, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+    - fila:
+      - {fileID: -6092088768334496970, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: 1598456932168405668, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
+      - {fileID: 3398127240668871210, guid: 272488fa31c78df43ba6b87a25982509, type: 3}
 --- !u!1 &6747146474128724179
 GameObject:
   m_ObjectHideFlags: 0

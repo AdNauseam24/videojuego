@@ -11,7 +11,23 @@ PrefabInstance:
     - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5370185286701851882, guid: 79e4307893dd863458f1246974c67ac6, type: 3}
+      objectReference: {fileID: 21300000, guid: 6f79fce4ff3423a4a912b24c4a17eb0a, type: 3}
+    - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 6884305
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1228043129985869347, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Name
       value: Arbol
@@ -64,9 +80,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4836561331572472236, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836561331572472236, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836561331572472236, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836561331572472236, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265701897524737470, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6747146474128724179, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747146474128724179, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7252027463159092610, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
@@ -79,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 7985794606698111290, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048318489744405611, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 6884305
       objectReference: {fileID: 0}
     - target: {fileID: 8327335348982590233, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer

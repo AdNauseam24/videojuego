@@ -14,6 +14,11 @@ public class SueloArable : MonoBehaviour
 
     private float duracion1, duracion2;
 
+    public ArraySprites arraySprites;
+
+    private int filaSprites;
+    private int idDrop;
+
 
     
     
@@ -22,7 +27,7 @@ public class SueloArable : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (!flagComenzadoCrecimiento && arado && regado && plantado && !crecido)
@@ -36,13 +41,13 @@ public class SueloArable : MonoBehaviour
         if(!flagCrecimiento1 && flagComenzadoCrecimiento && Time.time > duracion1)
         {
             flagCrecimiento1 = true;
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[5];
+            gameObject.GetComponent<SpriteRenderer>().sprite =arraySprites.filas[filaSprites].fila[0];
         }
         if(!flagListoCosecha && flagComenzadoCrecimiento && Time.time > duracion2)
         {
             crecido = true;
             flagListoCosecha = true;
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[6];
+            gameObject.GetComponent<SpriteRenderer>().sprite = arraySprites.filas[filaSprites].fila[1];
         }
     }
 
@@ -87,18 +92,65 @@ public class SueloArable : MonoBehaviour
         }
     }
 
-    public int Plantar()
+    public int Plantar(int idSemilla)
     {
         if(!plantado && arado && !regado)
         {
             plantado = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
+
+            switch (idSemilla)
+            {
+                case 14:
+                    filaSprites = 0;
+                    idDrop = 19;
+                    break;
+                case 15:
+                    filaSprites = 1;
+                    idDrop = 20;
+                    break;
+                case 16:
+                    filaSprites = 2;
+                    idDrop = 21;
+                    break;
+                case 17:
+                    filaSprites = 3;
+                    idDrop = 22;
+                    break;
+                case 18:
+                    filaSprites = 4;
+                    idDrop = 23;
+                    break;
+            }
             return 1;
         }
         else if (!plantado && arado && regado)
         {
             plantado = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[4];
+            switch (idSemilla)
+            {
+                case 14:
+                    filaSprites = 0;
+                    idDrop = 19;
+                    break;
+                case 15:
+                    filaSprites = 1;
+                    idDrop = 20;
+                    break;
+                case 16:
+                    filaSprites = 2;
+                    idDrop = 21;
+                    break;
+                case 17:
+                    filaSprites = 3;
+                    idDrop = 22;
+                    break;
+                case 18:
+                    filaSprites = 4;
+                    idDrop = 23;
+                    break;
+            }
             return 1;
         }
         return 0;
@@ -123,7 +175,7 @@ public class SueloArable : MonoBehaviour
             
             drop.transform.position = transform.position;
             drop.SetCantidad(Random.Range(1,3));
-            drop.SetId(10);
+            drop.SetId(idDrop);
 
             //activamos
             drop.GetComponent<ObjetoDrop>().enabled = true;
@@ -133,3 +185,5 @@ public class SueloArable : MonoBehaviour
 
    
 }
+
+

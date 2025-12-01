@@ -51,13 +51,13 @@ public class Objeto : MonoBehaviour
         }
         
     }
-    public int UsarSemilla(Vector2 posicion)
+    public int UsarSemilla(Vector2 posicion, int idSemilla)
     {
          if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Arable")))
         {
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arable"));
             SueloArable suelo = hit.transform.gameObject.GetComponent<SueloArable>();
-            return suelo.Plantar();
+            return suelo.Plantar(idSemilla);
         }
         return 0;
     }

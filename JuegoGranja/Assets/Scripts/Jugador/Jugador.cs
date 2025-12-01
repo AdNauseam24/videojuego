@@ -30,9 +30,9 @@ public class Jugador : MonoBehaviour
             if(!inventario.GetMenuAbierto() && highlight.GetPosicionValida())
             {
                 int idTemp = inventario.GetIdSeleccionadoHotbar();
-                if(idTemp == 7)
+                if(idTemp >= 14 && idTemp <=18)
                 {
-                    int n = compendio.GetObjeto(idTemp).UsarSemilla(highlight.GetPosicion());
+                    int n = compendio.GetObjeto(idTemp).UsarSemilla(highlight.GetPosicion(), idTemp);
                     if (n == 1)
                     {
                         inventario.hotbar.GetEspacioObjeto(inventario.hotbar.GetRememberSeleccionado()).ReducirUno();

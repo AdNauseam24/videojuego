@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -8036688359038876153, guid: 30030a0917ab9b3499645732cd3f2c8c, type: 3}
+  m_Sprite: {fileID: -1865553253, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,14 +102,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -8036688359038876153, guid: 30030a0917ab9b3499645732cd3f2c8c, type: 3}
-  - {fileID: 198022296, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
-  - {fileID: 1463079995, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
-  - {fileID: -100461077, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
-  - {fileID: -1715837207, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
+  - {fileID: -1865553253, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
+  - {fileID: -1406043100, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
+  - {fileID: 775514385, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
+  - {fileID: 1230005716, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
+  - {fileID: -2071013001, guid: cb579cd9c3be95d4582f5658d4354936, type: 3}
   - {fileID: 1359846826, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
   - {fileID: 1672579166, guid: 723a42a9a1eb516418621db9229cfb99, type: 3}
-  contador: 0
+  arraySprites:
+    filas:
+    - fila:
+      - {fileID: -1353415654941113434, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+      - {fileID: -5959918469348154582, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+    - fila:
+      - {fileID: 9050517691742672737, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+      - {fileID: -2679085155781722396, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+    - fila:
+      - {fileID: -9196659970217902120, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+      - {fileID: -944991142507032037, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+    - fila:
+      - {fileID: 1789164808224536835, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+      - {fileID: 8857629802933577838, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+    - fila:
+      - {fileID: -2644340927660884743, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
+      - {fileID: -1501608106337033991, guid: 5094f4bfee04beb4581e9a2be4706566, type: 3}
 --- !u!61 &5930848485318680704
 BoxCollider2D:
   m_ObjectHideFlags: 0
