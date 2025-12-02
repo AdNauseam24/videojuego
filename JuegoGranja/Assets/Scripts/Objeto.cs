@@ -64,21 +64,24 @@ public class Objeto : MonoBehaviour
 
    private  IEnumerator UsarPico(Vector2 posicion)
     {
-        if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Piedras")))
+        if(Time.timeScale == 1)
         {
-            RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Piedras"));
-            Rocas roca = hit.transform.gameObject.GetComponent<Rocas>();
-            Time.timeScale = 0;
-            roca.ActivarMinijuego();
-            yield return new WaitForSecondsRealtime(1f);
-            roca.desactivarCanvas();
-            roca.RecibirDaño();
+            if(Physics2D.OverlapCircle(posicion, .2f, LayerMask.GetMask("Piedras")))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Piedras"));
+                Rocas roca = hit.transform.gameObject.GetComponent<Rocas>();
+                Time.timeScale = 0;
+                roca.ActivarMinijuego();
+                yield return new WaitForSecondsRealtime(1f);
+                roca.desactivarCanvas();
+                roca.RecibirDaño();
 
-            Time.timeScale = 1;
-            
-           yield return 1;
+                Time.timeScale = 1;
+                
+                 yield return 1;
+            }
+            yield return -1;
         }
-       yield return -1;
     }
 
     private IEnumerator UsarHacha(Vector2 posicion)

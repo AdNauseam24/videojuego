@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class Rocas : MonoBehaviour
     private bool cambio1, cambio2;
 
     public ArraySprites arraySprites;
+
+    public GameObject polvo;
 
     void Start()
     {
@@ -67,11 +70,20 @@ public class Rocas : MonoBehaviour
 
         if(vida <= 0)
         {
-            Romperse();
+            StartCoroutine(Romperse());
         }
     }
 
-    public void Romperse()
+    public IEnumerator Romperse()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        polvo.SetActive(true);
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.2f);
+        Time.timeScale = 1;
+    }
+
+    public void dropObjeto()
     {
         Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
 		ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
