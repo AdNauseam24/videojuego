@@ -11,6 +11,10 @@ public class Arboles : MonoBehaviour
 
     [SerializeField]
     private SliderScript slider;
+
+    public Animator animator;
+
+    private bool activo = true;
     void Start()
     {
         vida = Random.Range(8,12);
@@ -23,8 +27,14 @@ public class Arboles : MonoBehaviour
     {
         if(vida <= 0)
         {
-            Romperse();
+            Caer();
         }
+    }
+
+    public void Caer()
+    {
+        activo = false;
+        animator.SetBool("activar",true);
     }
 
     public void Romperse()
@@ -57,5 +67,10 @@ public class Arboles : MonoBehaviour
     public void desactivarCanvas()
     {
         canvas.SetActive(false);
+    }
+
+    public bool GetActivo()
+    {
+        return activo;
     }
 }

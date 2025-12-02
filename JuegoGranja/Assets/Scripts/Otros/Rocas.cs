@@ -79,7 +79,7 @@ public class Rocas : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         polvo.SetActive(true);
         Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSecondsRealtime(0);
         Time.timeScale = 1;
     }
 

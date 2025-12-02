@@ -90,13 +90,16 @@ public class Objeto : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arboles"));
             Arboles arbol = hit.transform.gameObject.GetComponent<Arboles>();
-            Time.timeScale = 0;
-            arbol.ActivarMinijuego();
-            yield return new WaitForSecondsRealtime(1f);
-            arbol.desactivarCanvas();
-            arbol.RecibirDaño();
+            if(arbol.GetActivo())
+            {
+                Time.timeScale = 0;
+                arbol.ActivarMinijuego();
+                yield return new WaitForSecondsRealtime(1f);
+                arbol.desactivarCanvas();
+                arbol.RecibirDaño();
 
-            Time.timeScale = 1;
+                Time.timeScale = 1;
+            }
             
            yield return 1;
         }
