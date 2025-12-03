@@ -14,22 +14,21 @@ public class MovePointPez : MonoBehaviour
 
     [SerializeField]
     private Vector2 centro;
+
+    public delegate void CambioPosicion(Vector2 nuevaPos);
+    public static event CambioPosicion OnCambioPosicion;
     
 
     
     void Update()
     {
+        
         if(Time.realtimeSinceStartup >= tiempoCambio)
         {
-            float r = radio * Mathf.Sqrt(Random.Range(0f,1f));
-            float theta = Random.Range(0f,1f) * 2 * Mathf.PI;
-
-            float x = centro.x + r * Mathf.Cos(theta);
-            float y = centro.y + r * Mathf.Sin(theta);
-
-            transform.position = new Vector2(x,y);
-            tiempoCambio = Time.realtimeSinceStartup + Random.Range(2f,3f);
+            cambiarPosicion();
+            OnCambioPosicion(transform.position);
         }
+        
     }
 
     public void SetRadio(float f)
@@ -38,15 +37,9 @@ public class MovePointPez : MonoBehaviour
         
     }
     public void Empezar()
-    {
-         float r = radio * Mathf.Sqrt(Random.Range(0f,1f));
-            float theta = Random.Range(0f,1f) * 2 * Mathf.PI;
-
-            float x = centro.x + r * Mathf.Cos(theta);
-            float y = centro.y + r * Mathf.Sin(theta);
-
-            transform.position = new Vector2(x,y);
-        tiempoCambio = Time.realtimeSinceStartup + Random.Range(2f,3f);
+    { 
+        cambiarPosicion();
+        OnCambioPosicion(transform.position);
     }
     public void SetCentro(Vector2 posicion)
     {
@@ -57,10 +50,17 @@ public class MovePointPez : MonoBehaviour
     {
         return transform.position;
     }
-     void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerStay2D(Collider2D collision)
     {
          if(collision.gameObject.tag == "Pez")
         {
+            cambiarPosicion();
+            OnCambioPosicion(transform.position);
+        }
+    }
+
+    public void cambiarPosicion()
+    {
             float r = radio * Mathf.Sqrt(Random.Range(0f,1f));
             float theta = Random.Range(0f,1f) * 2 * Mathf.PI;
 
@@ -69,6 +69,5 @@ public class MovePointPez : MonoBehaviour
 
             transform.position = new Vector2(x,y);
             tiempoCambio = Time.realtimeSinceStartup + Random.Range(2f,3f);
-        }
     }
 }

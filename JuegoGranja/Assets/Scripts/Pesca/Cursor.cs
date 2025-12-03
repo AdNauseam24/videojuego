@@ -39,7 +39,7 @@ public class Cursor : MonoBehaviour
         }
         else
         {
-            slider.value -= Time.unscaledDeltaTime/3.5f;
+            slider.value -= Time.unscaledDeltaTime/100.5f;
         }
     }
 

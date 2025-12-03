@@ -49,5 +49,8 @@ TagManager:
   - name: Frente
     uniqueID: 6884305
     locked: 0
+  - name: Delante
+    uniqueID: 3005811807
+    locked: 0
   m_RenderingLayers:
   - Default

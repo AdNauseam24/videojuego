@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1020347757554962263, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd6d5211f33e158489949241f1323a26, type: 3}
     - target: {fileID: 1118213140407489664, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -97,8 +101,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5265701897524737470, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265701897524737470, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265701897524737470, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6747146474128724179, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
@@ -111,6 +123,10 @@ PrefabInstance:
     - target: {fileID: 7252027463159092610, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487625201445272948, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7685043509260536514, guid: 3593524baa84db243bc70bdb2953c9e2, type: 3}
       propertyPath: m_Layer
