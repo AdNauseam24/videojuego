@@ -70,4 +70,11 @@ public class MovePointPez : MonoBehaviour
             transform.position = new Vector2(x,y);
             tiempoCambio = Time.realtimeSinceStartup + Random.Range(2f,3f);
     }
+    
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(centro,radio);
+       
+    }
 }

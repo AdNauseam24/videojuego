@@ -38,7 +38,7 @@ public class Agua : MonoBehaviour
 
       cursor.GetComponent<Cursor>().SetLimites(radio, posicion);
 
-      movePointPez.SetRadio(radio);
+      movePointPez.SetRadio(radio/2);
       movePointPez.SetCentro(posicion);
       movePointPez.Empezar();
 
@@ -62,4 +62,5 @@ public class Agua : MonoBehaviour
         piscina.SetActive(false);
         cursor.SetActive(false);
     }
+
 }

@@ -11217,7 +11217,7 @@ GameObject:
   m_Layer: 0
   m_Name: MovepointPez
   m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11313,7 +11313,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.03
+  m_Radius: 0.045
 --- !u!1 &458823203
 GameObject:
   m_ObjectHideFlags: 0
@@ -16376,11 +16376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mp: {fileID: 446612228}
-  movePointPez: {fileID: 0}
-  velocidad: 5
+  velocidad: 1
   tiempoCambio: 0
-  objetivoGiro: {x: 0, y: 0}
-  objetivoMovimiento: {x: 0, y: 0}
 --- !u!70 &1267805501
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
