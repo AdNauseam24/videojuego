@@ -38,7 +38,7 @@ public class Agua : MonoBehaviour
 
       cursor.GetComponent<Cursor>().SetLimites(radio, posicion);
 
-      movePointPez.SetRadio(radio/2);
+      movePointPez.SetRadio(radio/1.8f);
       movePointPez.SetCentro(posicion);
       movePointPez.Empezar();
 

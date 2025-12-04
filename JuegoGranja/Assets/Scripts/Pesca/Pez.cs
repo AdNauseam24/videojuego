@@ -17,9 +17,12 @@ public class Pez : MonoBehaviour
 
     private Vector2 objetivoMovimiento;
 
-    public float velocidad = 1f;
+    private float velocidad = 3f;
 
-    public float tiempoCambio;
+    private float tiempoCambio;
+
+    [SerializeField]
+    private Animator animator;
 
     void Start()
     {
@@ -27,6 +30,8 @@ public class Pez : MonoBehaviour
     }
     void Update()
     {
+        
+ 
         transform.up = objetivoGiro;
        // transform.position = objetivoMovimiento;
        transform.position += transform.up*velocidad*Time.unscaledDeltaTime;
@@ -35,7 +40,8 @@ public class Pez : MonoBehaviour
        
         if(Time.realtimeSinceStartup >= tiempoCambio)
         {
-            velocidad = Random.Range(4f, 8f);
+            velocidad = Random.Range(4f, 10f);
+            animator.speed = velocidad/4f;
             tiempoCambio = Time.realtimeSinceStartup + Random.Range(0f, 5f);
 
         }
@@ -49,12 +55,13 @@ public class Pez : MonoBehaviour
 
     public void Girar(Vector2 vector2)
     {
+        //StopAllCoroutines();
         Vector2 vector21 = vector2 - (Vector2)transform.position;
         StartCoroutine(LerpGiro(transform.up, vector21, 1f));
     }
     public void CambiarDireccion(Vector2 vector2)
     {
-        StartCoroutine(LerpDireccion(transform.position, vector2, 1.5f));
+        StartCoroutine(LerpDireccion(transform.position, vector2.normalized, 1.5f));
     }
     IEnumerator LerpGiro(Vector2 start, Vector2 target, float lerpDuration)
     {
@@ -65,9 +72,10 @@ public class Pez : MonoBehaviour
            
             timeElapsed += Time.unscaledDeltaTime;
             objetivoGiro = Vector2.Lerp(start,target,timeElapsed/lerpDuration);
+            target = (mp.position-transform.position).normalized;
             yield return null;
         }
-        StartCoroutine(LerpGiro(transform.up, mp.position-transform.position,0.5f));
+        //StartCoroutine(LerpGiro(transform.up, (mp.position-transform.position).normalized,1.5f));
     }
     IEnumerator LerpDireccion(Vector2 start, Vector2 target, float lerpDuration)
     {
@@ -75,7 +83,7 @@ public class Pez : MonoBehaviour
         while(timeElapsed < lerpDuration)
         {
             timeElapsed += Time.unscaledDeltaTime;
-            objetivoMovimiento= Vector2.Lerp(start,target,timeElapsed/lerpDuration);;
+            objetivoMovimiento= Vector2.Lerp(start,target,timeElapsed/lerpDuration);
             yield return null;
         }
     }
@@ -90,4 +98,7 @@ public class Pez : MonoBehaviour
             MovePointPez.OnCambioPosicion -= CambiarDireccion;
 
     }
+
+     
+
 }
