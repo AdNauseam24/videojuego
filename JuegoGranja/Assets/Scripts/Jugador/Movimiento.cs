@@ -20,6 +20,11 @@ public class Movimiento : MonoBehaviour
     [SerializeField]
     private static Vector2 posicion = new Vector2(0,0);
 
+    [SerializeField]
+    private Animator animator;
+
+    private int direccion = 1;
+
     int filtroLayerMask;
     
     void Start()
@@ -41,9 +46,6 @@ public class Movimiento : MonoBehaviour
         int otrosMask = 1 << otrosLayer;
 
         filtroLayerMask = colisionMask | aguaMask | arbolesMask | piedrasMask | otrosMask;
-        
-
-
     }
 
     
@@ -53,37 +55,47 @@ public class Movimiento : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, vMovimiento * Time.deltaTime);
         posicion = transform.position;
 
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+
+        animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
+        animator.SetFloat("Vertical", Mathf.Abs(vertical));
+
+
         //Para limitar el movimiento del movepoint, que solo se podrá volver a mover cuando el jugador esté a punto
         //de alcanzarlo, evitando movimiento infinito
         if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
         {
 
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1 && Time.timeScale==1)
+            if (Mathf.Abs(horizontal) == 1 && Time.timeScale==1)
             {
-                if (Input.GetAxisRaw("Horizontal") == 1)
+                if (horizontal == 1)
                 {
                     ultimaDireccion = "right";
+                    transform.localScale = new Vector3(1,transform.localScale.y, transform.localScale.z);
                 }
                 else
                 {
                     ultimaDireccion = "left";
+                    transform.localScale = new Vector3(-1,transform.localScale.y, transform.localScale.z);
                 }
 
                 /*Antes de realizar el movimiento comprobamos que el punto al que nos queremos mover no es de colisión,
                 Para ello dibujamos un círculo en el punto al que nos queremos desplazar y si está en la capa de colisiones no se 
                 realiza el movimiento
                 */
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, filtroLayerMask))
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(horizontal, 0f, 0f), .2f, filtroLayerMask))
                 {
 
                 //movemos el movepoint por si el botón está presionado
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                movePoint.position += new Vector3(horizontal, 0f, 0f);
 
                 }
             }
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1 && Time.timeScale==1)
+            if (Mathf.Abs(vertical) == 1 && Time.timeScale==1)
             {
-                if (Input.GetAxisRaw("Vertical") == 1)
+                if (vertical == 1)
                 {
                     ultimaDireccion = "up";
                 }
@@ -91,11 +103,11 @@ public class Movimiento : MonoBehaviour
                 {
                     ultimaDireccion = "down";
                 }
-                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, filtroLayerMask))
+                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, vertical, 0f), .2f, filtroLayerMask))
                 {
 
                 //movemos el movepoint por si el botón está presionado
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                movePoint.position += new Vector3(0f, vertical, 0f);
 
                 }
 

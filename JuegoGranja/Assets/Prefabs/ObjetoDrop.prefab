@@ -266,6 +266,7 @@ MonoBehaviour:
   tipoObjeto: 0
   cantidad: 0
   imagen: {fileID: 2382639629769348447}
+  animator: {fileID: 1800634050118142528}
 --- !u!61 &-3208522385575886785
 BoxCollider2D:
   m_ObjectHideFlags: 0

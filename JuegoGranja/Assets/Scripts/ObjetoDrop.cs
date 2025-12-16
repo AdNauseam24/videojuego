@@ -9,6 +9,9 @@ public class ObjetoDrop : Objeto
     private int cantidad;
     [SerializeField]
     private SpriteRenderer imagen;
+
+    [SerializeField]
+    private Animator animator;
     
     void Start()
     {
@@ -17,8 +20,6 @@ public class ObjetoDrop : Objeto
         this.nombre = compendio.GetObjeto(id).GetNombre();
         this.sprite = compendio.GetObjeto(id).GetSprite();
         this.imagen.sprite = this.sprite;
-        
-        
     }
 
     public ObjetoDrop(int id)
@@ -31,8 +32,9 @@ public class ObjetoDrop : Objeto
     {
         if(collision.gameObject.tag == "Player")
         {
+            animator.SetBool("Recoger",true);
             gestorInventario.AddItem(id,nombre,cantidad,sprite);
-            Destroy(gameObject);
+            Destroy(gameObject, .5f);
         }
     }
 
