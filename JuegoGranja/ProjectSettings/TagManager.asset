@@ -9,6 +9,8 @@ TagManager:
   - Inventario
   - ObjetosMapa
   - Pez
+  - MovePoint
+  - Suelo
   layers:
   - Default
   - TransparentFX

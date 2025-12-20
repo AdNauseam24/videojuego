@@ -37,15 +37,15 @@ public class Movimiento : MonoBehaviour
         int aguaLayer = LayerMask.NameToLayer("Agua");
         int arbolesLayer = LayerMask.NameToLayer("Arboles");
         int piedrasLayer = LayerMask.NameToLayer("Piedras");
-        int otrosLayer = LayerMask.NameToLayer("Otros");
+        //int otrosLayer = LayerMask.NameToLayer("Otros");
 
         int colisionMask = 1 << colisionLayer;
         int aguaMask = 1 << aguaLayer;
         int arbolesMask = 1 << arbolesLayer;
         int piedrasMask = 1 << piedrasLayer;
-        int otrosMask = 1 << otrosLayer;
+        //int otrosMask = 1 << otrosLayer;
 
-        filtroLayerMask = colisionMask | aguaMask | arbolesMask | piedrasMask | otrosMask;
+        filtroLayerMask = colisionMask | aguaMask | arbolesMask | piedrasMask;
     }
 
     
