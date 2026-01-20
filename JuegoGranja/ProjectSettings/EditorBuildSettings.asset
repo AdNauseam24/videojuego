@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minas2.unity
     guid: 151b8438f44871845b95e848bea73c5a
+  - enabled: 1
+    path: Assets/Scenes/Playa.unity
+    guid: 4442a775b6c2239488a52dc13ac6cf70
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
