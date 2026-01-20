@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CambioEscenaBosque : MonoBehaviour
+public class CambioEscenaMinas : MonoBehaviour
 {
     public string escenaObjetivo;
 
@@ -26,9 +26,19 @@ public class CambioEscenaBosque : MonoBehaviour
     IEnumerator DelayFade()
     {
         yield return new WaitForSeconds(0.1f);
+        int x = Random.Range(1,3);
+        if(x == 1)
+        {
+            nuevaPos =  new Vector2(-10.5f,-11.5f);
+        }
+        else
+        {
+            nuevaPos =  new Vector2(-12.5f,-21.5f);
+        }
         jugador.position = nuevaPos;
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
-        SceneManager.LoadScene("Bosque" + Random.Range(1,3));
+        
+        SceneManager.LoadScene("Minas" + x);
     }
 }

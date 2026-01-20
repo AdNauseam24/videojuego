@@ -14,7 +14,7 @@ public class GenerarArboles : MonoBehaviour
             if(x == 1)
             {
             Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Arbol.prefab", typeof(Arboles));
-		    ObjetoDrop drop = Instantiate(prefab,this.transform, true) as ObjetoDrop;
+		    ObjetoDrop drop = Instantiate(prefab,spot.transform, false) as ObjetoDrop;
             }
         }
     }
