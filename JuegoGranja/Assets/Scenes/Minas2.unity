@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escenaObjetivo: SampleScene
-  nuevaPos: {x: 0.5, y: 0.5}
+  nuevaPos: {x: -17.5, y: 15.5}
 --- !u!50 &304866446
 Rigidbody2D:
   serializedVersion: 5
@@ -16418,7 +16418,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 25
-      m_TileSpriteIndex: 24
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16508,7 +16508,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -24278,7 +24278,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 21
-      m_TileSpriteIndex: 21
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -32831,16 +32831,16 @@ Tilemap:
     m_Data: {fileID: 1060050968, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -366873180, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -343670916, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1088198887, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -343670916, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -108891666, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1866221508, guid: 899e0510477b81748b23ba51ed213b16, type: 3}
   - m_RefCount: 2

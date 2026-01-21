@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escenaObjetivo: SampleScene
-  nuevaPos: {x: 0.5, y: 0.5}
+  nuevaPos: {x: -17.5, y: 15.5}
 --- !u!50 &304866446
 Rigidbody2D:
   serializedVersion: 5

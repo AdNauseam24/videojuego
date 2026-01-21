@@ -129,6 +129,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log(eventData.button);
 		if(eventData.button == PointerEventData.InputButton.Left && gestorInventario.GetMenuAbierto())
 		{
 			ClickIzquierdo();
