@@ -18,7 +18,9 @@ public class ObjetoDrop : Objeto
         this.gestorInventario = GameObject.Find("Inventario").GetComponent<GestorInventario>();
         this.compendio = GameObject.FindAnyObjectByType<Compendio>();
         this.nombre = compendio.GetObjeto(id).GetNombre();
+        Debug.Log(nombre);
         this.sprite = compendio.GetObjeto(id).GetSprite();
+        Debug.Log(sprite);
         this.imagen.sprite = this.sprite;
     }
 

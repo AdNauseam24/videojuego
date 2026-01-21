@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: bordesSuelo_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -162732608, guid: 7af1c9f97e9ecbd46ab588e529f39ff8, type: 3}
+  m_Sprite: {fileID: 222711503, guid: 7af1c9f97e9ecbd46ab588e529f39ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

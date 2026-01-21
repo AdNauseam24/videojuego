@@ -16,16 +16,6 @@ public class Agua : MonoBehaviour
     [SerializeField]
     private Cursor player;
    
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public  async Task<float> IniciarMinijuego(Vector2 posicion)
     {
       piscina.SetActive(true);
@@ -48,8 +38,8 @@ public class Agua : MonoBehaviour
 
       while ( sliderValue > 0 && sliderValue < 1)
         {
-            sliderValue = player.SliderValue();
-           await Task.Yield();
+        sliderValue = player.SliderValue();
+        await Task.Yield();
             
         }
 

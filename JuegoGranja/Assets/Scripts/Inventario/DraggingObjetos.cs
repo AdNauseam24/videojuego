@@ -34,8 +34,6 @@ public class DraggingObjetos : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
             gestorInventario.DeseleccionarTodo();
             espacio.SetSeleccionado(true);
 
-            Debug.Log("Empezar");
-            
             parentAfterDrag = transform.parent;
             transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
             transform.SetAsLastSibling();
@@ -59,7 +57,6 @@ public class DraggingObjetos : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
     {
          if(gestorInventario.GetMenuAbierto())
          {
-            Debug.Log("Terminar");
             transform.SetParent(parentAfterDrag);
             transform.SetAsFirstSibling();
             image.raycastTarget = true;

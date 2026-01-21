@@ -1,5 +1,8 @@
+
 using System;
 using System.Collections;
+using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using static TipoObjetoEnum;
 
@@ -139,6 +142,19 @@ public class Objeto : MonoBehaviour
             float success = await agua.IniciarMinijuego(posicion);
             agua.CerrarMinijuego();
 
+            Debug.Log(success);
+            if (success > 0.5)
+            {
+            UnityEngine.Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+            ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
+
+            drop.transform.position = posicion;
+            drop.SetCantidad(1);
+            drop.SetId(UnityEngine.Random.Range(24,29));
+            drop.GetComponent<ObjetoDrop>().enabled = true;
+            await Task.Delay(TimeSpan.FromSeconds(0.1));
+            drop.GetComponent<BoxCollider2D>().size = new Vector2(2f,2f);
+            }
             gestorInventario.ActivarHotbar();
             Time.timeScale = 1;
             
