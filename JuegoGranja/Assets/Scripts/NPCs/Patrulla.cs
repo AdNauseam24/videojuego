@@ -44,4 +44,9 @@ public class Patrulla : MonoBehaviour
         objetivo = puntosMovimiento[objetivoActual];
         pausado = false;
     }
+
+    private void OnEnable()
+    {
+         StartCoroutine(SetPuntoObjetivo());
+    }
 }
