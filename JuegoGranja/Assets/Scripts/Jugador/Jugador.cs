@@ -27,7 +27,7 @@ public class Jugador : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && contadorHerramienta <=0)
         {
-            if(!inventario.GetMenuAbierto() && highlight.GetPosicionValida())
+            if(!inventario.GetMenuAbierto() && highlight.GetPosicionValida() && !GestorDIalogos.Instance.dialogoActivo)
             {
                 int idTemp = inventario.GetIdSeleccionadoHotbar();
                 if(idTemp >= 14 && idTemp <=18)

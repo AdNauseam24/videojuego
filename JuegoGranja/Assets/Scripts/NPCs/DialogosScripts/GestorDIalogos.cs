@@ -11,6 +11,7 @@ public class GestorDIalogos : MonoBehaviour
     public TMP_Text nombreActor;
     public TMP_Text textoDialogo;
     public CanvasGroup canvasGroup;
+    public Button[] botonesOpciones;
 
     private DialogoSO dialogoActual;
     private int indiceDialogo;
@@ -29,6 +30,11 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        foreach (Button boton in botonesOpciones)
+        {
+            boton.gameObject.SetActive(false);
+        }
     }
     public void EmpezarDialogo(DialogoSO dialogoSO)
     {
@@ -45,7 +51,7 @@ public class GestorDIalogos : MonoBehaviour
         }
         else
         {
-            TerminarDialogo();
+            MostrarOpciones();
         }
     }
     private void MostrarDialogo()
@@ -63,13 +69,59 @@ public class GestorDIalogos : MonoBehaviour
         indiceDialogo++;
     }
 
+    private void MostrarOpciones()
+    {
+        LimpiarOpciones();
+        if(dialogoActual.opciones.Length > 0)
+        {
+            for (int i = 0; i < dialogoActual.opciones.Length; i++)
+            {
+                var opcion = dialogoActual.opciones[i];
+
+                botonesOpciones[i].GetComponentInChildren<TMP_Text>().text = opcion.textoOpcion;
+                botonesOpciones[i].gameObject.SetActive(true);
+
+                botonesOpciones[i].onClick.AddListener(() => ElegirOpcion(opcion.nextDialogo));
+            }
+        }
+        else
+        {
+            botonesOpciones[0].GetComponentInChildren<TMP_Text>().text = "Salir";
+            botonesOpciones[0].gameObject.SetActive(true);
+            botonesOpciones[0].onClick.AddListener(TerminarDialogo);
+        }
+    }
+
     private void TerminarDialogo()
     {
         indiceDialogo = 0;
         dialogoActivo = false;
+        LimpiarOpciones();
 
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+    }
+
+    private void ElegirOpcion(DialogoSO dialogoSO)
+    {
+        if(dialogoSO == null)
+        {
+            TerminarDialogo();
+        }
+        else
+        {
+            LimpiarOpciones();
+            EmpezarDialogo(dialogoSO);
+        }
+    }
+
+    private void LimpiarOpciones()
+    {
+        foreach (var boton in botonesOpciones)
+        {
+            boton.gameObject.SetActive(false);
+            boton.onClick.RemoveAllListeners();
+        }
     }
 }

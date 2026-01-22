@@ -10,17 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
-  m_Name: DialogoEjemplo
+  m_Name: ContarMas
   m_EditorClassIdentifier: 
   lineas:
   - speaker: {fileID: 11400000, guid: 0e79e84aecc0a554695ca5d21aac82e9, type: 2}
-    texto: Saludos
+    texto: "Te cuento m\xE1s"
   - speaker: {fileID: 11400000, guid: d9a6bcda017a28f4489ad577158af6c1, type: 2}
-    texto: Saludos
-  - speaker: {fileID: 11400000, guid: 0e79e84aecc0a554695ca5d21aac82e9, type: 2}
-    texto: Adios
-  opciones:
-  - textoOpcion: "Cu\xE9ntame m\xE1s"
-    nextDialogo: {fileID: 11400000, guid: 68bbe90d84dcf624784e404bd287e70b, type: 2}
-  - textoOpcion: Calla
-    nextDialogo: {fileID: 11400000, guid: b7e3eda130504234b9a1baed56eb4cef, type: 2}
+    texto: ok
+  opciones: []
