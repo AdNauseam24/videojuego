@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Hablar : MonoBehaviour
@@ -5,7 +6,8 @@ public class Hablar : MonoBehaviour
     private Rigidbody2D rb;
     //private Animator anim;
     public Animator bocadilloAnim;
-    public DialogoSO dialogoSO;
+    public List<DialogoSO> conversaciones;
+    public DialogoSO conversacionActual;
 
     private void Awake()
     {
@@ -33,7 +35,33 @@ public class Hablar : MonoBehaviour
             }
             else
             {
-                GestorDIalogos.Instance.EmpezarDialogo(dialogoSO);
+                CheckNuevaConversacion();
+                GestorDIalogos.Instance.EmpezarDialogo(conversacionActual);
+            }
+        }
+    }
+    private void CheckNuevaConversacion()
+    {
+        for (int i =  conversaciones.Count -1 ; i >= 0; i++)
+        {
+            var convo = conversaciones[i];
+            if(convo != null && convo.condicionCumplida())
+            {
+                conversacionActual = convo;
+                if (convo.removeAfterPlay)
+                {
+                    conversaciones.RemoveAt(i);
+                }
+
+                if(convo.removeListAfterPlay != null && convo.removeListAfterPlay.Count > 0)
+                {
+                    foreach (var quitar in convo.removeListAfterPlay)
+                    {
+                        conversaciones.Remove(quitar);
+                    }
+                }
+             
+                break;
             }
         }
     }
