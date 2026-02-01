@@ -25,6 +25,8 @@ public class Rocas : MonoBehaviour
 
     public GameObject polvo;
 
+    private float danio;
+
     void Start()
     {
         vida = Random.Range(11,15);
@@ -98,12 +100,13 @@ public class Rocas : MonoBehaviour
 
     public void ActivarMinijuego()
     {
+        danio = StatsGenerales.Instance.danioRocas;
         canvas.SetActive(true);
         slider.Activar();
     }
     public void RecibirDaño()
     {
-        vida -= 3.5f*slider.DevolverMultiplicador();
+        vida -= danio*slider.DevolverMultiplicador();
     }
 
     public float GetVida()

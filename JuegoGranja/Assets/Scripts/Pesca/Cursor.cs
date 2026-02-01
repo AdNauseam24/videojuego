@@ -13,11 +13,10 @@ public class Cursor : MonoBehaviour
    
    [SerializeField]
    private Slider slider;
-    
-    void Start()
-    {
-         
-    }
+
+    //A mayor número más lento
+    public float velocidadPesca;
+    public float VelocidadPerderPez;
 
     
     void Update()
@@ -35,11 +34,11 @@ public class Cursor : MonoBehaviour
         
         if(Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Pez")))
         {
-            slider.value += Time.unscaledDeltaTime/5;
+            slider.value += Time.unscaledDeltaTime/velocidadPesca;
         }
         else
         {
-            slider.value -= Time.unscaledDeltaTime/100.5f;
+            slider.value -= Time.unscaledDeltaTime/VelocidadPerderPez;
         }
     }
 

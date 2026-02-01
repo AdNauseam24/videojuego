@@ -14,6 +14,8 @@ public class Arboles : MonoBehaviour
 
     public Animator animator;
 
+    private float danio;
+
     private bool activo = true;
     void Start()
     {
@@ -52,12 +54,13 @@ public class Arboles : MonoBehaviour
 
     public void ActivarMinijuego()
     {
+        danio = StatsGenerales.Instance.danioArboles;
         canvas.SetActive(true);
         slider.Activar();
     }
     public void RecibirDaño()
     {
-        vida -= 3.5f*slider.DevolverMultiplicador();
+        vida -= danio*slider.DevolverMultiplicador();
     }
 
     public float GetVida()

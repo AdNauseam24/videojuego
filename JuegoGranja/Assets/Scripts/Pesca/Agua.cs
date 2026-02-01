@@ -18,25 +18,28 @@ public class Agua : MonoBehaviour
    
     public  async Task<float> IniciarMinijuego(Vector2 posicion)
     {
-      piscina.SetActive(true);
-      piscina.transform.position = posicion;
+    piscina.SetActive(true);
+    piscina.transform.position = posicion;
 
-      cursor.SetActive(true);
-      cursor.transform.position = new Vector3(posicion.x,posicion.y,0f);
+    
+    cursor.SetActive(true);
+    cursor.transform.position = new Vector3(posicion.x,posicion.y,0f);
 
-      float radio = piscina.GetComponent<SpriteRenderer>().bounds.size.x/2;
+    float radio = piscina.GetComponent<SpriteRenderer>().bounds.size.x/2;
 
-      cursor.GetComponent<Cursor>().SetLimites(radio, posicion);
+    cursor.GetComponent<Cursor>().SetLimites(radio, posicion);
+    cursor.GetComponent<Cursor>().velocidadPesca = StatsGenerales.Instance.vPesca;
+    cursor.GetComponent<Cursor>().VelocidadPerderPez = StatsGenerales.Instance.vPerderPez;
 
-      movePointPez.SetRadio(radio/1.8f);
-      movePointPez.SetCentro(posicion);
-      movePointPez.Empezar();
+    movePointPez.SetRadio(radio/1.8f);
+    movePointPez.SetCentro(posicion);
+    movePointPez.Empezar();
 
-      float sliderValue = player.SliderValue();
+    float sliderValue = player.SliderValue();
 
-      Debug.Log(sliderValue);
+    Debug.Log(sliderValue);
 
-      while ( sliderValue > 0 && sliderValue < 1)
+    while ( sliderValue > 0 && sliderValue < 1)
         {
         sliderValue = player.SliderValue();
         await Task.Yield();

@@ -187,6 +187,10 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 	//Función para determinar la posición a la que se dropearán los objetos en función de la última dirección en la que haya mirado el jugador
 	public void GestionDrop(bool todos)
     {
+        if(id <= 6)
+        {
+            return;
+        }
         Vector2 posicionPlayer = Movimiento.GetPosicion();
 		Vector2 lugarDrop = posicionPlayer;
 		string ultimaDireccion;

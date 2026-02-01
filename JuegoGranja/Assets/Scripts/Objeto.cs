@@ -21,6 +21,9 @@ public class Objeto : MonoBehaviour
     [SerializeField]
     protected TipoObjeto tipoObjeto;
 
+    public int precioCompra;
+    public int precioVenta;
+
     protected GestorInventario gestorInventario;
     void Start()
     {
