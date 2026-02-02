@@ -10,13 +10,13 @@ public class Objeto : MonoBehaviour
 {
     //para poder cambiar el nombre desde el editor de Unity
     [SerializeField]
-    protected string nombre;
+    public string nombre;
    
      [SerializeField]
-    protected Sprite sprite;
+    public Sprite sprite;
 
     [SerializeField]
-    protected int id;
+    public int id;
 
     [SerializeField]
     protected TipoObjeto tipoObjeto;

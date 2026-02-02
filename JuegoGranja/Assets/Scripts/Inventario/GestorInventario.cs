@@ -3,6 +3,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class GestorInventario : MonoBehaviour
 {
+    public static GestorInventario Instance;
     [SerializeField]
     private GameObject MenuInventario;
 
@@ -21,6 +22,15 @@ public class GestorInventario : MonoBehaviour
     [SerializeField]
     private GameObject hotbarGO;
 
+    void Awake()
+    {
+         if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     void Start()
     {
         MenuInventario.SetActive(false);
