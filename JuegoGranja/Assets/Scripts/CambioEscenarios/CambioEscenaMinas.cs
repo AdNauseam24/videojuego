@@ -14,7 +14,6 @@ public class CambioEscenaMinas : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Trigger");
         if(collision.gameObject.tag == "Player")
         {
             jugador = collision.transform;

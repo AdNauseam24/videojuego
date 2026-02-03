@@ -58,7 +58,7 @@ public class GestorInventario : MonoBehaviour
             hotbar.GetEspacioObjeto(hotbar.GetRememberSeleccionado()).SetSeleccionado(true);
         }
 
-        else if (Input.GetButtonDown("Inventario") && !menuAbierto)
+        else if (Input.GetButtonDown("Inventario") && !menuAbierto && Time.timeScale == 1)
         {
             //Pausar el juego
             Time.timeScale = 0;
@@ -131,5 +131,18 @@ public class GestorInventario : MonoBehaviour
     public int GetIdSeleccionadoHotbar()
     {
         return hotbar.GetIdSeleccionado();
+    }
+
+    public bool VenderObjeto(int id)
+    {
+         for (int i = 0; i < espacio.Length; i++)
+        {
+            if(espacio[i].GetId() == id)
+            {
+                espacio[i].ReducirUno();
+                return true;
+            }
+        }
+        return false;
     }
 }

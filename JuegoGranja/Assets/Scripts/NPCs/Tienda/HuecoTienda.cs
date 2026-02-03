@@ -13,8 +13,8 @@ public class HuecoTienda : MonoBehaviour
     [SerializeField] private GestorTienda gestorTienda;
 
 
-    private int precioCompra;
-    private int precioVenta;
+    public int precioCompra;
+    public int precioVenta;
     public void Initialize(Objeto nuevoObjeto)
     {
         objeto = nuevoObjeto;
