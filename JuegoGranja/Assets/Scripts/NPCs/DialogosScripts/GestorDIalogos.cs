@@ -103,6 +103,8 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+        GestorInventario.Instance.ActivarHotbar();
+        Time.timeScale = 1;
     }
 
     private void ElegirOpcion(DialogoSO dialogoSO)

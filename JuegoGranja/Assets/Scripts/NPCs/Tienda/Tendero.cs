@@ -23,6 +23,7 @@ public class Tendero : MonoBehaviour
                         canvasGroup.alpha = 1;
                         canvasGroup.blocksRaycasts = true;
                         canvasGroup.interactable = true;
+                        GestorInventario.Instance.DesactivarHotbar();
                     }
                     else
                     {
@@ -31,6 +32,7 @@ public class Tendero : MonoBehaviour
                         canvasGroup.alpha = 0;
                         canvasGroup.blocksRaycasts = false;
                         canvasGroup.interactable = false;
+                        GestorInventario.Instance.ActivarHotbar();
                     }
                 }
         }

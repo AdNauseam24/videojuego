@@ -37,6 +37,8 @@ public class Hablar : MonoBehaviour
             {
                 CheckNuevaConversacion();
                 GestorDIalogos.Instance.EmpezarDialogo(conversacionActual);
+                GestorInventario.Instance.DesactivarHotbar();
+                Time.timeScale = 0;
             }
         }
     }

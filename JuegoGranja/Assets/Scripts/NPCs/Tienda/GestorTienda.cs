@@ -9,6 +9,9 @@ public class GestorTienda : MonoBehaviour
     public bool modoVenta;
 
     public CanvasGroup objetoNoEnElInventario;
+    public CanvasGroup oroInsuficiente;
+    public CanvasGroup objetoComprado;
+    public CanvasGroup objetoVendido;
 
     private void Start()
     {
@@ -55,6 +58,19 @@ public class GestorTienda : MonoBehaviour
             {
                 StatsGenerales.Instance.RestarOro(objeto.precioCompra);
                 GestorInventario.Instance.AddItem(objeto.id,objeto.nombre,1,objeto.sprite);
+                StopAllCoroutines();
+                oroInsuficiente.alpha = 0;
+                objetoNoEnElInventario.alpha = 0;
+                objetoVendido.alpha = 0;
+                StartCoroutine(MostrarObjetoNoDisponible(objetoComprado));
+            }
+            else
+            {
+                StopAllCoroutines();
+                objetoNoEnElInventario.alpha = 0;
+                objetoComprado.alpha = 0;
+                objetoVendido.alpha = 0;
+                StartCoroutine(MostrarObjetoNoDisponible(oroInsuficiente));
             }
         }
         else
@@ -62,33 +78,41 @@ public class GestorTienda : MonoBehaviour
             if (GestorInventario.Instance.VenderObjeto(objeto.id))
             {
                 StatsGenerales.Instance.SumarOro(objeto.precioVenta);
+                StopAllCoroutines();
+                oroInsuficiente.alpha = 0;
+                objetoComprado.alpha = 0;
+                objetoNoEnElInventario.alpha = 0;
+                StartCoroutine(MostrarObjetoNoDisponible(objetoVendido));
+
             }
             else
             {
                 StopAllCoroutines();
-                StartCoroutine(MostrarObjetoNoDisponible());
+                oroInsuficiente.alpha = 0;
+                objetoComprado.alpha = 0;
+                objetoVendido.alpha = 0;
+                StartCoroutine(MostrarObjetoNoDisponible(objetoNoEnElInventario));
             }
         }
        
     }
-    public IEnumerator MostrarObjetoNoDisponible()
+    public IEnumerator MostrarObjetoNoDisponible(CanvasGroup canvasGroup)
     {
-        objetoNoEnElInventario.alpha = 1;
-        Debug.Log(objetoNoEnElInventario.alpha);
+        canvasGroup.alpha = 1;
         float startTime = Time.realtimeSinceStartup;
-        while (Time.realtimeSinceStartup-startTime < 1.5)
+        while (Time.realtimeSinceStartup-startTime < 1)
         {
         yield return null;
         }
        
        for (int i = 0; i < 5; i++)
         {
-            objetoNoEnElInventario.alpha -= 0.2f;
-             startTime = Time.realtimeSinceStartup;
-             while (Time.realtimeSinceStartup-startTime < .1f)
-             {
-                 yield return null;
-             }
+            canvasGroup.alpha -= 0.2f;
+            startTime = Time.realtimeSinceStartup;
+            while (Time.realtimeSinceStartup-startTime < .05f)
+            {
+                yield return null;
+            }
         }
     
     }

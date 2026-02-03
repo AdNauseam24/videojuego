@@ -18,6 +18,7 @@ public class DialogoSO : ScriptableObject
 
     public bool condicionCumplida()
     {
+        Debug.Log(requisitoNPCs.Length);
         if(requisitoNPCs.Length > 0)
         {
             foreach (var npc in requisitoNPCs)

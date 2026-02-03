@@ -612,6 +612,9 @@ MonoBehaviour:
   - {fileID: 1850322917}
   modoVenta: 0
   objetoNoEnElInventario: {fileID: 0}
+  oroInsuficiente: {fileID: 0}
+  objetoComprado: {fileID: 0}
+  objetoVendido: {fileID: 0}
 --- !u!1001 &361344796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1427,9 +1430,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1289155489
-  m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingLayerID: 6884305
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 866579385, guid: c5c5a7984efc32d4fbaed5587250913a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22736,6 +22739,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9451dbf6c88c1a545812c16be1eb71ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1396115697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396115699}
+  - component: {fileID: 1396115700}
+  m_Layer: 0
+  m_Name: GestorPueblo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1396115699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396115697}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1396115700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396115697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4b0ec70bd0234498452214e7d2e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448527772
 GameObject:
   m_ObjectHideFlags: 0
@@ -23708,7 +23755,7 @@ Transform:
   m_GameObject: {fileID: 2045702497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 10.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24330,3 +24377,4 @@ SceneRoots:
   - {fileID: 563196408}
   - {fileID: 1223737745}
   - {fileID: 1278780268}
+  - {fileID: 1396115699}
