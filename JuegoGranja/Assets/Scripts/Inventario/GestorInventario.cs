@@ -145,4 +145,29 @@ public class GestorInventario : MonoBehaviour
         }
         return false;
     }
+
+    public bool CheckCantidad(int id, int cantidad)
+    {
+        for (int i = 0; i < espacio.Length; i++)
+        {
+            if(espacio[i].GetId() == id && espacio[i].GetCantidad() >= cantidad)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void RestarCantidad(int id, int cantidad)
+    {
+       for (int i = 0; i < espacio.Length; i++)
+        {
+            if(espacio[i].GetId() == id && espacio[i].GetCantidad() >= cantidad)
+            {
+                espacio[i].ReducirCantidad(cantidad);
+                break;
+            }
+        }
+       
+    }
 }

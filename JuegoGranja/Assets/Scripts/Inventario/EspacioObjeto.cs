@@ -126,6 +126,15 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
             this.RemoveItem();
         }
     }
+    public void ReducirCantidad(int cantidad)
+    {
+        this.cantidad -= cantidad;
+        this.textoCantidad.text = this.cantidad.ToString();
+		if(this.cantidad  < 1)
+        {
+            this.RemoveItem();
+        }
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -285,5 +294,9 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 	 public bool GetSeleccionado()
     {
         return seleccionado;
+    }
+    public int GetCantidad()
+    {
+        return cantidad;
     }
 }

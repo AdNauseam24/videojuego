@@ -19,14 +19,14 @@ public class GestorTenderos : MonoBehaviour
 
     public void ActivarTenderosPueblo1()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             tenderos[i].gameObject.SetActive(true);
         }
     }
       public void DesactivarTenderosPueblo1()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             tenderos[i].gameObject.SetActive(false);
         }

@@ -5,10 +5,15 @@ public class StatsGenerales : MonoBehaviour
 {
     public static StatsGenerales Instance;
     public int oro = 100;
-    public float danioRocas = 3.5f;
-    public float danioArboles = 3.5f;
+    public float danioRocas = 2.5f;
+    public float danioArboles = 2.5f;
+
+    //A mayor número más lento
     public float vPesca= 6f;
     public float vPerderPez = 6f;
+
+    //Hacha-Pico-Caña
+    public int[] mejorasHerramientas = {0,0,0};
 
     public TMP_Text textoOro;
 
