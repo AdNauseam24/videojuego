@@ -31,7 +31,7 @@ public class Hablar : MonoBehaviour
         {
             if (GestorDIalogos.Instance.dialogoActivo)
             {
-                GestorDIalogos.Instance.AvanzarDialogo();
+                GestorDIalogos.Instance.AvanzarDialogo(null);
             }
             else
             {

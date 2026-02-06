@@ -43,7 +43,7 @@ public class GestorDIalogos : MonoBehaviour
         dialogoActivo = true;
         MostrarDialogo();
     }
-    public void AvanzarDialogo()
+    public void AvanzarDialogo(System.Action accionPosterior)
     {
         if(indiceDialogo < dialogoActual.lineas.Length)
         {
@@ -51,7 +51,7 @@ public class GestorDIalogos : MonoBehaviour
         }
         else
         {
-            MostrarOpciones();
+            MostrarOpciones(accionPosterior);
         }
     }
     private void MostrarDialogo()
@@ -71,9 +71,17 @@ public class GestorDIalogos : MonoBehaviour
         indiceDialogo++;
     }
 
-    private void MostrarOpciones()
+    private void MostrarOpciones(System.Action accionPosterior)
     {
         LimpiarOpciones();
+
+        if(accionPosterior != null)
+        {
+            TerminarDialogo();
+            accionPosterior();
+            return;
+        }
+        
         if(dialogoActual.opciones.Length > 0)
         {
             for (int i = 0; i < dialogoActual.opciones.Length; i++)

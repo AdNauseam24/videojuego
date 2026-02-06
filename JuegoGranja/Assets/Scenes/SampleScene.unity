@@ -72254,6 +72254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 84308479}
+  conversacionActual: {fileID: 0}
   canvasGroup: {fileID: 544010810}
 --- !u!58 &374139253
 CircleCollider2D:
@@ -77156,6 +77157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1329564471}
+  conversacionActual: {fileID: 11400000, guid: 6d385641066003140bd74b063cc076fd, type: 2}
   canvasGroup: {fileID: 280438379}
 --- !u!58 &686648734
 CircleCollider2D:
@@ -88040,6 +88042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 191397382}
+  conversacionActual: {fileID: 0}
   canvasGroup: {fileID: 639914135}
 --- !u!58 &1538134898
 CircleCollider2D:
@@ -101426,6 +101429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 198612469}
+  conversacionActual: {fileID: 0}
   canvasGroup: {fileID: 575064976}
 --- !u!58 &2134435640
 CircleCollider2D:
