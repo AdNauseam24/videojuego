@@ -11,6 +11,8 @@ public class Patrulla : MonoBehaviour
     private Rigidbody2D rb;
     private bool pausado;
     private int objetivoActual;
+
+    public Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,14 @@ public class Patrulla : MonoBehaviour
         }
 
         Vector2 direction = ((Vector3)objetivo - transform.position).normalized;
+        if(direction.x > 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1,1,1);
+        }
+        else
+        {
+             gameObject.transform.localScale = new Vector3(1,1,1);
+        }
         rb.linearVelocity = direction * velocidad;
 
         if(Vector2.Distance(transform.position,objetivo) < .1f)
@@ -38,15 +48,22 @@ public class Patrulla : MonoBehaviour
     IEnumerator SetPuntoObjetivo()
     {
         pausado = true;
+        anim.SetBool("Caminar", false);
 
         yield return new WaitForSeconds(Random.Range(2,10));
         objetivoActual = Random.Range(0,puntosMovimiento.Length);
         objetivo = puntosMovimiento[objetivoActual];
         pausado = false;
+        anim.SetBool("Caminar", true);
     }
 
     private void OnEnable()
     {
          StartCoroutine(SetPuntoObjetivo());
+    }
+
+    void OnDisable()
+    {
+        anim.SetBool("Caminar", false);
     }
 }
