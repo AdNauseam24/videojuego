@@ -64,6 +64,7 @@ public class Patrulla : MonoBehaviour
 
     void OnDisable()
     {
+        StopAllCoroutines();
         anim.SetBool("Caminar", false);
     }
 }

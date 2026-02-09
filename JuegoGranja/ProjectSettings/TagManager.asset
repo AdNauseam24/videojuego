@@ -11,6 +11,7 @@ TagManager:
   - Pez
   - MovePoint
   - Suelo
+  - Fade
   layers:
   - Default
   - TransparentFX

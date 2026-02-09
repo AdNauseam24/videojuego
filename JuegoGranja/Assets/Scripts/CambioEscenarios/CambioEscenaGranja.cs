@@ -6,26 +6,27 @@ public class CambioEscenaGranja : MonoBehaviour
 {
     public string escenaObjetivo;
 
-  //  [SerializeField]
-   // private Animator animator;
-
     public Vector2 nuevaPos;
     private Transform jugador;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Trigger");
         if(collision.gameObject.tag == "Player")
         {
             jugador = collision.transform;
-           // animator.Play("FadeBlanco");
             StartCoroutine(DelayFade());
         }
     }
 
     IEnumerator DelayFade()
     {
-        yield return new WaitForSeconds(0.1f);
+        GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
+        {
+            fadeimg.GetComponent<CanvasGroup>().alpha += 0.1f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(0.25f);
         jugador.position = nuevaPos;
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();

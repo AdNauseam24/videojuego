@@ -24,7 +24,13 @@ public class CambioEscenaMinas : MonoBehaviour
 
     IEnumerator DelayFade()
     {
-        yield return new WaitForSeconds(0.1f);
+        GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
+        {
+            fadeimg.GetComponent<CanvasGroup>().alpha += 0.1f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(0.25f);
         int x = Random.Range(1,3);
         if(x == 1)
         {
