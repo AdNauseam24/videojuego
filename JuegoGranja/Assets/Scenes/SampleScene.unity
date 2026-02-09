@@ -1928,11 +1928,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 58.1
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 36
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -72254,7 +72254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 84308479}
-  conversacionActual: {fileID: 0}
+  conversacionActual: {fileID: 11400000, guid: 76a0603e72576e94bbff483ef5b1ad84, type: 2}
   canvasGroup: {fileID: 544010810}
 --- !u!58 &374139253
 CircleCollider2D:
@@ -77157,7 +77157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1329564471}
-  conversacionActual: {fileID: 11400000, guid: 6d385641066003140bd74b063cc076fd, type: 2}
+  conversacionActual: {fileID: 11400000, guid: 5d18707b770f04749ae0231d0b91d521, type: 2}
   canvasGroup: {fileID: 280438379}
 --- !u!58 &686648734
 CircleCollider2D:
@@ -77467,7 +77467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3745119269783253895, guid: d64321c6b5a984c44a81ebba31fc3db5, type: 3}
+  m_Sprite: {fileID: -7376653197218750502, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77501,8 +77501,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.5, y: 3}
-  m_SizeDelta: {x: 750, y: 750}
+  m_AnchoredPosition: {x: 32, y: -89}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705761847 stripped
 MonoBehaviour:
@@ -78619,8 +78619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -271}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 39, y: -77}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784935925
 MonoBehaviour:
@@ -78642,7 +78642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 866579385, guid: c5c5a7984efc32d4fbaed5587250913a, type: 3}
+  m_Sprite: {fileID: 3678038748078168489, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -85067,8 +85067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -271}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 32, y: -77}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375096007
 MonoBehaviour:
@@ -85090,7 +85090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 866579385, guid: c5c5a7984efc32d4fbaed5587250913a, type: 3}
+  m_Sprite: {fileID: 2422372510023762443, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88042,7 +88042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 191397382}
-  conversacionActual: {fileID: 0}
+  conversacionActual: {fileID: 11400000, guid: 3b58b844482362b44adeee7879cf57d8, type: 2}
   canvasGroup: {fileID: 639914135}
 --- !u!58 &1538134898
 CircleCollider2D:
@@ -94871,8 +94871,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -271}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 37, y: -53}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581346320
 MonoBehaviour:
@@ -94894,7 +94894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 866579385, guid: c5c5a7984efc32d4fbaed5587250913a, type: 3}
+  m_Sprite: {fileID: 9215376509614325946, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -97973,8 +97973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -271}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 50, y: -56}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879693460
 MonoBehaviour:
@@ -97996,7 +97996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 866579385, guid: c5c5a7984efc32d4fbaed5587250913a, type: 3}
+  m_Sprite: {fileID: -8967153052053633929, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -101429,7 +101429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 198612469}
-  conversacionActual: {fileID: 0}
+  conversacionActual: {fileID: 11400000, guid: 6247fc90406ba39448aa4c0bf2741f16, type: 2}
   canvasGroup: {fileID: 575064976}
 --- !u!58 &2134435640
 CircleCollider2D:
