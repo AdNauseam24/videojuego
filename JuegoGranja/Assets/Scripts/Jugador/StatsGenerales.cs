@@ -8,6 +8,12 @@ public class StatsGenerales : MonoBehaviour
     public float danioRocas = 2.5f;
     public float danioArboles = 2.5f;
 
+    public int capituloHistoria;
+
+    
+    public int afinidadPueblo1 = 0;
+    public int afinidadPueblo2 = 0;
+
     //A mayor número más lento
     public float vPesca= 6f;
     public float vPerderPez = 6f;
@@ -18,6 +24,7 @@ public class StatsGenerales : MonoBehaviour
     public TMP_Text textoOro;
 
     public bool[] arbolesTalados = {false,false};
+    public bool[] rocasPicadas = {false,false};
 
 
 

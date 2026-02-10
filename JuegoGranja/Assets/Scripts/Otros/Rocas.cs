@@ -27,6 +27,9 @@ public class Rocas : MonoBehaviour
 
     private float danio;
 
+    public bool rotoPermanente= false;
+    public int indice;
+
     void Start()
     {
         vida = Random.Range(11,15);
@@ -94,6 +97,11 @@ public class Rocas : MonoBehaviour
 		drop.SetCantidad(Random.Range(1,3));
 		drop.SetId(dropId);
 		drop.GetComponent<ObjetoDrop>().enabled = true;
+
+         if (rotoPermanente)
+        {
+            StatsGenerales.Instance.rocasPicadas[indice] = true;
+        }
 
         Destroy(gameObject);
     }

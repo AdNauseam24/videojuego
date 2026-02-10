@@ -4,6 +4,7 @@ using System.Collections;
 public class GestorGranja : MonoBehaviour
 {
     public GameObject[] arboles;
+     public GameObject[] rocas;
      void OnEnable()
     {
         StartCoroutine(OcultarFade());
@@ -12,6 +13,10 @@ public class GestorGranja : MonoBehaviour
             if (StatsGenerales.Instance.arbolesTalados[i])
             {
                 Destroy(arboles[i]);
+            }
+             if (StatsGenerales.Instance.rocasPicadas[i])
+            {
+                Destroy(rocas[i]);
             }
         }
     }

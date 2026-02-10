@@ -11,6 +11,12 @@ public class DialogoSO : ScriptableObject
     [Header("Requisitos condicionales(opcional)")]
     public ActorSO[] requisitoNPCs;
 
+    public int afinidadPueblo1;
+
+    public int afinidadPueblo2;
+
+    public int capituloHistoria;
+
     [Header("ControlFlags")]
     public bool removeAfterPlay;
     public List<DialogoSO> removeListAfterPlay;
@@ -28,6 +34,20 @@ public class DialogoSO : ScriptableObject
                 }
             }
         }
+        if(afinidadPueblo1 != 0 && afinidadPueblo1 > StatsGenerales.Instance.afinidadPueblo1)
+        {
+            return false;
+        }
+        if(afinidadPueblo2 != 0 && afinidadPueblo2 > StatsGenerales.Instance.afinidadPueblo2)
+        {
+            return false;
+        }
+        if(capituloHistoria > StatsGenerales.Instance.capituloHistoria)
+        {
+            return false;
+        }
+
+
         return true;
     }
 }
