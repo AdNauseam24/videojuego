@@ -16,6 +16,9 @@ public class Arboles : MonoBehaviour
 
     private float danio;
 
+    public bool rotoPermanente= false;
+    public int indice;
+
     private bool activo = true;
     void Start()
     {
@@ -24,7 +27,6 @@ public class Arboles : MonoBehaviour
         canvas.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 0.7f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(vida <= 0)
@@ -48,6 +50,11 @@ public class Arboles : MonoBehaviour
 		drop.SetCantidad(Random.Range(1,3));
 		drop.SetId(9);
 		drop.GetComponent<ObjetoDrop>().enabled = true;
+
+        if (rotoPermanente)
+        {
+            StatsGenerales.Instance.arbolesTalados[indice] = true;
+        }
 
         Destroy(gameObject);
     }

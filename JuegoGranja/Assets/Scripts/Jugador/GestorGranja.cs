@@ -3,9 +3,17 @@ using System.Collections;
 
 public class GestorGranja : MonoBehaviour
 {
+    public GameObject[] arboles;
      void OnEnable()
     {
         StartCoroutine(OcultarFade());
+        for (int i = 0; i < 2; i++)
+        {
+            if (StatsGenerales.Instance.arbolesTalados[i])
+            {
+                Destroy(arboles[i]);
+            }
+        }
     }
 
  public IEnumerator OcultarFade()

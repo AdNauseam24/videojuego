@@ -96,6 +96,7 @@ public class Objeto : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Arboles"));
             Arboles arbol = hit.transform.gameObject.GetComponent<Arboles>();
+            
             if(arbol.GetActivo())
             {
                 Time.timeScale = 0;

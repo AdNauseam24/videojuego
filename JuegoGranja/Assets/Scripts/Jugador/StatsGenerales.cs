@@ -17,6 +17,8 @@ public class StatsGenerales : MonoBehaviour
 
     public TMP_Text textoOro;
 
+    public bool[] arbolesTalados = {false,false};
+
 
 
    private void Awake()
