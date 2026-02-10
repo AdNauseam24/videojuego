@@ -73,6 +73,10 @@ public class GestorDIalogos : MonoBehaviour
 
     private void MostrarOpciones(System.Action accionPosterior)
     {
+        if(dialogoActual.accion != null)
+        {
+            dialogoActual.accion.OnUse();
+        }
         LimpiarOpciones();
 
         if(accionPosterior != null)
@@ -135,5 +139,9 @@ public class GestorDIalogos : MonoBehaviour
             boton.gameObject.SetActive(false);
             boton.onClick.RemoveAllListeners();
         }
+    }
+    public static void Prueba()
+    {
+        
     }
 }

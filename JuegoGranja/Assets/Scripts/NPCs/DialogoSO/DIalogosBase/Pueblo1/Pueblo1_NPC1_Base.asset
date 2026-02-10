@@ -18,5 +18,9 @@ MonoBehaviour:
       puede volverse duro"
   opciones: []
   requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  accion: {fileID: 0}
   removeAfterPlay: 0
   removeListAfterPlay: []

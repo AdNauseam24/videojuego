@@ -19,5 +19,9 @@ MonoBehaviour:
     texto: "Puede que parezcan de fiar, pero siempre est\xE1n tramando algo..."
   opciones: []
   requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  accion: {fileID: 11400000, guid: cbd5c26c15c8a4949b036337d08e4c82, type: 2}
   removeAfterPlay: 0
   removeListAfterPlay: []

@@ -26,7 +26,13 @@ public class Movimiento : MonoBehaviour
     private int direccion = 1;
 
     int filtroLayerMask;
-    
+
+    public void OnDisable()
+    {
+        animator.SetFloat("Horizontal", 0);
+        animator.SetFloat("Vertical", 0);
+    }
+
     void Start()
     {
         //para que se mueva el movepoint y el jugador lo siga, si no al moverse pj se movería movepoint
@@ -123,4 +129,5 @@ public class Movimiento : MonoBehaviour
     {
         return posicion;
     }
+    
 }

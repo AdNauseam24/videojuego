@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "DialogoSO", menuName = "Diálogo/NodoDiálogo")]
 public class DialogoSO : ScriptableObject
@@ -16,6 +18,8 @@ public class DialogoSO : ScriptableObject
     public int afinidadPueblo2;
 
     public int capituloHistoria;
+
+    public ComportamientoBaseSO accion;
 
     [Header("ControlFlags")]
     public bool removeAfterPlay;
