@@ -1,27 +1,34 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Gestor1_2 : MonoBehaviour
 {
     public Animator animTroll;
-    public bool listoParaEmpezar;
-    public bool minijuegoActivo;
+    private bool listoParaEmpezar;
+    private bool minijuegoActivo;
     public TMP_Text textoArriba;
     public TMP_Text textoPuntuacion;
     public TMP_Text textoMultiplicador;
     public BeatScroller beatScroller;
     public AudioSource musica;
-    public bool reproducir;
-    public int puntuacion;
+    private bool reproducir;
+    private int puntuacion;
     public int puntuacionPorNota = 100;
+    public CanvasGroup textoDerrota;
+
+    public Transform jugador;
+    public GameObject troll;
+    public Sprite trollDormido;
+
+    private bool disponibleReempezar;
 
     public Canvas textosPuntuaciones;
     public GameObject flechas;
     public GameObject botones;
 
-    public int multiplicador = 1;
-    public int multTracker = 0;
+    private int multiplicador = 1;
+    private int multTracker = 0;
     public int[] umbrales;
 
     public static Gestor1_2 Instance;
@@ -52,12 +59,86 @@ public class Gestor1_2 : MonoBehaviour
             beatScroller.empezado = true;
             musica.Play();
         }
-        if(musica.time> 60)
+        if(musica.time> 60 && reproducir)
         {
+             botones.SetActive(false);
+            reproducir = false;
             musica.Stop();
+            if(puntuacion > 10000)
+            {
+                StartCoroutine(Script6());
+            }
+            else
+            {
+                StartCoroutine(Script3());
+            }
+        }
+
+        if(disponibleReempezar && Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Script4());
         }
     }
+    public IEnumerator Script6()
+    {
+        yield return new WaitForSeconds(2.5f);
+        animTroll.Play("New State");
+        troll.GetComponent<SpriteRenderer>().sprite = trollDormido;
+         yield return new WaitForSeconds(1f);
+        StartCoroutine(Script5());
 
+    }
+    public IEnumerator Script4()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Capitulo1-2");
+    }
+    public IEnumerator Script3()
+    {
+        animTroll.Play("Troll_Caminar");
+        float timeElapsed = 0f;
+        float lerpDuration = 0.75f;
+        Vector3 posicionInicial = troll.transform.position;
+        Vector3 objetivo = jugador.position;
+        StartCoroutine(Script5());
+       
+         while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+           troll.transform.position = Vector3.Lerp(posicionInicial,objetivo,timeElapsed/lerpDuration);
+           
+            yield return null;
+        }
+       
+        yield return new WaitForSeconds(1.5f);
+
+        timeElapsed = 0f;
+        lerpDuration = 2.5f;
+        while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            textoDerrota.alpha = Mathf.Lerp(0,1,timeElapsed/lerpDuration);
+           
+            yield return null;
+        }
+        disponibleReempezar = true;
+    }
+
+    public IEnumerator Script5()
+    {
+         yield return new WaitForSeconds(0.25f);
+        GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        
+        float timeElapsed = 0f;
+       float  lerpDuration = 0.6f;
+        while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            fadeimg.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(0,1,timeElapsed/lerpDuration);
+           
+            yield return null;
+        }
+    }
     public IEnumerator Script()
     {
          GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
