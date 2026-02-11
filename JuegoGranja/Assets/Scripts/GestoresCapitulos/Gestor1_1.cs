@@ -12,6 +12,8 @@ public class Gestor1_1 : MonoBehaviour
     public TMP_Text textoArriba;
     public Camera camara;
 
+    public GameObject troll;
+
 
     void Awake()
     {
@@ -82,11 +84,15 @@ public class Gestor1_1 : MonoBehaviour
         {
              jugador.GetComponent<Movimiento>().enabled = false;
              anim.Play("Idle");
+             StartCoroutine(MovimientoCamara());
              StartCoroutine(Script2());
+             troll.GetComponent<Animator>().Play("Troll_Atacar");
+
+             
         }
     }
 
-    public IEnumerator Script2()
+    public IEnumerator MovimientoCamara()
     {
         float timeElapsed = 0f;
         float lerpDuration = 3f;
@@ -99,6 +105,64 @@ public class Gestor1_1 : MonoBehaviour
             camara.transform.position = Vector3.Lerp(posicionInicial,posicionObjetivo, timeElapsed/lerpDuration);
             yield return null;
         }
+        yield return new WaitForSeconds(3f);
+
+        timeElapsed = 0f;
+        lerpDuration = 3f;
+        posicionInicial = camara.transform.position;
+        posicionObjetivo = new Vector3(posicionInicial.x-20,posicionInicial.y,posicionInicial.z);
+        while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            camara.transform.position = Vector3.Lerp(posicionInicial,posicionObjetivo, timeElapsed/lerpDuration);
+            yield return null;
+        }
+        
 
     }
+
+    public IEnumerator Script2()
+    {
+        textoArriba.text = "Ves a una criatura enfermiza en la distancia";
+        textoArriba.GetComponent<CanvasGroup>().alpha = 1;
+         yield return new WaitForSeconds(2.5f);
+
+        textoArriba.text = "Parece que está atacando a alguien";
+        textoArriba.GetComponent<CanvasGroup>().alpha = 1;
+         yield return new WaitForSeconds(2);
+        troll.GetComponent<Animator>().Play("New State");
+        troll.transform.localScale = new Vector3(-2,2,1);
+         yield return new WaitForSeconds(1.5f);
+        textoArriba.text = "Parece que te ha visto";
+        textoArriba.GetComponent<CanvasGroup>().alpha = 1;
+         troll.GetComponent<Animator>().Play("Troll_Caminar");
+       
+
+        float timeElapsed = 0f;
+        float lerpDuration = 3f;
+        Vector3 posicionInicial = troll.transform.position;
+        Vector3 posicionObjetivo = new Vector3(posicionInicial.x-25,posicionInicial.y,posicionInicial.z);
+
+         while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            troll.transform.position = Vector3.Lerp(posicionInicial,posicionObjetivo, timeElapsed/lerpDuration);
+            yield return null;
+        }
+
+        GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        
+        timeElapsed = 0f;
+        lerpDuration = 0.5f;
+         while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            fadeimg.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(0,1,timeElapsed/lerpDuration);
+           
+            yield return null;
+        }
+
+    }
+
+    
 }
