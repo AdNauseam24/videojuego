@@ -12,6 +12,7 @@ TagManager:
   - MovePoint
   - Suelo
   - Fade
+  - Activador
   layers:
   - Default
   - TransparentFX
