@@ -30,8 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Pueblo2.unity
     guid: d6cd064a4fb6dc446aa8c9c22a4fb8f3
   - enabled: 1
+    path: Assets/Scenes/Capitulo1/Capitulo1-1.unity
+    guid: 77c2da2ef4f945c42b39399d2e444e5f
+  - enabled: 1
     path: Assets/Scenes/Capitulo1/Capitulo1-2.unity
     guid: 327d473de3fab814d907776ddb8fc230
+  - enabled: 1
+    path: Assets/Scenes/Capitulo1/Capitulo1-3.unity
+    guid: 3b3c59329022ad74ba8f1f286c502093
+  - enabled: 1
+    path: Assets/Scenes/Capitulo1/Capitulo1-4.unity
+    guid: 83bfa9c006b7681468dcab33e8a84f13
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

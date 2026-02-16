@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Vampiros 1-4
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 8bf09546afc1169439c4495fd80f3d9b, type: 2}
+    texto: "Vaya vaya por fin est\xE1s despierto"
+  - speaker: {fileID: 11400000, guid: 8bf09546afc1169439c4495fd80f3d9b, type: 2}
+    texto: Tranquilo que no pasa nada
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Me llamo Holstein, y soy el alcande de un peque\xF1o pueblo al oeste
+      de donde estamos ahora mismo"
+  - speaker: {fileID: 11400000, guid: 39519ba0c0951ef46bf3594d93fc0c47, type: 2}
+    texto: Te encontramos herido e inconsciente  dentro de una cueva
+  - speaker: {fileID: 11400000, guid: 0961b1894b1025a488ee50becc9ace90, type: 2}
+    texto: Estabas junto con uno de nuestros vecinos, parece que le conseguiste salvar
+      la vida
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Y como pago por haberle salvado la vida te hemos tra\xEDdo aqu\xED, una
+      peque\xF1a granja que queda cerca de nuestro pueblo"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Podr\xE1s quedarte aqu\xED el tiempo que necesites"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Aunque hemos visto que eres un alquimista, y tu presencia podr\xEDa sernos
+      muy \xFAtil"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Si te apetece echarnos una mano, nos encontramos justo al este de este
+      granja
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Bueno, nos despedimos
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  accion: {fileID: 11400000, guid: fb1bc606563bbcd459911409610eb16d, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

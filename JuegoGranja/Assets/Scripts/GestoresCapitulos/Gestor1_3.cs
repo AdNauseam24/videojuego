@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gestor1_3 : MonoBehaviour
 {
@@ -79,6 +81,8 @@ public class Gestor1_3 : MonoBehaviour
         HerramientasEscenasScript.Instance.Fade(0,1,1.75f);
         yield return new WaitForSeconds(1.75f);
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Después de oír un rugido ensordecedor, la cueva colapsa y pierdes la conciencia", 5f);
+        yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene("Capitulo1-4");
     }
 
 

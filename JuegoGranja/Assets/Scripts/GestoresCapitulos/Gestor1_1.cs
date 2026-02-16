@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Gestor1_1 : MonoBehaviour
 {
@@ -161,6 +162,9 @@ public class Gestor1_1 : MonoBehaviour
            
             yield return null;
         }
+
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Capitulo1-2");
 
     }
 

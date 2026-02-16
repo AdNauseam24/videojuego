@@ -138,6 +138,11 @@ public class Gestor1_2 : MonoBehaviour
            
             yield return null;
         }
+        if(puntuacion > 10000)
+        {
+            yield return new WaitForSeconds(1.5f);
+            SceneManager.LoadScene("Capitulo1-3");
+        }
     }
     public IEnumerator Script()
     {

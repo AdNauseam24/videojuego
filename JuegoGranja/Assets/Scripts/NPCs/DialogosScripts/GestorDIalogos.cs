@@ -77,36 +77,51 @@ public class GestorDIalogos : MonoBehaviour
         {
             dialogoActual.accion.OnUse();
         }
-        LimpiarOpciones();
-
-        if(accionPosterior != null)
-        {
-            TerminarDialogo();
-            accionPosterior();
-            return;
-        }
-        
-        if(dialogoActual.opciones.Length > 0)
-        {
-            for (int i = 0; i < dialogoActual.opciones.Length; i++)
-            {
-                var opcion = dialogoActual.opciones[i];
-
-                botonesOpciones[i].GetComponentInChildren<TMP_Text>().text = opcion.textoOpcion;
-                botonesOpciones[i].gameObject.SetActive(true);
-
-                botonesOpciones[i].onClick.AddListener(() => ElegirOpcion(opcion.nextDialogo));
-            }
-        }
         else
         {
-            botonesOpciones[0].GetComponentInChildren<TMP_Text>().text = "Salir";
-            botonesOpciones[0].gameObject.SetActive(true);
-            botonesOpciones[0].onClick.AddListener(TerminarDialogo);
+            LimpiarOpciones();
+            if(accionPosterior != null)
+            {
+                TerminarDialogo();
+                accionPosterior();
+                return;
+            }
+            
+            if(dialogoActual.opciones.Length > 0)
+            {
+                for (int i = 0; i < dialogoActual.opciones.Length; i++)
+                {
+                    var opcion = dialogoActual.opciones[i];
+
+                    botonesOpciones[i].GetComponentInChildren<TMP_Text>().text = opcion.textoOpcion;
+                    botonesOpciones[i].gameObject.SetActive(true);
+
+                    botonesOpciones[i].onClick.AddListener(() => ElegirOpcion(opcion.nextDialogo));
+                }
+            }
+            else
+            {
+                botonesOpciones[0].GetComponentInChildren<TMP_Text>().text = "Salir";
+                botonesOpciones[0].gameObject.SetActive(true);
+                botonesOpciones[0].onClick.AddListener(TerminarDialogo);
+            }
         }
+       
+
     }
 
-    private void TerminarDialogo()
+    public void TerminarDialogoScripted()
+    {
+        indiceDialogo = 0;
+        dialogoActivo = false;
+        LimpiarOpciones();
+
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+        Time.timeScale = 1;
+    }
+    public void TerminarDialogo()
     {
         indiceDialogo = 0;
         dialogoActivo = false;
