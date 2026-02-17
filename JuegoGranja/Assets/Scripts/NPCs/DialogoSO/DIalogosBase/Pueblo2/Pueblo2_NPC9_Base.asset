@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Pueblo2_NPC9_Base
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 5a1dff0f82593244d8d9b2e9183f8fe9, type: 2}
+    texto: Encargarse del turno nocturno es el mayor miedo de cualquier guardia...
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 0
+  entregado: 0
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

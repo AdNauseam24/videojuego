@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap1_Pueblo2_NOAyudado y Primero
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Vaya, si eres t\xFA"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Supimos que estuviste en la mina con uno de nuestros vecinos
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Es una pena que no pudieses hacer nada para ayudar
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Pero bueno me alegro de que est\xE9s bien"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Y todav\xEDa puedes sernos de ayuda"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Ver\xE1s, dependemos mucho de esa mina, y el accidente la ha dejado inaccesible"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "El puente de madera que us\xE1bamos para llegar, al norte de aqu\xED,
+      ha quedado destrozado"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Nos gustar\xEDa que nos ayudases a repararlo con 100 de madera y 50 de
+      oro"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Pero para ello tengo una cosa
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Esa criatura que te encontraste en la mina se llama Malismo, y se dedica
+      a atacar a personas desprevenidas
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Pero gracias a un ritual hemos podido contener su poder
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Con ese poder podr\xE1s recolectar la madera sin ning\xFAn problema"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Toma y vuelve cuando tengas lo que te he pedido
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 1
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 1
+  entregado: 0
+  accion: {fileID: 11400000, guid: 22b874b3099455c4daebec524b3b42e3, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

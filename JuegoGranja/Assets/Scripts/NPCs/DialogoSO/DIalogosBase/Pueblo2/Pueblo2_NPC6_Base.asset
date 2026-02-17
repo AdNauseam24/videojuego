@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Pueblo2_NPC6_Base
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 1eea7d4991e489d4cb9ca3be9072a43c, type: 2}
+    texto: Tomar el sol es uno de los mayores placeres de esta vida
+  - speaker: {fileID: 11400000, guid: 1eea7d4991e489d4cb9ca3be9072a43c, type: 2}
+    texto: Una pena que los del otro lado no puedan disfrutarlo
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 0
+  entregado: 0
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

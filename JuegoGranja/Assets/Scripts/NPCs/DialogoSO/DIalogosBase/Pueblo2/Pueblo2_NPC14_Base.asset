@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
-  m_Name: PruebaPueblo2
+  m_Name: Pueblo2_NPC14_Base
   m_EditorClassIdentifier: 
   lineas:
-  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
-    texto: prueba
+  - speaker: {fileID: 11400000, guid: ea0efe0b734185c469c52ef0b15f0780, type: 2}
+    texto: "Aqu\xED es donde honramos a nuestros difuntos"
+  - speaker: {fileID: 11400000, guid: ea0efe0b734185c469c52ef0b15f0780, type: 2}
+    texto: Guarda el respeto que se merecen
   opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 0
   afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 0
+  entregado: 0
   accion: {fileID: 0}
   removeAfterPlay: 0
   removeListAfterPlay: []

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap1_Pueblo2_IntentarEntregar
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "\xBFVienes a entregar los materiales del puente?"
+  opciones:
+  - textoOpcion: "S\xED"
+    nextDialogo: {fileID: 11400000, guid: 8230ab57caa95b64db838c5dfccde4a9, type: 2}
+  - textoOpcion: "Todav\xEDa no"
+    nextDialogo: {fileID: 11400000, guid: aefe73fd2299a1747b9c22c79d290bb8, type: 2}
+  requisitoNPCs:
+  - {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 0
+  entregado: 0
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

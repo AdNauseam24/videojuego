@@ -3,10 +3,21 @@ using System.Collections;
 
 public class GestorPueblo2 : MonoBehaviour
 {
+    public GameObject roca;
+    public GameObject[] puentes;
        void OnEnable()
     {
         StartCoroutine(OcultarFade());
         GestorTenderos.Instance.ActivarTenderosPueblo2();
+
+        if (StatsGenerales.Instance.PuentePueblo2)
+        {
+            roca.SetActive(false);
+            foreach (var puente in puentes)
+            {
+                puente.SetActive(true);
+            }
+        }
     }
 
     void OnDisable()

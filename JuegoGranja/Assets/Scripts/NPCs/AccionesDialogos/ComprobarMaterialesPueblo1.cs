@@ -30,6 +30,7 @@ public class ComprobarMatsPueblo1 : ComportamientoBaseSO
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
                 StatsGenerales.Instance.afinidadPueblo1++;
                 StatsGenerales.Instance.ultimaAfinidad = 1;
+                StatsGenerales.Instance.entregado = true;
             }
         else
         {

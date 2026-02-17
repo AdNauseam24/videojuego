@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap1_Pueblo2_NOAyudadoYSegundo
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "\xA1Vaya! Pero si es el amiguito de los humanos"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Tranquilo, que no te guardo rencor
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Pero comprender\xE1s que est\xE9 disgustado por el desarrollo de los
+      acontecimientos"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Sabes, el pueblo \xFAltimamente lleva una mala racha"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Y la \xFAltima faena ha sido perder el puente que nos da acceso a las
+      minas"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "No s\xE9 si te parecer\xE1 muy egoista, pero me gustar\xEDa pedirte un
+      favor"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "SI nos ayudases a arreglaro te estar\xEDamos eternamente agradecidos,
+      y podr\xEDamos invitarte a formar parte que nuestra comunidad"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Para ello necesitamos 100 de madera y 50 de oro
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Contamos contigo
+  opciones: []
+  requisitoNPCs:
+  - {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+  afinidadPueblo1: 1
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 1
+  entregado: 0
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

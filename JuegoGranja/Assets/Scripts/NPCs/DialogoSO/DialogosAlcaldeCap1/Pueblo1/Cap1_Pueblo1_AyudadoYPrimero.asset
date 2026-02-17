@@ -43,14 +43,13 @@ MonoBehaviour:
     texto: Si te interesa vuelve cuando tengas 100 de madera y 50 de oro
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
     texto: "\xA1Ah! y aqu\xED tienes"
-  opciones:
-  - textoOpcion: 
-    nextDialogo: {fileID: 0}
+  opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 1
   afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 1
+  entregado: 0
   accion: {fileID: 11400000, guid: 22b874b3099455c4daebec524b3b42e3, type: 2}
   removeAfterPlay: 0
   removeListAfterPlay: []

@@ -9,6 +9,7 @@ public class GestorPueblo1 : MonoBehaviour
     {
         StartCoroutine(OcultarFade());
         GestorTenderos.Instance.ActivarTenderosPueblo1();
+        
         if (StatsGenerales.Instance.puentePueblo1)
         {
             roca.SetActive(false);

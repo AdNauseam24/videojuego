@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd54da87f10ba8a438b2df50070c94f4, type: 3}
+  m_Name: COmprobarMatsPueblo2
+  m_EditorClassIdentifier: 
+  dialogosCumplido:
+  - {fileID: 11400000, guid: 374795f4ce6eca54597bedd1de810da6, type: 2}
+  noCumplido: {fileID: 11400000, guid: ae72fcd265744684db56b89258b89e2d, type: 2}

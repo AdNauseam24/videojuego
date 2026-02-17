@@ -21,6 +21,8 @@ public class DialogoSO : ScriptableObject
 
     public int ultimaAfinidad;
 
+    public bool entregado;
+
     public ComportamientoBaseSO accion;
 
     [Header("ControlFlags")]
@@ -53,6 +55,11 @@ public class DialogoSO : ScriptableObject
             return false;
         }
         if(ultimaAfinidad != 0 && ultimaAfinidad != StatsGenerales.Instance.ultimaAfinidad)
+        {
+            return false;
+        }
+
+        if(entregado && !StatsGenerales.Instance.entregado)
         {
             return false;
         }

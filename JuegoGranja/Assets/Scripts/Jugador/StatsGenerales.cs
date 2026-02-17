@@ -36,6 +36,8 @@ public class StatsGenerales : MonoBehaviour
         "50 100 9"
     };
 
+    public bool entregado;
+
 
 
    private void Awake()
