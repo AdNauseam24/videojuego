@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Android.Gradle;
 
 public class GestorGranja : MonoBehaviour
 {
@@ -19,9 +20,28 @@ public class GestorGranja : MonoBehaviour
                 Destroy(rocas[i]);
             }
         }
+
+       
+    }
+    void Start()
+    {
+         if(RegistroAyuda.Instance != null)
+        {
+            if(RegistroAyuda.Instance.ayuda == 1)
+            {
+                StatsGenerales.Instance.afinidadPueblo1 ++;
+                StatsGenerales.Instance.ultimaAfinidad = 1;
+            }
+            else
+            {
+                StatsGenerales.Instance.afinidadPueblo2++;
+                 StatsGenerales.Instance.ultimaAfinidad = 2;
+            }
+            Destroy(RegistroAyuda.Instance.gameObject);
+        }
     }
 
- public IEnumerator OcultarFade()
+    public IEnumerator OcultarFade()
     {
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         fadeimg.GetComponent<CanvasGroup>().alpha =1;

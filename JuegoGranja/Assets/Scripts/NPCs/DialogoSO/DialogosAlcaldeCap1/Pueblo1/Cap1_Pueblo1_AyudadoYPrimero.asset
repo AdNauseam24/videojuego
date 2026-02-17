@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap1_Pueblo1_AyudadoYPrimero
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "\xA1Vaya, vaya! Pero si es nuestro h\xE9roe"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Te agradezco mucho que hayas venido
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "No sabes lo contentos que estamos aqu\xED gracias a tu haza\xF1a"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Por cierto, tengo una cosa para ti
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: No se si lo sabes pero en este pueblo estamos muy arraigados a los poderes
+      y bendiciones de la naturaleza
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: A esa criatura que derrotaste en la cueva se la conoce como Malismo, y
+      se dedica a atacar a personas desprevenidas
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Pues bien, gracias a tu haza\xF1a, hemos sido capaces de contener su
+      poder mediante un ritual"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Con lo cual hemos creado un amuleto que podr\xEDa serte muy \xFAtil para
+      la tarea que te voy a encomendar ahora"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Ver\xE1s, resulta que en el derrumbe uno de los puentes que daba acceso
+      vital a las minas ha sido destruido"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Por lo que necesitaremos madera y oro para repararlo, y seguro que con
+      tu nuevo amuleto es pan comido
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Si te interesa vuelve cuando tengas 100 de madera y 50 de oro
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "\xA1Ah! y aqu\xED tienes"
+  opciones:
+  - textoOpcion: 
+    nextDialogo: {fileID: 0}
+  requisitoNPCs: []
+  afinidadPueblo1: 1
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 1
+  accion: {fileID: 11400000, guid: 22b874b3099455c4daebec524b3b42e3, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

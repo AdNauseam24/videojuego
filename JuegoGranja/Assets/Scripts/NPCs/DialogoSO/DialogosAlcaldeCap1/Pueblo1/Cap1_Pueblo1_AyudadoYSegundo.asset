@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap1_Pueblo1_AyudadoYSegundo
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "\xA1Vaya!\xA1Pero si es nuestro h\xE9roe!"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: A que viene esa cara, parece como si hubieses visto un vampiro
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Espera...
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: No me digas que ya has conocido a nuestros vecinos
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Y seguro que han intentado embaucarte para que les hagas las tareas
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Todo con el amuleto del Malismo que nos pertenec\xEDa"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Siempre igual
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Pues sabes qu\xE9, por culpa de esa gente nosotros tambi\xE9n nos hemos
+      quedado sin acceso a las minas"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Lo cual nos supone una infinita cantidad de problemas
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Te voy a pedir como favor una cosa, y es que nos ayudes a nosotros en
+      vez de a ellos
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "SI pudieses traernos 100 de madera y 50 de oro te estar\xEDamos eternamente
+      agradecidos"
+  opciones: []
+  requisitoNPCs:
+  - {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+  afinidadPueblo1: 1
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 1
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

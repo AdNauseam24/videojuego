@@ -14,6 +14,8 @@ public class StatsGenerales : MonoBehaviour
     public int afinidadPueblo1 = 0;
     public int afinidadPueblo2 = 0;
 
+    public int ultimaAfinidad;
+
     //A mayor número más lento
     public float vPesca= 6f;
     public float vPerderPez = 6f;
@@ -25,6 +27,14 @@ public class StatsGenerales : MonoBehaviour
 
     public bool[] arbolesTalados = {false,false};
     public bool[] rocasPicadas = {false,false};
+
+    public bool puentePueblo1;
+    public bool PuentePueblo2;
+
+     public string[] requisitosMisiones= new string[]
+    {
+        "50 100 9"
+    };
 
 
 

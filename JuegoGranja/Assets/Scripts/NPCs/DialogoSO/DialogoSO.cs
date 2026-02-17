@@ -19,6 +19,8 @@ public class DialogoSO : ScriptableObject
 
     public int capituloHistoria;
 
+    public int ultimaAfinidad;
+
     public ComportamientoBaseSO accion;
 
     [Header("ControlFlags")]
@@ -47,6 +49,10 @@ public class DialogoSO : ScriptableObject
             return false;
         }
         if(capituloHistoria > StatsGenerales.Instance.capituloHistoria)
+        {
+            return false;
+        }
+        if(ultimaAfinidad != 0 && ultimaAfinidad != StatsGenerales.Instance.ultimaAfinidad)
         {
             return false;
         }

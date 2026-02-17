@@ -3,10 +3,20 @@ using UnityEngine;
 
 public class GestorPueblo1 : MonoBehaviour
 {
+    public GameObject roca;
+    public GameObject[] puentes;
     void OnEnable()
     {
         StartCoroutine(OcultarFade());
         GestorTenderos.Instance.ActivarTenderosPueblo1();
+        if (StatsGenerales.Instance.puentePueblo1)
+        {
+            roca.SetActive(false);
+            foreach (var puente in puentes)
+            {
+                puente.SetActive(true);
+            }
+        }
     }
 
     void OnDisable()
