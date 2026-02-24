@@ -14,11 +14,17 @@ public GameObject jugador;
 
  public GameObject camara;
 
+ public Animator pocion;
+ public Animator exclamacion;
+ public GameObject pocionGO;
+ public Animator ciclope2;
+
 
 
 void OnEnable()
     {
         TriggerTexto.OnMandarTexto+=MostrarTexto;
+        Trigger2_1.OnEmpezarScript+= EmpezarScript3;
     }
  void Start()
     {
@@ -74,6 +80,33 @@ void OnEnable()
     public void MostrarTexto(string txt)
     {
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,txt,4);
+    }
+
+    public void EmpezarScript3()
+    {
+        StartCoroutine(Script3());
+    }
+
+    public IEnumerator Script3()
+    {
+        jugador.GetComponent<Movimiento>().enabled = false;
+        HerramientasEscenasScript.Instance.MoverObjeto(jugador, new Vector3(-25.5f,147.5f,0),2);
+        jugadorAnim.SetFloat("Horizontal",1);
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"¡Lo has alcanzado!",3);
+        yield return new WaitForSeconds(2f);
+        jugadorAnim.SetFloat("Horizontal",0);
+        yield return new WaitForSeconds(2f);    
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Es hora de usar la poción que te dieron",3);
+        yield return new WaitForSeconds(1.5f);
+        pocionGO.GetComponent<SpriteRenderer>().enabled = true;
+        pocion.Play("LanzamientoPocion");
+        yield return new WaitForSeconds(0.9f);
+        Destroy(pocionGO);
+        yield return new WaitForSeconds(1f);
+        exclamacion.Play("Exclamacion");
+        yield return new WaitForSeconds(1.5f);
+        ciclope2.Play("Caer_Ciclope");
+
     }
 
 }
