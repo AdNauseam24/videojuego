@@ -44,6 +44,14 @@ public class CambioEscenaMinas : MonoBehaviour
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
         
-        SceneManager.LoadScene("Minas" + x);
+        if(StatsGenerales.Instance.capituloHistoria < 1)
+        {
+            SceneManager.LoadScene("Capitulo2-1");
+        }
+        else
+        {
+             SceneManager.LoadScene("Minas" + x);
+        }
+       
     }
 }

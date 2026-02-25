@@ -33,7 +33,7 @@ public class StatsGenerales : MonoBehaviour
 
      public string[] requisitosMisiones= new string[]
     {
-        "50 100 9"
+        "50 100 9", "75 100 8"
     };
 
     public bool entregado;

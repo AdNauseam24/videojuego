@@ -26,4 +26,9 @@ public class DialogueHistoryTracker : MonoBehaviour
     {
         return spokenNPCs.Contains(actorSO);
     }
+
+    public void LImpiarLista()
+    {
+        spokenNPCs.Clear();
+    }
 }

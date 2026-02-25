@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gestor2_1 : MonoBehaviour
 {
@@ -28,6 +29,8 @@ void OnEnable()
     }
  void Start()
     {
+        Jugador.Instance.gameObject.SetActive(false);
+        GestorInventario.Instance.gameObject.SetActive(false);
         jugadorAnim = jugador.GetComponent<Animator>();
         ciclopeAnim = ciclope.GetComponent<Animator>();
         canvasTextoArriba = textoArriba.GetComponent<CanvasGroup>();
@@ -94,18 +97,52 @@ void OnEnable()
         jugadorAnim.SetFloat("Horizontal",1);
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"¡Lo has alcanzado!",3);
         yield return new WaitForSeconds(2f);
+        
         jugadorAnim.SetFloat("Horizontal",0);
-        yield return new WaitForSeconds(2f);    
+        yield return new WaitForSeconds(2f);   
+
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Es hora de usar la poción que te dieron",3);
         yield return new WaitForSeconds(1.5f);
+
         pocionGO.GetComponent<SpriteRenderer>().enabled = true;
         pocion.Play("LanzamientoPocion");
         yield return new WaitForSeconds(0.9f);
+
         Destroy(pocionGO);
         yield return new WaitForSeconds(1f);
+
         exclamacion.Play("Exclamacion");
         yield return new WaitForSeconds(1.5f);
+
         ciclope2.Play("Caer_Ciclope");
+        yield return new WaitForSeconds(1f);
+
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"¡Ha funcionado!",3);
+        yield return new WaitForSeconds(4f);
+
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Pero en ese momento...",3);
+        yield return new WaitForSeconds(4f);
+
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Vuelves a escuchar el mismo rugido de la primera vez",3);
+        yield return new WaitForSeconds(4f);
+        
+        StartCoroutine(camara.GetComponent<AgitarCamara>().Agitar(2.5f,1.5f));
+        HerramientasEscenasScript.Instance.Fade(0,1,2f);
+        yield return new WaitForSeconds(2.5f);
+
+        HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Y otra vez pierdes la consciencia",3);
+        yield return new WaitForSeconds(6f);
+
+         Jugador.Instance.gameObject.SetActive(true);
+        GestorInventario.Instance.gameObject.SetActive(true);
+
+        StatsGenerales.Instance.capituloHistoria = 1;
+        StatsGenerales.Instance.entregado = false;
+        DialogueHistoryTracker.Instance.LImpiarLista();
+
+        SceneManager.LoadScene("SampleScene");
+
+
 
     }
 
