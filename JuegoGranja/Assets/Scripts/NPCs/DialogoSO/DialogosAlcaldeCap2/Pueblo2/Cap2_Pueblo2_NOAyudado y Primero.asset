@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap2_Pueblo2_NOAyudado y Primero
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Vaya, si eres t\xFA"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "A pesar de que nos dejaste tirados la \xFAltima vez parece que has vuelto"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Tengo una cosa interesante para ti
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Que seguro que har\xE1 que esta vez decidas ayudarnos a nosotros"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Ver\xE1s, la criatura esa que te encontraste en las minas es un oj\xE1ncano"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Y con su poder hemos creado un amuleto
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Aqu\xED tienes"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Con esto podr\xE1s hacernos un peque\xF1o favor"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Ver\xE1s, al sur del pueblo hay una arboleda en p\xE9simo estado"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Y queremos arreglarla
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Pero para ello necesitaremos 75 de oro y 100 de piedra
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Si nos ayudas te estar\xEDamos eternamente agradecidos"
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 1
+  ultimaAfinidad: 1
+  entregado: 0
+  accion: {fileID: 11400000, guid: 143c76e486ec2304aa93109c86eb81a8, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

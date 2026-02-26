@@ -44,7 +44,6 @@ public class Hablar : MonoBehaviour
     {
         for (int i =  conversaciones.Count -1 ; i >= 0; i--)
         {
-            Debug.Log(i);
             var convo = conversaciones[i];
             if(convo != null && convo.condicionCumplida())
             {

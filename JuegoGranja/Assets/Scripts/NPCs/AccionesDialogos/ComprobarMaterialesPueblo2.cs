@@ -50,7 +50,7 @@ public class ComprobarMatsPueblo2 : ComportamientoBaseSO
             {
                 StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
                 GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
-                //StatsGenerales.Instance.PuentePueblo2 = true;
+                StatsGenerales.Instance.vallaPueblo2 = true;
                 GestorDIalogos.Instance.TerminarDialogoScripted();
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
                 StatsGenerales.Instance.afinidadPueblo2++;

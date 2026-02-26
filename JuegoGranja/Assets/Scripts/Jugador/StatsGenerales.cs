@@ -31,9 +31,13 @@ public class StatsGenerales : MonoBehaviour
     public bool puentePueblo1;
     public bool PuentePueblo2;
 
+    public bool vallaPueblo1;
+    public bool vallaPueblo2;
+
      public string[] requisitosMisiones= new string[]
     {
-        "50 100 9", "75 100 8"
+        "50 100 9", 
+        "75 100 8"
     };
 
     public bool entregado;
@@ -53,6 +57,11 @@ public class StatsGenerales : MonoBehaviour
     private void Start()
     {
         UpdateOro();
+        requisitosMisiones = new string[]
+        {
+        "50 100 9", 
+        "75 100 8"
+    };
     }
 
     public void SumarOro(int n)

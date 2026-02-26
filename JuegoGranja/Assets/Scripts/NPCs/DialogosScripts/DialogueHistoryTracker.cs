@@ -19,7 +19,6 @@ public class DialogueHistoryTracker : MonoBehaviour
     public void RegistrarNPC(ActorSO actorSO)
     {
         spokenNPCs.Add(actorSO);
-        Debug.Log(actorSO.nombreActor);
     }
 
     public bool HabladoCon(ActorSO actorSO)

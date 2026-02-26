@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosCumplido:
   - {fileID: 11400000, guid: 4836915a00dfd884f934cce574b39e6e, type: 2}
+  - {fileID: 11400000, guid: 8608e768ebd21244781f75f2742bc206, type: 2}
   noCumplido: {fileID: 11400000, guid: 5beab9b3d8c03a24a9bfd4b41d5c32d5, type: 2}

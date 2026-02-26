@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap2_Pueblo1_NOAyudadoYSegundo
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "\xA1Vaya! Pero si has vuelto"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: A pesar de ignorarnos y no ayudarnos
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: En fin, si buscas algo que hacer necesitamos ayuda
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Ver\xE1s, al sur del pueblo tenemos una arboleda que necesita cuidados"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Para arreglarla necesitar\xEDamos 75 de oro y 100 de piedra"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Conf\xEDo en que esta vez puedas ayudarnos"
+  opciones: []
+  requisitoNPCs:
+  - {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 1
+  ultimaAfinidad: 2
+  entregado: 0
+  accion: {fileID: 0}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

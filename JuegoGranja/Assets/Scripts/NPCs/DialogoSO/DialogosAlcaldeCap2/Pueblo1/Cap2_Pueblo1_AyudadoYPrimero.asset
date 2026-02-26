@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap2_Pueblo1_AyudadoYPrimero
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "\xA1Vaya, vaya! Pero si has vuelto otra vez"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Nos alegramos mucho de que est\xE9s aqu\xED"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Otra vez has sido capaz de dominar a una criatura, y a un oj\xE1ncano
+      nada menos"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Y esta vez, gracias a tu heroismo, tengo otra cosa para ti
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Hemos podido sellar los poderes del oj\xE1ncano, y seguro que te vendr\xE1n
+      muy bien para poder picar esas rocas tan molestas"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "Ver\xE1s, al sur del pueblo tenemos una arboleda, que ahora mismo est\xE1
+      cerrada"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: "est\xE1 en p\xE9simo estado, pero si nos traes los materiales adecuados
+      podr\xEDamos arreglarla y restaurar el acceso"
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Ncesitaremos 75 de oro y 100 de piedra
+  - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
+    texto: Y toma el amuleto por cierto
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 1
+  ultimaAfinidad: 1
+  entregado: 0
+  accion: {fileID: 11400000, guid: 143c76e486ec2304aa93109c86eb81a8, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

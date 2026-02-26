@@ -5,6 +5,7 @@ public class GestorPueblo2 : MonoBehaviour
 {
     public GameObject roca;
     public GameObject[] puentes;
+    public GameObject[] vallas;
        void OnEnable()
     {
         StartCoroutine(OcultarFade());
@@ -16,6 +17,14 @@ public class GestorPueblo2 : MonoBehaviour
             foreach (var puente in puentes)
             {
                 puente.SetActive(true);
+            }
+        }
+          if (StatsGenerales.Instance.vallaPueblo2)
+        {
+            
+            foreach (var valla in vallas)
+            {
+                valla.SetActive(false);
             }
         }
     }

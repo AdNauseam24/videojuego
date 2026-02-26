@@ -45,12 +45,17 @@ public class ComprobarMatsPueblo1 : ComportamientoBaseSO
 
     private void RequisitosCap2()
     {
+        Debug.Log(StatsGenerales.Instance.requisitosMisiones[0]);
+        Debug.Log(StatsGenerales.Instance.requisitosMisiones.Length);
+        Debug.Log(StatsGenerales.Instance.requisitosMisiones[1]);
+        Debug.Log(StatsGenerales.Instance.capituloHistoria);
+        Debug.Log(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria]);
         if(StatsGenerales.Instance.oro >= int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]) &&
             GestorInventario.Instance.CheckCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1])))
             {
                 StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
                 GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
-               // StatsGenerales.Instance.puentePueblo1 = true;
+                StatsGenerales.Instance.vallaPueblo1 = true;
                 GestorDIalogos.Instance.TerminarDialogoScripted();
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
                 StatsGenerales.Instance.afinidadPueblo1++;
