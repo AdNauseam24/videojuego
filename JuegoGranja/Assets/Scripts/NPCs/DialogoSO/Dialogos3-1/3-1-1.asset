@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: 3-1-1
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 1272ab3835950d04a820c5c8a484e613, type: 2}
+    texto: "\xA1Espera!"
+  - speaker: {fileID: 11400000, guid: 1272ab3835950d04a820c5c8a484e613, type: 2}
+    texto: Tranquilo, no creo que tenga malas intenciones
+  - speaker: {fileID: 11400000, guid: 1272ab3835950d04a820c5c8a484e613, type: 2}
+    texto: "Y t\xFA no te asustes, que no pasa nada"
+  - speaker: {fileID: 11400000, guid: 1272ab3835950d04a820c5c8a484e613, type: 2}
+    texto: "Perd\xF3n por la mala primera impresi\xF3n"
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 0
+  entregado: 0
+  accion: {fileID: 11400000, guid: fb1bc606563bbcd459911409610eb16d, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

@@ -94,4 +94,21 @@ public class HerramientasEscenasScript : MonoBehaviour
         }
 
     }
+    public void AlejarCamara(Camera camara, float objetivo, float tiempo)
+    {
+        StartCoroutine(AlejarCamaraCoroutine(camara,objetivo, tiempo));
+    }
+    private IEnumerator AlejarCamaraCoroutine(Camera camara, float objetivo, float tiempo)
+    {
+        float timeElapsed = 0f;
+        float lerpDuration = tiempo;
+        float inicial = camara.orthographicSize;
+        while(timeElapsed < lerpDuration)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+           camara.orthographicSize = Mathf.Lerp(inicial,objetivo,timeElapsed/lerpDuration);
+           
+            yield return null;
+        }
+    }
 }
