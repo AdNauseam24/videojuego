@@ -20,6 +20,7 @@ public DialogoSO[] dialogos;
 public CanvasGroup brilloBlanco;
 
 private Animator loboMarronAnim;
+private Animator abuelaAnim;
 
 private int contador = 0;
 private bool dialogosActivos;
@@ -40,6 +41,10 @@ public Animator[] exclamaciones;
             contador++;
             StartCoroutine(Script2());
         }
+        else
+        {
+            StartCoroutine(Script3());
+        }
     }
 
     void OnDisable()
@@ -48,11 +53,13 @@ public Animator[] exclamaciones;
     }
     void Start()
     {
-        //Jugador.Instance.gameObject.SetActive(false);
-        //GestorInventario.Instance.gameObject.SetActive(false);
+        Jugador.Instance.gameObject.SetActive(false);
+        GestorInventario.Instance.gameObject.SetActive(false);
         jugadorAnim = jugador.GetComponent<Animator>();
         loboMarronAnim = loboMarron.GetComponent<Animator>();
+        abuelaAnim = loboGris.GetComponent<Animator>();
         loboMarronAnim.enabled = false;
+        abuelaAnim.enabled = false;
         canvasTextoArriba = textoArriba.GetComponent<CanvasGroup>();
         StartCoroutine(Script1());
     }
@@ -123,6 +130,29 @@ public Animator[] exclamaciones;
         HerramientasEscenasScript.Instance.MostrarYOcultarCanvasGroup(brilloBlanco,1,0,1.5f);
         yield return new WaitForSeconds(2f);
         exclamaciones[0].Play("Exclamacion");
+        yield return new WaitForSeconds(1.5f);
+
+        dialogosActivos = true;
+        GestorDIalogos.Instance.EmpezarDialogo(dialogos[1]);
+    }
+
+    private IEnumerator Script3()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        abuelaAnim.enabled = true;
+        abuelaAnim.Play("Abuela_Andar");
+        HerramientasEscenasScript.Instance.MoverObjeto(loboGris, new Vector3(-16,-37,0), 10f);
+        yield return new WaitForSeconds(3f);
+
+        camara.gameObject.transform.SetParent(null);
+        jugadorAnim.SetFloat("Horizontal",1);
+        jugador.transform.localScale = new Vector3(-1,1,1);
+        HerramientasEscenasScript.Instance.MoverObjeto(jugador, new Vector3(-16,-37,0), 10f);
+
+        yield return new WaitForSeconds(3f);
+
+        HerramientasEscenasScript.Instance.Fade(0,1,3f);
     }
 
     

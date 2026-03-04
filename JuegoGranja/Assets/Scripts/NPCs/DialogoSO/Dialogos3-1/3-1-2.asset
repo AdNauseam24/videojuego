@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: 3-1-2
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: e7a69f07d51b4d048bee7c49e1d74724, type: 2}
+    texto: Tranquilo, no te asustes
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: "Soy una esp\xEDritu del bosque"
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: Soy completamente benevolente, no tienes nada que temer
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: "Y este es mi fiel compa\xF1ero"
+  - speaker: {fileID: 11400000, guid: f47118f886570f24e9bcef2ccf3dbc29, type: 2}
+    texto: Woof
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: "No pretendemos ning\xFAn mal a este bosque ni a los habitantes del pueblo"
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: Pero si que tenemos un problema
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: La vida en esta arboleda se desvanece
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: Y necesitamos ayuda para restaurarla
+  - speaker: {fileID: 11400000, guid: be96923cba901c84ca998de35afc6253, type: 2}
+    texto: "Por favor, ven conmigo y te ense\xF1o c\xF3mo puedes ayudar"
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 0
+  ultimaAfinidad: 0
+  entregado: 0
+  accion: {fileID: 11400000, guid: fb1bc606563bbcd459911409610eb16d, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []
