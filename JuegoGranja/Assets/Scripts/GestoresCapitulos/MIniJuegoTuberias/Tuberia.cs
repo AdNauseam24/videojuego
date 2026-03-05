@@ -26,6 +26,9 @@ public class Tuberia : MonoBehaviour,  IPointerClickHandler
     //0 vacío, 1 lleno
    public Sprite[] sprites;
 
+    public delegate void TuberiaGirada();
+    public static event TuberiaGirada OnTuberiaGirada;
+
 
     private void RotarTuberia()
     {
@@ -148,6 +151,7 @@ public class Tuberia : MonoBehaviour,  IPointerClickHandler
         {
             ComprobarLadosInactivo();
         }
+        OnTuberiaGirada();
     }
 
     private void ComprobarLadosActivo()

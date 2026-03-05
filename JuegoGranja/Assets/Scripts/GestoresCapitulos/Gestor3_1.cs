@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gestor3_1 : MonoBehaviour
 {
@@ -153,6 +155,8 @@ public Animator[] exclamaciones;
         yield return new WaitForSeconds(3f);
 
         HerramientasEscenasScript.Instance.Fade(0,1,3f);
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("Capitulo3-2");
     }
 
     
