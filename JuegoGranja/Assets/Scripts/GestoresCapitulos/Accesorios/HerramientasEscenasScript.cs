@@ -56,9 +56,9 @@ public class HerramientasEscenasScript : MonoBehaviour
     }
 
     public void MostrarYOcultarTexto(CanvasGroup canvas, TMP_Text texto,string str, float tiempo)
-    {
-        StartCoroutine(MostrarYOcultarTextoCoroutine(canvas,texto,str,tiempo));
-    }
+        {
+            StartCoroutine(MostrarYOcultarTextoCoroutine(canvas,texto,str,tiempo));
+        }
     private IEnumerator MostrarYOcultarTextoCoroutine(CanvasGroup canvas, TMP_Text texto,string str, float tiempo)
     {
         canvas.alpha = 1f;

@@ -7,35 +7,35 @@ using UnityEngine.SceneManagement;
 
 public class Gestor3_1 : MonoBehaviour
 {
-public GameObject jugador;
-public TMP_Text textoArriba;
-private CanvasGroup canvasTextoArriba;
-private Animator jugadorAnim;
-public GameObject camara;
-public GameObject loboGris;
-public GameObject loboMarron;
-public Sprite[] spritesLoboGris;
-public Sprite[] spritesLoboMarron;
+    public GameObject jugador;
+    public TMP_Text textoArriba;
+    private CanvasGroup canvasTextoArriba;
+    private Animator jugadorAnim;
+    public GameObject camara;
+    public GameObject loboGris;
+    public GameObject loboMarron;
+    public Sprite[] spritesLoboGris;
+    public Sprite[] spritesLoboMarron;
 
-public DialogoSO[] dialogos;
+    public DialogoSO[] dialogos;
 
-public CanvasGroup brilloBlanco;
+    public CanvasGroup brilloBlanco;
 
-private Animator loboMarronAnim;
-private Animator abuelaAnim;
+    private Animator loboMarronAnim;
+    private Animator abuelaAnim;
 
-private int contador = 0;
-private bool dialogosActivos;
+    private int contador = 0;
+    private bool dialogosActivos;
 
-//Jugador, lobo gris, lobo marrón
-public Animator[] exclamaciones;
+    //Jugador, lobo gris, lobo marrón
+    public Animator[] exclamaciones;
 
- void OnEnable()
+    void OnEnable()
     {
-        ComportamientoDerivadoPrueba.OnDialogoTerminado += EmpezarScrip2;
+        ComportamientoDerivadoPrueba.OnDialogoTerminado += EmpezarScript2;
     }
 
-    private void EmpezarScrip2()
+    private void EmpezarScript2()
     {
         dialogosActivos = false;
         if(contador == 0)
@@ -51,7 +51,7 @@ public Animator[] exclamaciones;
 
     void OnDisable()
     {
-        ComportamientoDerivadoPrueba.OnDialogoTerminado -= EmpezarScrip2;
+        ComportamientoDerivadoPrueba.OnDialogoTerminado -= EmpezarScript2;
     }
     void Start()
     {

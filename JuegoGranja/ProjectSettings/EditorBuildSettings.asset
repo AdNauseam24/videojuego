@@ -44,6 +44,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Capitulo2/Capitulo2-1.unity
     guid: 63f758fc64cc9e04f82e9e4215231002
+  - enabled: 1
+    path: Assets/Scenes/Capitulo3/Capitulo3-1.unity
+    guid: 241150669fedfda4fbb5418643e21476
+  - enabled: 1
+    path: Assets/Scenes/Capitulo3/Capitulo3-2.unity
+    guid: 90d0c2fc90848394695498a147056b15
+  - enabled: 1
+    path: Assets/Scenes/Capitulo3/Capitulo3-3.unity
+    guid: f198d0f3937090341bef0a156e78259f
+  - enabled: 1
+    path: Assets/Scenes/Capitulo3/Capitulo3-4.unity
+    guid: 4aa0b473d7b98c54d9b6c6aa6a526f45
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

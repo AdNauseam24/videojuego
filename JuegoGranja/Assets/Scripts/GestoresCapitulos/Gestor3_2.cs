@@ -14,6 +14,10 @@ public class Gestor3_2 : MonoBehaviour
     {
         Tuberia.OnTuberiaGirada += ComprobarTuberias;
     }
+    void OnDisable()
+    {
+        Tuberia.OnTuberiaGirada -= ComprobarTuberias;
+    }
 
     private void ComprobarTuberias()
     {
