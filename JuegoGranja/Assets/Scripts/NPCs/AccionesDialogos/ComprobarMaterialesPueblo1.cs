@@ -18,6 +18,9 @@ public class ComprobarMatsPueblo1 : ComportamientoBaseSO
             case 1:
                 RequisitosCap2();
                 break;
+            case 2:
+                RequisitosCap3();
+                break;
 
         }
     }
@@ -45,11 +48,6 @@ public class ComprobarMatsPueblo1 : ComportamientoBaseSO
 
     private void RequisitosCap2()
     {
-        Debug.Log(StatsGenerales.Instance.requisitosMisiones[0]);
-        Debug.Log(StatsGenerales.Instance.requisitosMisiones.Length);
-        Debug.Log(StatsGenerales.Instance.requisitosMisiones[1]);
-        Debug.Log(StatsGenerales.Instance.capituloHistoria);
-        Debug.Log(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria]);
         if(StatsGenerales.Instance.oro >= int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]) &&
             GestorInventario.Instance.CheckCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1])))
             {
@@ -67,5 +65,25 @@ public class ComprobarMatsPueblo1 : ComportamientoBaseSO
             GestorDIalogos.Instance.TerminarDialogoScripted();
             GestorDIalogos.Instance.EmpezarDialogo(noCumplido);
         }
+    }
+     private void RequisitosCap3()
+    {
+        if(StatsGenerales.Instance.oro >= int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]) &&
+            GestorInventario.Instance.CheckCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1])))
+            {
+                StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
+                GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
+                //StatsGenerales.Instance.vallaPueblo1 = true;
+                GestorDIalogos.Instance.TerminarDialogoScripted();
+                GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
+                StatsGenerales.Instance.afinidadPueblo1++;
+                StatsGenerales.Instance.ultimaAfinidad = 1;
+                StatsGenerales.Instance.entregado = true;
+            }
+            else
+            {
+                GestorDIalogos.Instance.TerminarDialogoScripted();
+                GestorDIalogos.Instance.EmpezarDialogo(noCumplido);
+            }
     }
 }

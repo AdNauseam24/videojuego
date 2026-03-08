@@ -15,4 +15,5 @@ MonoBehaviour:
   dialogosCumplido:
   - {fileID: 11400000, guid: 374795f4ce6eca54597bedd1de810da6, type: 2}
   - {fileID: 11400000, guid: 74d6156690035e0439095c7a07a1cb30, type: 2}
+  - {fileID: 11400000, guid: 9e81f8bd92402d2409d631edd873cb3c, type: 2}
   noCumplido: {fileID: 11400000, guid: ae72fcd265744684db56b89258b89e2d, type: 2}

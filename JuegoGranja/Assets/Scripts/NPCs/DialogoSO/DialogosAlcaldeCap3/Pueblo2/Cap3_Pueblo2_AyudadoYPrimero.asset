@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7542fd98a6c7a64992f0fe42f2fb690, type: 3}
+  m_Name: Cap3_Pueblo2_AyudadoYPrimero
+  m_EditorClassIdentifier: 
+  lineas:
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "\xA1Vaya, vaya! Pero si has vuelto otra vez"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Nos alegramos mucho de que est\xE9s aqu\xED"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "No s\xE9 c\xF3mo lo has hecho pero esos lobos han dejado de molestarnos"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "No s\xE9 c\xF3mo podr\xEDamos seguir sin ti"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Has sido de incre\xEDble ayuda"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: De hecho, parece que no solo nos ahs ayudado a nosotros
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Hace un rato vino una anciana y nos dio una cosa para ti
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: Dos, de hecho
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "M\xE1s amuletos para ti"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Por cierto, ahora ya pr\xE1cticamente te consideramos parte de nuestra
+      comunidad, y quer\xEDa pedirte un favorcillo m\xE1s"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Queremos realizar una gran celebraci\xF3n, para lo cual necesitaremos
+      flores y dinero"
+  - speaker: {fileID: 11400000, guid: 3dbaba3bdf77bae498b8e434c5c1e008, type: 2}
+    texto: "Quer\xEDa pedirte si puedes que utilices tus nuevos amuletos para conseguirnos
+      50 flores rojas y 300 de oro"
+  opciones: []
+  requisitoNPCs: []
+  afinidadPueblo1: 0
+  afinidadPueblo2: 0
+  capituloHistoria: 2
+  ultimaAfinidad: 2
+  entregado: 0
+  accion: {fileID: 11400000, guid: 2f24193bf7a01aa4493d589de882e400, type: 2}
+  removeAfterPlay: 0
+  removeListAfterPlay: []

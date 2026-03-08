@@ -6,6 +6,7 @@ public class GestorPueblo1 : MonoBehaviour
     public GameObject roca;
     public GameObject[] puentes;
     public GameObject[] vallas;
+    public GameObject tpArboleda;
 
 
     void OnEnable()
@@ -29,6 +30,10 @@ public class GestorPueblo1 : MonoBehaviour
             {
                 valla.SetActive(false);
             }
+        }
+        if(StatsGenerales.Instance.capituloHistoria >= 2)
+        {
+            Destroy(tpArboleda);
         }
     }
 

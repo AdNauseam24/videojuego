@@ -60,7 +60,8 @@ public class StatsGenerales : MonoBehaviour
         requisitosMisiones = new string[]
         {
         "50 100 9", 
-        "75 100 8"
+        "75 100 8",
+        "300 50 23"
     };
     }
 
