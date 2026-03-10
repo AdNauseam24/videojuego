@@ -5,10 +5,15 @@ using Unity.Android.Gradle;
 public class GestorGranja : MonoBehaviour
 {
     public GameObject[] arboles;
-     public GameObject[] rocas;
+    public GameObject[] rocas;
+    public GameObject[] vallas;
+
      void OnEnable()
     {
         StartCoroutine(OcultarFade());
+    }
+    void Start()
+    {
         for (int i = 0; i < 2; i++)
         {
             if (StatsGenerales.Instance.arbolesTalados[i])
@@ -20,11 +25,13 @@ public class GestorGranja : MonoBehaviour
                 Destroy(rocas[i]);
             }
         }
-
-       
-    }
-    void Start()
-    {
+        if (StatsGenerales.Instance.playaDesbloqueada)
+        {
+            foreach (var valla in vallas)
+            {
+                Destroy(valla);
+            }
+        }
          if(RegistroAyuda.Instance != null)
         {
             if(RegistroAyuda.Instance.ayuda == 1)

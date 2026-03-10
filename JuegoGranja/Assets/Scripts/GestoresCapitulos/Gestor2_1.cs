@@ -140,6 +140,8 @@ void OnEnable()
         StatsGenerales.Instance.entregado = false;
         DialogueHistoryTracker.Instance.LImpiarLista();
 
+         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
+
         SceneManager.LoadScene("SampleScene");
 
 

@@ -34,6 +34,8 @@ public class StatsGenerales : MonoBehaviour
     public bool vallaPueblo1;
     public bool vallaPueblo2;
 
+    public bool playaDesbloqueada;
+
      public string[] requisitosMisiones= new string[]
     {
         "50 100 9", 
