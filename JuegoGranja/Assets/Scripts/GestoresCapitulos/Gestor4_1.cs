@@ -20,6 +20,8 @@ public class Gestor4_1 : MonoBehaviour
 
     void Start()
     {
+        Jugador.Instance.gameObject.SetActive(false);
+        GestorInventario.Instance.gameObject.SetActive(false);
         jugadorAnim = jugador.GetComponent<Animator>();
         canvasTextoArriba = textoArriba.GetComponent<CanvasGroup>();
         exclamacionAnim = exclamacion.GetComponent<Animator>();
@@ -42,11 +44,9 @@ public class Gestor4_1 : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Por fin estás en la playa, así que toca ponerse a explorar...",3f);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         jugadorAnim.SetFloat("Horizontal",0);
-        yield return new WaitForSeconds(0.5f);
-
-        jugadorAnim.SetFloat("Horizontal",0);
+        yield return new WaitForSeconds(1f);    
 
         exclamacionAnim.Play("Exclamacion");
         yield return new WaitForSeconds(0.5f);
@@ -144,7 +144,7 @@ public class Gestor4_1 : MonoBehaviour
         HerramientasEscenasScript.Instance.Fade(0,1,2f);
 
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("Capitulo4_2");
+        SceneManager.LoadScene("Capitulo4-2");
 
 
 
