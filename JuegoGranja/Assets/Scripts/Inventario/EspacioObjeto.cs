@@ -96,6 +96,18 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
 		imagenObjeto.sprite = sprite;
         
     }
+    public void UpdateSlot(int id, int cantidad)
+    {
+        if(id == 0 || id == -1)
+        {
+            RemoveItem();
+        }
+        else
+        {
+            Objeto objeto = Compendio.Instance.GetObjeto(id);
+            AddItem(id, objeto.nombre,cantidad,objeto.sprite);
+        }
+    }
 
     public void RemoveItem()
     {

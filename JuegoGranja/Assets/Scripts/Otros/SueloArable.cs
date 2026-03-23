@@ -5,28 +5,19 @@ using UnityEngine.EventSystems;
 
 public class SueloArable : MonoBehaviour
 {
-    private bool arado,regado,plantado, crecido;
+    public bool arado, regado, plantado, crecido;
 
-    private bool flagComenzadoCrecimiento, flagCrecimiento1, flagListoCosecha;
+    public bool flagComenzadoCrecimiento, flagCrecimiento1, flagListoCosecha;
 
     [SerializeField]
     private Sprite[] sprites;
 
-    private float duracion1, duracion2;
+    public float duracion1, duracion2;
 
     public ArraySprites arraySprites;
 
-    private int filaSprites;
-    private int idDrop;
-
-
-    
-    
-    void Start()
-    {
-        
-    }
-
+    public int filaSprites;
+    public int idDrop;
     
     void Update()
     {
@@ -154,6 +145,58 @@ public class SueloArable : MonoBehaviour
             return 1;
         }
         return 0;
+    }
+
+    public void UpdateTile(GridSaveData data)
+    {
+        arado = data.arado;
+        regado = data.regado;
+        plantado = data.plantado;
+        crecido = data.crecido;
+        idDrop = data.idDrop;
+        filaSprites = data.filaSprites;
+
+        if (crecido)
+        {
+            flagListoCosecha = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = arraySprites.filas[filaSprites].fila[1];
+            return;
+        }
+        if(arado && plantado && regado)
+        {
+            flagComenzadoCrecimiento = true;
+            if(data.tiempoRestante1 <= 0)
+            {
+                flagCrecimiento1 = true;
+                gameObject.GetComponent<SpriteRenderer>().sprite =arraySprites.filas[filaSprites].fila[0];
+                duracion2 = Time.time + data.tiempoRestante2;
+                return;
+
+            }
+            else
+            {
+                duracion1 = Time.time + data.tiempoRestante1;
+                duracion2 = Time.time + data.tiempoRestante2;
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[4];
+                return;
+            }
+        }
+        if (arado)
+        {
+            if(plantado && !regado)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
+                return;
+            }
+            if(regado && !plantado)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
+                return;
+            }
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
+            return;
+        }
+
     }
 
     public void OnMouseDown()

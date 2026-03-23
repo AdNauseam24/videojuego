@@ -30,4 +30,20 @@ public class DialogueHistoryTracker : MonoBehaviour
     {
         spokenNPCs.Clear();
     }
+
+    public void Save(ref DialogueTrackerSaveData data)
+    {
+        data.spokenNPCs = spokenNPCs.ToArray();
+    }
+    public void Load(DialogueTrackerSaveData data)
+    {
+        ActorSO [] NPCs = data.spokenNPCs;
+        spokenNPCs.AddRange(NPCs);
+    }
+}
+
+[System.Serializable]
+public struct DialogueTrackerSaveData
+{
+    public ActorSO[] spokenNPCs;
 }

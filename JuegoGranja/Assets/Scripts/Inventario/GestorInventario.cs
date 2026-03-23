@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -170,4 +171,41 @@ public class GestorInventario : MonoBehaviour
         }
        
     }
+    public void Save(ref InventorySaveData data)
+    {
+        List<SlotSaveData> slotSaveDataList = new List<SlotSaveData>();
+        foreach(var hueco in espacio)
+        {
+            SlotSaveData slotSaveData = new SlotSaveData
+            {
+                id = hueco.GetId(),
+                cantidad = hueco.GetCantidad()
+            };
+            slotSaveDataList.Add(slotSaveData);
+        }
+        data.slots = slotSaveDataList.ToArray();
+    }
+    public void Load(InventorySaveData data)
+    {
+        SlotSaveData[] slotArray = data.slots;
+
+        for (int i = 0; i < slotArray.Length; i++)
+        {
+            espacio[i].UpdateSlot(slotArray[i].id, slotArray[i].cantidad);
+        }
+    }
+
+}
+[System.Serializable]
+public struct InventorySaveData
+{
+    public SlotSaveData[] slots;
+}
+
+[System.Serializable]
+public struct SlotSaveData
+{
+    public int id;
+    public int cantidad;
+
 }

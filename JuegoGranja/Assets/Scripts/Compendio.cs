@@ -5,11 +5,17 @@ public class Compendio : MonoBehaviour
 {
     [SerializeField]
     private Objeto[] objetos;
-    
 
-    public static explicit operator Compendio(GameObject v)
+    public static Compendio Instance;
+
+    void Awake()
     {
-        throw new NotImplementedException();
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
 
     public Objeto GetObjeto(int id)
