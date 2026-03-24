@@ -4,6 +4,7 @@ using System.IO;
 public class Guardado
 {
     private static SaveData _saveData = new SaveData();
+    public static string nombreArchivo;
 
 
     [System.Serializable]
@@ -17,7 +18,7 @@ public class Guardado
 
     public static string SaveFileName()
     {
-        string saveFile = Application.persistentDataPath + "/save" + ".save";
+        string saveFile = Application.persistentDataPath + "/" + nombreArchivo + ".save";
         return saveFile;
     }
 

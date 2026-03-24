@@ -15,6 +15,8 @@ public class StatsGenerales : MonoBehaviour
     public int afinidadPueblo1 = 0;
     public int afinidadPueblo2 = 0;
 
+    public int dia = 1;
+
     public int ultimaAfinidad;
 
     //A mayor número más lento
@@ -103,6 +105,7 @@ public class StatsGenerales : MonoBehaviour
         data.vallaPueblo2 = vallaPueblo2;
         data.playaDesbloqueada = playaDesbloqueada;
         data.entregado = entregado;
+        data.dia = dia;
     }
     public void Load(StatsSavedata data)
     {
@@ -126,6 +129,7 @@ public class StatsGenerales : MonoBehaviour
         vallaPueblo2 = data.vallaPueblo2;
         playaDesbloqueada = data.playaDesbloqueada;
         entregado = data.entregado;
+        dia = data.dia;
 
     }
 
@@ -165,4 +169,5 @@ public struct StatsSavedata
     public bool vallaPueblo2;
     public bool playaDesbloqueada;
     public bool entregado;
+    public int dia;
 }

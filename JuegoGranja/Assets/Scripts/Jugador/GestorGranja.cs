@@ -8,12 +8,19 @@ public class GestorGranja : MonoBehaviour
     public GameObject[] rocas;
     public GameObject[] vallas;
 
+    public static bool cargar;
+
      void OnEnable()
     {
         StartCoroutine(OcultarFade());
     }
     void Start()
     {
+        if (cargar)
+        {
+            cargar = false;
+            Guardado.Load();
+        }
         for (int i = 0; i < 2; i++)
         {
             if (StatsGenerales.Instance.arbolesTalados[i])
