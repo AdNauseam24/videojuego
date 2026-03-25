@@ -12,6 +12,8 @@ public class SlotGuardado : MonoBehaviour
     public TMP_Text oro;
     public Image imagenOro;
 
+    public Image borrado;
+
  public void ModificarSlot(string nombre, int dia, int oro)
     {
         ocupado = true;
@@ -23,6 +25,7 @@ public class SlotGuardado : MonoBehaviour
         this.dia.gameObject.SetActive(true);
         this.oro.gameObject.SetActive(true);
         imagenOro.gameObject.SetActive(true);
+        borrado.gameObject.SetActive(true);
     }
 
     public void CLickSlot()
@@ -43,4 +46,23 @@ public class SlotGuardado : MonoBehaviour
         }
         
     }
+
+    public void ClickTrash()
+    {
+        MenuPrincipal.Instance.borrarPartida.gameObject.SetActive(true);
+        MenuPrincipal.Instance.slotBorrar = this;
+    }
+
+    public void VaciarSlot()
+    {
+        ocupado = false;
+
+        this.nombre.text = "Ranura Vacía";
+
+        this.dia.gameObject.SetActive(false);
+        this.oro.gameObject.SetActive(false);
+        imagenOro.gameObject.SetActive(false);
+        borrado.gameObject.SetActive(false);
+    }
+
 }

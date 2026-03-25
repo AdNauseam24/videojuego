@@ -6,6 +6,7 @@ using static Guardado;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    public SlotGuardado slotBorrar;
     private static SaveData saveData = new SaveData();
     public static MenuPrincipal Instance;
     private void Awake()
@@ -22,6 +23,7 @@ public class MenuPrincipal : MonoBehaviour
    public Canvas botonesPrincipales;
    public Canvas menuSlots;
    public Canvas IntroducirNombre;
+   public Canvas borrarPartida;
    public string nombre;
 
    public bool modoCargar;
@@ -39,6 +41,12 @@ public class MenuPrincipal : MonoBehaviour
         modoCargar = false;
         ModificarSlots();
         menuSlots.gameObject.SetActive(true);
+    }
+
+    public void CerrarSlots()
+    {
+         botonesPrincipales.gameObject.SetActive(true);
+          menuSlots.gameObject.SetActive(false);
     }
 
     public void ModificarSlots()
@@ -64,10 +72,38 @@ public class MenuPrincipal : MonoBehaviour
     {
         IntroducirNombre.gameObject.SetActive(true);
     }
+    public void DesactivarInputField()
+    {
+         IntroducirNombre.gameObject.SetActive(false);
+    }
 
     public void RecogerNombre(string input)
     {
         nombreArchivo = input;
         SceneManager.LoadScene("Capitulo1-1");
+    }
+
+    public void CerrarBorrado()
+    {
+        borrarPartida.gameObject.SetActive(false);
+    }
+
+    public void BorrarGuardado()
+    {
+        Debug.Log(Application.persistentDataPath + "/" + slotBorrar.nombre.text + ".save");
+        File.Delete(Application.persistentDataPath + "/" + slotBorrar.nombre.text + ".save");
+        CerrarBorrado();
+        slotBorrar.VaciarSlot();
+    }
+
+    public void CerrarJuego()
+    {
+
+        #if UNITY_STANDALONE
+        Application.Quit();
+        #endif
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
