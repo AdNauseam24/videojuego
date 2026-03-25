@@ -31,7 +31,7 @@ public class Hotbar : MonoBehaviour
     {
     
         //movilidad de la selección de espacios
-        if(!gestorInventario.GetMenuAbierto())
+        if(!gestorInventario.GetMenuAbierto() && Time.timeScale == 1)
         {
             //checkeamos si algún número del 1 al 8 es pulsado
             for( int i = 0 ; i < keyCodes.Length ; ++i )
