@@ -20,7 +20,6 @@ public class ObjetoDrop : Objeto
         this.nombre = compendio.GetObjeto(id).GetNombre();
         Debug.Log(nombre);
         this.sprite = compendio.GetObjeto(id).GetSprite();
-        Debug.Log(sprite);
         this.imagen.sprite = this.sprite;
     }
 

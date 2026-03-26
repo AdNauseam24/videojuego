@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    public float vMovimiento = 5f;
+    public static float vMovimiento = 5f;
 
    //El punto al que queremos que el jugador se desplace en cada movimiento, 
    // con el fin de que siempre esté en los márgenes de una celda

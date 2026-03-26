@@ -33,10 +33,15 @@ public class ConsolaComandos : MonoBehaviour
                 GiveFunction(commands);
                 break;
 
+            case "speed":
+                SpeedChange(commands);
+                break;
+
             default:
                 closeInputField();
                 break;
         }
+        closeInputField();
     }
 
     private void GiveFunction(string[] commands)
@@ -79,7 +84,21 @@ public class ConsolaComandos : MonoBehaviour
             //TODO
         }
 
-       closeInputField();
+    }
+    private void SpeedChange(string[] commands)
+    {
+        try{
+        int result;
+        int.TryParse(commands[1], out result);
+        if(result != 0 && result >0)
+            Movimiento.vMovimiento = result;
+        else
+            throw new ArgumentException();
+        }
+        catch
+        {
+            //TODO
+        }
     }
 
     private void closeInputField()

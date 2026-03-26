@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
+using UnityEngine.UI;
 
 public class GestorInventario : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class GestorInventario : MonoBehaviour
 
     [SerializeField]
     private GameObject hotbarGO;
+
+    public Image panelInfo;
+    public TMP_Text textoInfo;
 
     void Awake()
     {
@@ -193,6 +197,20 @@ public class GestorInventario : MonoBehaviour
         {
             espacio[i].UpdateSlot(slotArray[i].id, slotArray[i].cantidad);
         }
+    }
+
+    public void mostrarInfo(EspacioObjeto hueco)
+    {
+        panelInfo.gameObject.SetActive(true);
+        textoInfo.text = hueco.nombre;
+        Vector3 posicionHueco = hueco.GetComponent<RectTransform>().localPosition;
+        panelInfo.transform.SetParent(hueco.transform);
+        panelInfo.rectTransform.localPosition = new Vector3(100, 100, 0);
+    }
+    public void ocultarInfo()
+    {
+        panelInfo.transform.SetParent(this.transform);
+        panelInfo.gameObject.SetActive(false);
     }
 
 }

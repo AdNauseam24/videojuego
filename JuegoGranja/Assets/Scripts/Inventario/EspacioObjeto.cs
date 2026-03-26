@@ -1,19 +1,18 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 using UnityEditor;
-using Unity.Mathematics;
 
-public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
+public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+
 {
 	[SerializeField]
    private int id;
 
 	[SerializeField]
-   private string nombre;
-
+   public string nombre;
+   
 	[SerializeField]
    private int cantidad;
 
@@ -310,5 +309,16 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler
     public int GetCantidad()
     {
         return cantidad;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(ocupado)
+            gestorInventario.mostrarInfo(this);
+    }
+    public void  OnPointerExit(PointerEventData eventData)
+    {
+        if(ocupado)
+            gestorInventario.ocultarInfo();
     }
 }
