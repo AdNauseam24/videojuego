@@ -45,10 +45,19 @@ public class Jugador : MonoBehaviour
                         inventario.hotbar.GetEspacioObjeto(inventario.hotbar.GetRememberSeleccionado()).ReducirUno();
                     }
                 }
-                else if (idTemp != -1 && compendio.GetObjeto(idTemp).GetTipoObjeto() == (int)TipoObjeto.Herramienta)
+                else if (idTemp != -1 && compendio.GetObjeto(idTemp).GetTipoObjeto() == (int)TipoObjeto.Herramienta )
                 {
+                    if(StatsGenerales.Instance.energia >= 2)
+                    {
                      compendio.GetObjeto(idTemp).UsarMapa(highlight.GetPosicion());
                      contadorHerramienta = 1;
+                     StatsGenerales.Instance.RestarEnergia(2);
+                    }
+                    else
+                    {
+                        contadorHerramienta = 1;
+                        StatsGenerales.Instance.AgitarBarra();
+                    }
                 }
                 
             }

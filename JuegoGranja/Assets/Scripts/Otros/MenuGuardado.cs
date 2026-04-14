@@ -37,6 +37,7 @@ public class MenuGuardado : MonoBehaviour
     }
     public IEnumerator CambioDia()
     {
+        StatsGenerales.Instance.ReestablecerEnergia();
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         
         float timeElapsed = 0f;

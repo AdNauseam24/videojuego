@@ -1,6 +1,8 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class StatsGenerales : MonoBehaviour
 {
@@ -8,6 +10,11 @@ public class StatsGenerales : MonoBehaviour
     public int oro = 100;
     public float danioRocas = 2.5f;
     public float danioArboles = 2.5f;
+
+    public int energiaMax = 200;
+    public int energia = 200;
+    public Slider sliderEnergia;
+    public Vector3 originalPos;
 
     public int capituloHistoria;
 
@@ -60,12 +67,15 @@ public class StatsGenerales : MonoBehaviour
     private void Start()
     {
         UpdateOro();
+        UpdateEnergia();
         requisitosMisiones = new string[]
         {
         "50 100 9", 
         "75 100 8",
         "300 50 23"
     };
+
+    originalPos = sliderEnergia.GetComponent<RectTransform>().localPosition;
     }
 
     public void SumarOro(int n)
@@ -83,6 +93,49 @@ public class StatsGenerales : MonoBehaviour
     private void UpdateOro()
     {
         textoOro.text = oro.ToString();
+    }
+
+    public void UpdateEnergia()
+    {
+        if(energia>energiaMax)
+            energia = energiaMax;
+
+        sliderEnergia.value = energia;
+    }
+
+    public void RestarEnergia(int n)
+    {
+        energia-=n;
+        if(energia<0)
+            energia = 0;
+        
+        UpdateEnergia();
+    }
+
+    public void ReestablecerEnergia()
+    {
+        energia = energiaMax;
+        UpdateEnergia();
+    }
+    public void AgitarBarra()
+    {
+        StartCoroutine(Agitar(1,1f));
+    }
+
+     private IEnumerator Agitar(float tiempo, float magnitud)
+    {
+        float timeElapsed = 0f;
+
+        while(timeElapsed < tiempo)
+        {
+            float xOffset = Random.Range(originalPos.x - 4f, originalPos.x +4f) * magnitud;
+            float yOffset = Random.Range(originalPos.y-4f, originalPos.y + 4f) * magnitud;
+            sliderEnergia.GetComponent<RectTransform>().localPosition = new Vector3(xOffset,yOffset,originalPos.z);
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        sliderEnergia.GetComponent<RectTransform>().localPosition = originalPos;
     }
 
     public void Save(ref StatsSavedata data)
