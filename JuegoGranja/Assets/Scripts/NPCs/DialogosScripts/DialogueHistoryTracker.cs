@@ -31,6 +31,14 @@ public class DialogueHistoryTracker : MonoBehaviour
         spokenNPCs.Clear();
     }
 
+    public void CambioDia()
+    {
+        foreach (var npc in spokenNPCs)
+        {
+            npc.habladoHoy = false;
+        }
+    }
+
     public void Save(ref DialogueTrackerSaveData data)
     {
         data.spokenNPCs = spokenNPCs.ToArray();

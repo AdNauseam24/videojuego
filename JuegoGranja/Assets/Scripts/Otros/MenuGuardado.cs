@@ -37,6 +37,7 @@ public class MenuGuardado : MonoBehaviour
     }
     public IEnumerator CambioDia()
     {
+        DialogueHistoryTracker.Instance.CambioDia();
         StatsGenerales.Instance.ReestablecerEnergia();
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         

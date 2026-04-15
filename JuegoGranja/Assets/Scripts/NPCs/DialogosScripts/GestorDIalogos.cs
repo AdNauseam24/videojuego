@@ -59,6 +59,11 @@ public class GestorDIalogos : MonoBehaviour
         LineaDialogo linea = dialogoActual.lineas[indiceDialogo];
 
         DialogueHistoryTracker.Instance.RegistrarNPC(linea.speaker);
+        if (!linea.speaker.habladoHoy && linea.speaker.aplicable)
+        {
+            linea.speaker.habladoHoy = true;
+            linea.speaker.nivelRelacion +=1;
+        }
 
         retrato.sprite = linea.speaker.retrato;
         nombreActor.text = linea.speaker.nombreActor;
