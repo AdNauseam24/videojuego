@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineas:
   - speaker: {fileID: 11400000, guid: d51762d5aa8ef234ebe9d1c8f0a28478, type: 2}
-    texto: "\xA1Wow!\xA1Gracias! Me encanta este reaglo"
+    texto: "\xA1Wow!\xA1Gracias! Me encanta este regalo"
   opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 0

@@ -13,6 +13,8 @@ public class GestorDIalogos : MonoBehaviour
     public CanvasGroup canvasGroup;
     public Button[] botonesOpciones;
 
+    public Image[] corazones;
+
     private DialogoSO dialogoActual;
     private int indiceDialogo;
     public bool dialogoActivo;
@@ -30,6 +32,7 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+        OcultarCorazones();
 
         foreach (Button boton in botonesOpciones)
         {
@@ -63,6 +66,20 @@ public class GestorDIalogos : MonoBehaviour
         {
             linea.speaker.habladoHoy = true;
             linea.speaker.nivelRelacion +=1;
+
+            if( linea.speaker.nivelRelacion >= 10 && linea.speaker.nivelRelacion < 20)
+            {
+                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel1);
+            }
+            if( linea.speaker.nivelRelacion >= 30 && linea.speaker.nivelRelacion < 40)
+            {
+                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel2);
+            }
+            if( linea.speaker.nivelRelacion >= 50 && linea.speaker.nivelRelacion < 60)
+            {
+                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel3);
+            }
+
         }
 
         retrato.sprite = linea.speaker.retrato;
@@ -72,6 +89,8 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
+
+        MostrarCorazones();
 
         indiceDialogo++;
     }
@@ -124,6 +143,7 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+        OcultarCorazones();
         Time.timeScale = 1;
     }
     public void TerminarDialogo()
@@ -135,6 +155,7 @@ public class GestorDIalogos : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+        OcultarCorazones();
         GestorInventario.Instance.ActivarHotbar();
         Time.timeScale = 1;
     }
@@ -158,6 +179,24 @@ public class GestorDIalogos : MonoBehaviour
         {
             boton.gameObject.SetActive(false);
             boton.onClick.RemoveAllListeners();
+        }
+    }
+    public void MostrarCorazones()
+    {
+        int n = dialogoActual.lineas[0].speaker.nivelRelacion/10;
+        if(n>6)
+            n=6;
+        
+        for (int i = 0; i < n; i++)
+        {
+            corazones[i].GetComponent<CanvasGroup>().alpha = 1;
+        }
+    }
+    public void OcultarCorazones()
+    {
+        foreach (var corazon in corazones)
+        {
+            corazon.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
     public static void Prueba()

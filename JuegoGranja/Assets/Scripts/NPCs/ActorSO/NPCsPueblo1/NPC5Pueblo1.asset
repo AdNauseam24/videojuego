@@ -15,12 +15,12 @@ MonoBehaviour:
   nombreActor: Nilau
   retrato: {fileID: 8547111151298606167, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
   habladoHoy: 0
-  nivelRelacion: 0
+  nivelRelacion: 50
   regalosFavoritos: 07000000
   regalosDesagradables: 08000000
-  dialogoNivel1: {fileID: 0}
-  dialogoNivel2: {fileID: 0}
-  dialogoNivel3: {fileID: 0}
+  escenaNivel1: NPC5P1Escena1
+  escenaNivel2: NPC5P1Escena2
+  escenaNivel3: NPC5P1Escena3
   dialogoAgrado: {fileID: 11400000, guid: 0c9311928bd3a0d44aceae5631df387a, type: 2}
   dialogoNeutro: {fileID: 11400000, guid: 817d2b9b9f17f2044bdca33e65372abe, type: 2}
   dialogoDesagrado: {fileID: 11400000, guid: bb2a949a5436aca43b31b112121c909b, type: 2}

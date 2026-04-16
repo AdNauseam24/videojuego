@@ -12,9 +12,9 @@ public class ActorSO : ScriptableObject
     public int[] regalosFavoritos;
     public int[] regalosDesagradables;
 
-    public DialogoSO dialogoNivel1;
-    public DialogoSO dialogoNivel2;
-    public DialogoSO dialogoNivel3;
+    public string escenaNivel1;
+    public string escenaNivel2;
+    public string escenaNivel3;
 
     public DialogoSO dialogoAgrado;
     public DialogoSO dialogoNeutro;
