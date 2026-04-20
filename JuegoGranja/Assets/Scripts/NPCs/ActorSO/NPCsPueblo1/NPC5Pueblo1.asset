@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreActor: Nilau
   retrato: {fileID: 8547111151298606167, guid: bb87129f6cfff774f8501f952d67925c, type: 3}
-  habladoHoy: 0
-  nivelRelacion: 50
+  habladoHoy: 1
+  nivelRelacion: 30
   regalosFavoritos: 07000000
   regalosDesagradables: 08000000
   escenaNivel1: NPC5P1Escena1

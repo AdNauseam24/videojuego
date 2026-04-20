@@ -39,7 +39,7 @@ MonoBehaviour:
       flores y dinero"
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
     texto: "Quer\xEDa pedirte si puedes que utilices tus nuevos amuletos para conseguirnos
-      50 flores rojas y 300 de oro"
+      50 regalos del drag\xF3n y 300 de oro"
   opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 0

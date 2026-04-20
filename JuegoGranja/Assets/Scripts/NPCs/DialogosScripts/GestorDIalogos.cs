@@ -67,21 +67,21 @@ public class GestorDIalogos : MonoBehaviour
             linea.speaker.habladoHoy = true;
             linea.speaker.nivelRelacion +=1;
 
-            if( linea.speaker.nivelRelacion >= 10 && linea.speaker.nivelRelacion < 20)
-            {
-                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel1);
-            }
-            if( linea.speaker.nivelRelacion >= 30 && linea.speaker.nivelRelacion < 40)
-            {
-                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel2);
-            }
-            if( linea.speaker.nivelRelacion >= 50 && linea.speaker.nivelRelacion < 60)
-            {
-                DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel3);
-            }
-
         }
 
+        if( linea.speaker.nivelRelacion >= 10 && linea.speaker.nivelRelacion < 20)
+        {
+            DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel1);
+        }
+        if( linea.speaker.nivelRelacion >= 30 && linea.speaker.nivelRelacion < 40)
+        {
+            DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel2);
+        }
+        if( linea.speaker.nivelRelacion >= 50 && linea.speaker.nivelRelacion < 60)
+        {
+            DialogueHistoryTracker.Instance.escenasPendientes.Add(linea.speaker.escenaNivel3);
+        }
+        
         retrato.sprite = linea.speaker.retrato;
         nombreActor.text = linea.speaker.nombreActor;
         textoDialogo.text = linea.texto;

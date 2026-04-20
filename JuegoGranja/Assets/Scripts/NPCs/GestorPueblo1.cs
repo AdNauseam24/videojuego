@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GestorPueblo1 : MonoBehaviour
 {
@@ -10,7 +12,10 @@ public class GestorPueblo1 : MonoBehaviour
 
 
     void OnEnable()
-    {
+    {   if(DialogueHistoryTracker.Instance.escenasPendientes.Count > 0)
+        {
+            SceneManager.LoadScene(DialogueHistoryTracker.Instance.escenasPendientes.ElementAt(0));
+        }
         StartCoroutine(OcultarFade());
         GestorTenderos.Instance.ActivarTenderosPueblo1();
         
