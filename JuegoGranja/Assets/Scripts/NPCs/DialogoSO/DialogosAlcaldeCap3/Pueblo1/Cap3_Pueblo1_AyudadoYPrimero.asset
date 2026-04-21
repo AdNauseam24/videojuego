@@ -24,7 +24,7 @@ MonoBehaviour:
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
     texto: "Has sido de incre\xEDble ayuda"
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
-    texto: De hecho, parece que no solo nos ahs ayudado a nosotros
+    texto: De hecho, parece que no solo nos has ayudado a nosotros
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
     texto: Hace un rato vino una anciana y nos dio una cosa para ti
   - speaker: {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}

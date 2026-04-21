@@ -45,7 +45,18 @@ public class Gestor4_2 : MonoBehaviour
          HerramientasEscenasScript.Instance.Fade(0,1,3f);
         yield return new WaitForSeconds(6f);
 
-        SceneManager.LoadScene("Capitulo4-3");
+
+        Jugador.Instance.gameObject.SetActive(true);
+        GestorInventario.Instance.gameObject.SetActive(true);
+
+        StatsGenerales.Instance.capituloHistoria = 3;
+        StatsGenerales.Instance.entregado = false;
+        DialogueHistoryTracker.Instance.LImpiarLista();
+        Jugador.Instance.transform.position = new Vector3(-193.5f,26.5f,0);
+        GameObject.FindGameObjectWithTag("MovePoint").transform.position =new Vector3(-193.5f,26.5f,0);
+
+        GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
+        SceneManager.LoadScene("SampleScene");
 
 
 
