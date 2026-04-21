@@ -1,7 +1,5 @@
-using Mono.Cecil.Cil;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class SueloArable : MonoBehaviour
 {
@@ -212,7 +210,13 @@ public class SueloArable : MonoBehaviour
             flagComenzadoCrecimiento = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
 
-            Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+            Object prefab;
+            #if UNITY_EDITOR
+            prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+            #endif
+            #if UNITY_STANDALONE
+            prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+            #endif
             ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
             

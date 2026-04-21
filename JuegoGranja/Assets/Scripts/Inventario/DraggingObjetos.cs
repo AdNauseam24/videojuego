@@ -1,7 +1,5 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class DraggingObjetos : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
 {

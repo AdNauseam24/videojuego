@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Unity.Android.Gradle;
 
 public class GestorGranja : MonoBehaviour
 {

@@ -59,7 +59,14 @@ public class ConsolaComandos : MonoBehaviour
             }
             else
             {
-                UnityEngine.Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+                UnityEngine.Object prefab;
+                #if UNITY_EDITOR
+                    prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+                #endif
+                #if UNITY_STANDALONE
+                     prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+                #endif
+
                 ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
                 int result;

@@ -17,19 +17,43 @@ public class GenerarRocas : MonoBehaviour
             Object prefab;
             if(y >= 1 && y <= 4)
                 {
-                    prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Roca.prefab", typeof(Rocas));
+                    #if UNITY_EDITOR
+                        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Roca.prefab", typeof(Rocas));
+                    #endif
+                    #if UNITY_STANDALONE
+                         prefab = Resources.Load("Prefabs/Rocas/Roca", typeof(Rocas));
+                    #endif
+                    
                 }
             else if(y >=5 && y <= 7)
                 {
-                    prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Cobre.prefab", typeof(Rocas));
+                    #if UNITY_EDITOR
+                        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Cobre.prefab", typeof(Rocas));
+                    #endif
+                    #if UNITY_STANDALONE
+                        prefab = Resources.Load("Prefabs/Rocas/Cobre", typeof(Rocas));   
+                    #endif
+                    
                 }
             else if (y == 8 || y == 9)
                 {
-                    prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Hierro.prefab", typeof(Rocas));
+                    #if UNITY_EDITOR
+                        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Hierro.prefab", typeof(Rocas));
+                    #endif
+                    #if UNITY_STANDALONE
+                        prefab = Resources.Load("Prefabs/Rocas/Hierro", typeof(Rocas));
+                    #endif
+                  
                 }
                 else
                 {
-                    prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Oro.prefab", typeof(Rocas));
+                    #if UNITY_EDITOR
+                        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Rocas/Oro.prefab", typeof(Rocas));
+                    #endif
+                    #if UNITY_STANDALONE
+                        prefab = Resources.Load("Prefabs/Rocas/Oro", typeof(Rocas));
+                    #endif
+                   
                 }
             
 		    ObjetoDrop drop = Instantiate(prefab,spot.transform,false) as ObjetoDrop;

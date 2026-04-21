@@ -244,7 +244,13 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, 
 	public void DropObjeto(Vector2 posicion)
     {
 		//creamos el objeto
-        Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+        Object prefab;
+        #if UNITY_EDITOR
+        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+        #endif
+        #if UNITY_STANDALONE
+        prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+        #endif
 		ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
 		//le damos los valores
@@ -264,7 +270,13 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, 
     }
 	public void DropTodosObjetos(Vector2 posicion)
     {
-        Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+        Object prefab;
+        #if UNITY_EDITOR
+        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+        #endif
+        #if UNITY_STANDALONE
+        prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+        #endif
 		ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
 		drop.transform.position = posicion;

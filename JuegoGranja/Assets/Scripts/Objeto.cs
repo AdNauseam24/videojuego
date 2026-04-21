@@ -149,7 +149,13 @@ public class Objeto : MonoBehaviour
             Debug.Log(success);
             if (success > 0.5)
             {
-            UnityEngine.Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+            UnityEngine.Object prefab;
+            #if UNITY_EDITOR
+            prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+            #endif
+            #if UNITY_STANDALONE
+            prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+            #endif
             ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
             drop.transform.position = posicion;

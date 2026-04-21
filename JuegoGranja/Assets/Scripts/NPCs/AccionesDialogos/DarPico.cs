@@ -6,7 +6,13 @@ public class DarPico : ComportamientoBaseSO
 {
      public override void OnUse()
     {
-        Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+       Object prefab;
+        #if UNITY_EDITOR
+        prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ObjetoDrop.prefab", typeof(ObjetoDrop));
+        #endif
+        #if UNITY_STANDALONE
+        prefab = Resources.Load("Prefabs/ObjetoDrop", typeof(ObjetoDrop));
+        #endif
 		ObjetoDrop drop = Instantiate(prefab,GameObject.FindGameObjectWithTag("ObjetosMapa").transform, true) as ObjetoDrop;
 
         drop.transform.position = StatsGenerales.Instance.gameObject.transform.position;
