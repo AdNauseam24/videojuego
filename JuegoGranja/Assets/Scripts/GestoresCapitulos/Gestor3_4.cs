@@ -106,6 +106,9 @@ public class Gestor3_4 : MonoBehaviour
         Jugador.Instance.gameObject.SetActive(true);
         GestorInventario.Instance.gameObject.SetActive(true);
 
+        Jugador.Instance.transform.position = new Vector3(-193.5f,26.5f,0);
+        GameObject.FindGameObjectWithTag("MovePoint").transform.position =new Vector3(-193.5f,26.5f,0);
+
         StatsGenerales.Instance.capituloHistoria = 2;
         StatsGenerales.Instance.entregado = false;
         DialogueHistoryTracker.Instance.LImpiarLista();
@@ -113,9 +116,6 @@ public class Gestor3_4 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
 
         SceneManager.LoadScene("SampleScene");
-
-
-
 
     }
 
