@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,12 @@ public class MenuOpciones : MonoBehaviour
     private bool opcionesAbierto;
 
     private bool menuPrincipal;
+
+    void Start()
+    {
+        panelOpciones.gameObject.SetActive(false);
+        panelConfirmacion.gameObject.SetActive(false);
+    }
 
     public void BotonOpciones()
     {
@@ -27,7 +34,7 @@ public class MenuOpciones : MonoBehaviour
         if(Time.timeScale == 1 && !opcionesAbierto)
         {
             Time.timeScale = 0;
-            GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0.5f;
+            GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0.8f;
             panelOpciones.gameObject.SetActive(true);
             opcionesAbierto = true;
         }
@@ -59,23 +66,42 @@ public class MenuOpciones : MonoBehaviour
     }
     public void CerrarConfirmar()
     {
-        panelConfirmacion.gameObject.SetActive(true);
+        panelConfirmacion.gameObject.SetActive(false);
     }
     public void BotonConfirmar()
     {
         if (menuPrincipal)
         {
-            SceneManager.LoadScene("MainMenu");
+           StartCoroutine(DelayFade());
         }
         else
         {
-             #if UNITY_STANDALONE
+            #if UNITY_STANDALONE
             Application.Quit();
             #endif
             #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
             #endif
         }
+    }
+
+    IEnumerator DelayFade()
+    {
+        GameObject.FindGameObjectWithTag("Fade").GetComponentInParent<Canvas>().sortingOrder = 101;
+
+        GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        fadeimg.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        while(fadeimg.GetComponent<CanvasGroup>().alpha < 1)
+        {
+            fadeimg.GetComponent<CanvasGroup>().alpha += 0.05f;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+        yield return new WaitForSecondsRealtime(0.25f);
+
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+        GameManager.Instance.LimpiezaDuplicados();
+        
     }
 
     void Update()

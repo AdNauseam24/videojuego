@@ -51,7 +51,7 @@ public class GestorInventario : MonoBehaviour
 
             //cambiamos el padre de la hotbar
             hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
-            hotbar.transform.localPosition = new Vector3(-690,-300);
+            hotbar.transform.localPosition = new Vector3(-690,-400);
             hotbar.ActivarHuecos();
 
             //desactivamos y cerramos

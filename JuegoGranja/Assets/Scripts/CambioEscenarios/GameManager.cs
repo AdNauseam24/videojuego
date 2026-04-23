@@ -32,12 +32,13 @@ public GameObject[] objetosPersistentes;
             }
         }
     }
-    private void LimpiezaDuplicados()
+    public void LimpiezaDuplicados()
     {
         foreach (GameObject obj in objetosPersistentes)
         {
             Destroy(obj);
         }
+        Destroy(GameObject.FindGameObjectWithTag("MovePoint"));
         Destroy(gameObject);
     }
 }
