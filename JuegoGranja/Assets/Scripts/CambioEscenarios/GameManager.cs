@@ -38,6 +38,14 @@ public GameObject[] objetosPersistentes;
         {
             Destroy(obj);
         }
+        Destroy(gameObject);
+    }
+    public void Borrado()
+    {
+        foreach (GameObject obj in objetosPersistentes)
+        {
+            Destroy(obj);
+        }
         Destroy(GameObject.FindGameObjectWithTag("MovePoint"));
         Destroy(gameObject);
     }

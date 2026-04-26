@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: badb4251946f4fd4da50a127272ed393
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -64636152597809734
+    second: pickAxe_0
+  - first:
+      213: -4321220722577824863
+    second: pickAxe_1
+  - first:
+      213: -7626574418609208436
+    second: pickAxe_2
+  - first:
+      213: 5281408211945802300
+    second: pickAxe_3
+  - first:
+      213: -8511325317923261595
+    second: pickAxe_4
+  - first:
+      213: 2794216738066519600
+    second: pickAxe_5
+  - first:
+      213: 5453723792671160400
+    second: pickAxe_6
+  - first:
+      213: -4311389099520297745
+    second: pickAxe_7
+  - first:
+      213: -5306474794682979986
+    second: pickAxe_8
+  - first:
+      213: -1858935074418335973
+    second: pickAxe_9
+  - first:
+      213: -5168831165826681089
+    second: pickAxe_10
+  - first:
+      213: 8793324847153227444
+    second: pickAxe_11
+  - first:
+      213: -4932280390046523426
+    second: pickAxe_12
+  - first:
+      213: -1365748140090730657
+    second: pickAxe_13
+  - first:
+      213: 1955548650217666358
+    second: pickAxe_14
+  - first:
+      213: -5981774752394126772
+    second: pickAxe_15
+  - first:
+      213: 6890947121071184687
+    second: pickAxe_16
+  - first:
+      213: 2288578794159542888
+    second: pickAxe_17
+  - first:
+      213: 7423306448330800624
+    second: pickAxe_18
+  - first:
+      213: 4343298780607292313
+    second: pickAxe_19
+  - first:
+      213: -2283273016940228114
+    second: pickAxe_20
+  - first:
+      213: 3996682000513727236
+    second: pickAxe_21
+  - first:
+      213: -8759800805630979375
+    second: pickAxe_22
+  - first:
+      213: -2521768497106189498
+    second: pickAxe_23
+  - first:
+      213: -5026615224914737233
+    second: pickAxe_24
+  - first:
+      213: 3440529161896346155
+    second: pickAxe_25
+  - first:
+      213: 8698294884966447271
+    second: pickAxe_26
+  - first:
+      213: 8415587439895363186
+    second: pickAxe_27
+  - first:
+      213: 4609749418176951000
+    second: pickAxe_28
+  - first:
+      213: -2273369291425726456
+    second: pickAxe_29
+  - first:
+      213: -4963647778933700291
+    second: pickAxe_30
+  - first:
+      213: 4224419637217272214
+    second: pickAxe_31
+  - first:
+      213: 1302822228636684009
+    second: pickAxe_32
+  - first:
+      213: 2657822417194760100
+    second: pickAxe_33
+  - first:
+      213: -5006268557589469545
+    second: pickAxe_34
+  - first:
+      213: 4183606568307746828
+    second: pickAxe_35
+  - first:
+      213: -4387726765251836041
+    second: pickAxe_36
+  - first:
+      213: -5268814438189525662
+    second: pickAxe_37
+  - first:
+      213: 5130087973331060944
+    second: pickAxe_38
+  - first:
+      213: -3886354330454721606
+    second: pickAxe_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pickAxe_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab572ccf2cd5a1ff0800000000000000
+      internalID: -64636152597809734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a321bac5a0f704c0800000000000000
+      internalID: -4321220722577824863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8387bd39f6f82690800000000000000
+      internalID: -7626574418609208436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a4cd269c45b4940800000000000000
+      internalID: 5281408211945802300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5633561e7b2b1e980800000000000000
+      internalID: -8511325317923261595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_5
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036d7e1a15d07c620800000000000000
+      internalID: 2794216738066519600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_6
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 384
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058b245f4e48fab40800000000000000
+      internalID: 5453723792671160400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 324
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4f99ae47eda24c0800000000000000
+      internalID: -4311389099520297745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 324
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e696b550a4d9b56b0800000000000000
+      internalID: -5306474794682979986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_9
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 324
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fd7cc166cb336e0800000000000000
+      internalID: -1858935074418335973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_10
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 323
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6bee8b07f9448b0800000000000000
+      internalID: -5168831165826681089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_11
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 323
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b62f250c5a280a70800000000000000
+      internalID: 8793324847153227444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 323
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfd6aa1e150d8bb0800000000000000
+      internalID: -4932280390046523426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_13
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 322
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57dd397d43eb0de0800000000000000
+      internalID: -1365748140090730657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 262
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637f73de221832b10800000000000000
+      internalID: 1955548650217666358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_15
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 262
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ad5253e877cfca0800000000000000
+      internalID: -5981774752394126772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_16
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 262
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2bd27595ef81af50800000000000000
+      internalID: 6890947121071184687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_17
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 262
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8621f52b94aa2cf10800000000000000
+      internalID: 2288578794159542888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 263
+        width: 53
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fdbf9762e1e40760800000000000000
+      internalID: 7423306448330800624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 263
+        width: 62
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9932c7baa3f764c30800000000000000
+      internalID: 4343298780607292313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_20
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 252
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee11b04d94f2050e0800000000000000
+      internalID: -2283273016940228114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 184
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b71d8aa11177730800000000000000
+      internalID: 3996682000513727236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 181
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d25f25249fee6680800000000000000
+      internalID: -8759800805630979375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_23
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 180
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643073ca9e0e00dd0800000000000000
+      internalID: -2521768497106189498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_24
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 180
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa70368c510ed3ab0800000000000000
+      internalID: -5026615224914737233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_25
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 180
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2244364b073fbf20800000000000000
+      internalID: 3440529161896346155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_26
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 180
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8b502cc1d86b870800000000000000
+      internalID: 8698294884966447271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_27
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 181
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27eb33b503c2ac470800000000000000
+      internalID: 8415587439895363186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2300e1cae19ff30800000000000000
+      internalID: 4609749418176951000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_29
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800c94d9cae5370e0800000000000000
+      internalID: -2273369291425726456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_30
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d390082c4a49d1bb0800000000000000
+      internalID: -4963647778933700291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6912582374720aa30800000000000000
+      internalID: 4224419637217272214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_32
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee4f5f0aed841210800000000000000
+      internalID: 1302822228636684009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_33
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7b6fc186b72e420800000000000000
+      internalID: 2657822417194760100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_34
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 121
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7962cae6549268ab0800000000000000
+      internalID: -5006268557589469545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0869f712082f0a30800000000000000
+      internalID: 4183606568307746828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 61
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777c0b111c9ab13c0800000000000000
+      internalID: -4387726765251836041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_37
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 61
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26593401f2961e6b0800000000000000
+      internalID: -5268814438189525662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_38
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 61
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8c6e4d4dbb13740800000000000000
+      internalID: 5130087973331060944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickAxe_39
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 61
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbf1f5c355e01ac0800000000000000
+      internalID: -3886354330454721606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 98232ed22b9025241b88efff5ddd1cea
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pickAxe_0: -64636152597809734
+      pickAxe_1: -4321220722577824863
+      pickAxe_10: -5168831165826681089
+      pickAxe_11: 8793324847153227444
+      pickAxe_12: -4932280390046523426
+      pickAxe_13: -1365748140090730657
+      pickAxe_14: 1955548650217666358
+      pickAxe_15: -5981774752394126772
+      pickAxe_16: 6890947121071184687
+      pickAxe_17: 2288578794159542888
+      pickAxe_18: 7423306448330800624
+      pickAxe_19: 4343298780607292313
+      pickAxe_2: -7626574418609208436
+      pickAxe_20: -2283273016940228114
+      pickAxe_21: 3996682000513727236
+      pickAxe_22: -8759800805630979375
+      pickAxe_23: -2521768497106189498
+      pickAxe_24: -5026615224914737233
+      pickAxe_25: 3440529161896346155
+      pickAxe_26: 8698294884966447271
+      pickAxe_27: 8415587439895363186
+      pickAxe_28: 4609749418176951000
+      pickAxe_29: -2273369291425726456
+      pickAxe_3: 5281408211945802300
+      pickAxe_30: -4963647778933700291
+      pickAxe_31: 4224419637217272214
+      pickAxe_32: 1302822228636684009
+      pickAxe_33: 2657822417194760100
+      pickAxe_34: -5006268557589469545
+      pickAxe_35: 4183606568307746828
+      pickAxe_36: -4387726765251836041
+      pickAxe_37: -5268814438189525662
+      pickAxe_38: 5130087973331060944
+      pickAxe_39: -3886354330454721606
+      pickAxe_4: -8511325317923261595
+      pickAxe_5: 2794216738066519600
+      pickAxe_6: 5453723792671160400
+      pickAxe_7: -4311389099520297745
+      pickAxe_8: -5306474794682979986
+      pickAxe_9: -1858935074418335973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

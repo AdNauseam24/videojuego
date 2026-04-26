@@ -80,11 +80,17 @@ public class Objeto : MonoBehaviour
                 roca.ActivarMinijuego();
                 yield return new WaitForSecondsRealtime(1f);
                 roca.desactivarCanvas();
-                roca.RecibirDaño();
+              
 
                 Time.timeScale = 1;
-                
-                 yield return 1;
+
+                Jugador.Instance.GetComponent<Animator>().SetBool("Pico", true);
+                yield return new WaitForSeconds(0.35f);
+                Jugador.Instance.GetComponent<Animator>().SetBool("Pico", false);
+
+
+                roca.RecibirDaño();
+                yield return 1;
             }
             yield return -1;
         }

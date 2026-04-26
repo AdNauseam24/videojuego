@@ -24,16 +24,16 @@ AnimationClip:
       value: {fileID: -8219788850212080820, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
     - time: 0.1
       value: {fileID: 3955681608948607562, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
-    - time: 0.21666667
+    - time: 0.2
       value: {fileID: 9180910349131397091, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
-    - time: 0.28333333
+    - time: 0.3
       value: {fileID: -6655125059931859839, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
     - time: 0.4
       value: {fileID: -2027657127923747698, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
     - time: 0.5
       value: {fileID: 5333996877051899898, guid: 17d7d6cc270f5bf4089640c9a9571ff1, type: 3}
     attribute: m_Sprite
-    path: Triangle
+    path: Hacha
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -45,7 +45,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 652283857
+      path: 4030444011
       attribute: 0
       script: {fileID: 0}
       typeID: 212
