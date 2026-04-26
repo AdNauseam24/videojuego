@@ -106,6 +106,13 @@ public class Objeto : MonoBehaviour
                 arbol.RecibirDaño();
 
                 Time.timeScale = 1;
+                
+
+                Jugador.Instance.GetComponent<Animator>().SetBool("Hacha", true);
+                yield return new WaitForSeconds(0.25f);
+                Jugador.Instance.GetComponent<Animator>().SetBool("Hacha", false);
+
+                arbol.RecibirDaño();
             }
             
            yield return 1;

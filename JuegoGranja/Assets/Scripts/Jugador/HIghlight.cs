@@ -94,6 +94,10 @@ public class HIghlight : MonoBehaviour
         mouse = Input.mousePosition;
 
         worldPos = Camera.main.ScreenToWorldPoint(mouse);
+        if(worldPos.x > Jugador.Instance.transform.position.x)
+            Jugador.Instance.transform.localScale = new Vector3(1,1,1);
+        else
+            Jugador.Instance.transform.localScale = new Vector3(-1,1,1);
 
         Vector2 playerPos = player.position;
 
