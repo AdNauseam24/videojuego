@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour, IPointerClickHandler
 
    public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.button == PointerEventData.InputButton.Left && estadoActual == NPCState.Hablar && actorSO.aplicable)
+        if(eventData.button == PointerEventData.InputButton.Left && estadoActual == NPCState.Hablar && actorSO != null && actorSO.aplicable)
         {
             if(!GestorInventario.Instance.GetMenuAbierto() && !GestorDIalogos.Instance.dialogoActivo)
             {

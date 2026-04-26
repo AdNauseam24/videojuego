@@ -79,8 +79,11 @@ public class MenuPrincipal : MonoBehaviour
 
     public void RecogerNombre(string input)
     {
+        if(!input.Equals("") && Input.GetKeyDown(KeyCode.Return))
+        {
         nombreArchivo = input;
         SceneManager.LoadScene("Capitulo1-1");
+        }
     }
 
     public void CerrarBorrado()
