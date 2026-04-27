@@ -152,6 +152,10 @@ public class Objeto : MonoBehaviour
             Debug.Log("Pescar");
             RaycastHit2D hit = Physics2D.Raycast(posicion,new Vector2(1,1), 0.3f, LayerMask.GetMask("Agua"));
             Agua agua = hit.transform.gameObject.GetComponent<Agua>();
+            Jugador.Instance.highlight.transform.position = posicion;
+            Jugador.Instance.highlight.GetComponentInChildren<Animator>().Play("EfectoPesca");
+            Jugador.Instance.GetComponent<Movimiento>().enabled = false;
+            await Task.Delay(600);
 
             Time.timeScale = 0;
             gestorInventario.DesactivarHotbar();
@@ -178,6 +182,7 @@ public class Objeto : MonoBehaviour
             await Task.Delay(TimeSpan.FromSeconds(0.1));
             drop.GetComponent<BoxCollider2D>().size = new Vector2(2f,2f);
             }
+            Jugador.Instance.GetComponent<Movimiento>().enabled = true;
             gestorInventario.ActivarHotbar();
             Time.timeScale = 1;
             

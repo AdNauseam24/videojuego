@@ -23,7 +23,7 @@ public class Cursor : MonoBehaviour
     {
         
         posicionraton = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        Physics.Simulate(Time.fixedDeltaTime);
+        //Physics.Simulate(Time.fixedDeltaTime);
 
         
         if(Vector2.Distance(centro, posicionraton) < radio)

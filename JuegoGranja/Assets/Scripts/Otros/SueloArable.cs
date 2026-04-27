@@ -65,6 +65,8 @@ public class SueloArable : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
 
         }
+
+        gameObject.GetComponentInChildren<Animator>().Play("EfectoArar");
     }
 
     public void Regar()
@@ -79,6 +81,7 @@ public class SueloArable : MonoBehaviour
             regado = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[4];
         }
+         gameObject.GetComponentInChildren<Animator>().Play("EfectoRegar");
     }
 
     public int Plantar(int idSemilla)

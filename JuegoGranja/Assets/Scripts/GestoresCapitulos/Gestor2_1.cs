@@ -132,6 +132,7 @@ void OnEnable()
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Y otra vez pierdes la consciencia",3);
         yield return new WaitForSeconds(6f);
+        
 
         Jugador.Instance.gameObject.SetActive(true);
         GestorInventario.Instance.gameObject.SetActive(true);

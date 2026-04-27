@@ -7,7 +7,7 @@ public class Jugador : MonoBehaviour
     private GestorInventario inventario;
 
     [SerializeField]
-    private HIghlight highlight;
+    public HIghlight highlight;
 
     [SerializeField]
     private Compendio compendio;
