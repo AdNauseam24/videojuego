@@ -49,4 +49,25 @@ public GameObject[] objetosPersistentes;
         Destroy(GameObject.FindGameObjectWithTag("MovePoint"));
         Destroy(gameObject);
     }
+    public void ActivarTodo()
+    {
+        foreach (GameObject obj in objetosPersistentes)
+        {
+            if(obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    public void DesactivarTodo()
+    {
+        foreach (GameObject obj in objetosPersistentes)
+        {
+            if(obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
 }

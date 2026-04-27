@@ -31,7 +31,7 @@ public class Hablar : MonoBehaviour
             {
                 GestorDIalogos.Instance.AvanzarDialogo(null);
             }
-            else
+            else if(Time.timeScale == 1)
             {
                 CheckNuevaConversacion();
                 GestorDIalogos.Instance.EmpezarDialogo(conversacionActual);
