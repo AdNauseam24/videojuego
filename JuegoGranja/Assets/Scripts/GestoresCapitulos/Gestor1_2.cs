@@ -6,7 +6,6 @@ public class Gestor1_2 : MonoBehaviour
 {
     public Animator animTroll;
     private bool listoParaEmpezar;
-    private bool minijuegoActivo;
     public TMP_Text textoArriba;
     public TMP_Text textoPuntuacion;
     public TMP_Text textoMultiplicador;
@@ -54,7 +53,6 @@ public class Gestor1_2 : MonoBehaviour
             botones.SetActive(true);
             listoParaEmpezar = false;
             reproducir = true;
-            minijuegoActivo = true;
             textoArriba.GetComponent<CanvasGroup>().alpha = 0f;
             beatScroller.empezado = true;
             musica.Play();

@@ -13,7 +13,7 @@ public class Gestor1_3 : MonoBehaviour
  public CanvasGroup botones;
  private bool botonesActivos;
 
- public Camera camera;
+ public new Camera camera;
 
 
 

@@ -23,8 +23,6 @@ public class Movimiento : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-    private int direccion = 1;
-
     int filtroLayerMask;
 
     public void OnDisable()

@@ -11,7 +11,6 @@ public class HIghlight : MonoBehaviour
 
     private float contador;
 
-    private bool activado;
     void Start()
     {
         
@@ -27,7 +26,6 @@ public class HIghlight : MonoBehaviour
         }
         else
         {
-            activado = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
          /*mouse = Input.mousePosition;
@@ -147,7 +145,6 @@ public class HIghlight : MonoBehaviour
     public void VisibleValido(Vector2 posicion)
     {
         transform.position = posicion;
-        activado = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
         contador = 1;
@@ -158,7 +155,6 @@ public class HIghlight : MonoBehaviour
     public void VisibleNoValido(Vector2 posicion)
     {
         transform.position = posicion;
-        activado = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1,0,0,0.5f);
         contador = 1;
