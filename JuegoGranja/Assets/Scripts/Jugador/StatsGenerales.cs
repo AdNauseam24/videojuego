@@ -16,6 +16,10 @@ public class StatsGenerales : MonoBehaviour
     public Slider sliderEnergia;
     public Vector3 originalPos;
 
+    public float volumenGeneral = 1f;
+    public float volumenSFX = 1f;
+    public float volumenMusica = 1f;
+
     public int capituloHistoria;
 
     
@@ -160,6 +164,9 @@ public class StatsGenerales : MonoBehaviour
         data.playaDesbloqueada = playaDesbloqueada;
         data.entregado = entregado;
         data.dia = dia;
+        data.volumenGeneral=volumenGeneral;
+        data.volumenMusica = volumenMusica;
+        data.volumenSFX = volumenSFX;
     }
     public void Load(StatsSavedata data)
     {
@@ -184,6 +191,9 @@ public class StatsGenerales : MonoBehaviour
         playaDesbloqueada = data.playaDesbloqueada;
         entregado = data.entregado;
         dia = data.dia;
+        volumenGeneral = data.volumenGeneral;
+        volumenSFX = data.volumenSFX;
+        volumenMusica = data.volumenMusica;
 
     }
 
@@ -224,4 +234,7 @@ public struct StatsSavedata
     public bool playaDesbloqueada;
     public bool entregado;
     public int dia;
+    public float volumenGeneral;
+    public float volumenSFX;
+    public float volumenMusica;
 }

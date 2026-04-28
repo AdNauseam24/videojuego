@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 7a34e49467080354eaa6e4ef264afa7a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 363414
+  packageName: Path of Adventure - Free Music Pack for JRPG
+  packageVersion: 1.0
+  assetPath: Assets/PathOfAdventure/Loop/Village_Loop.wav
+  uploadId: 867734
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 8
+  defaultSettings:
+    serializedVersion: 2
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+    preloadAudioData: 1
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

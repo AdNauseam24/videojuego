@@ -44,7 +44,7 @@ public class HerramientasEscenasScript : MonoBehaviour
          while(timeElapsed < lerpDuration)
         {
             timeElapsed += Time.unscaledDeltaTime;
-           objeto.transform.position = Vector3.Lerp(posicionInicial,objetivo,timeElapsed/lerpDuration);
+            objeto.transform.position = Vector3.Lerp(posicionInicial,objetivo,timeElapsed/lerpDuration);
            
             yield return null;
         }
