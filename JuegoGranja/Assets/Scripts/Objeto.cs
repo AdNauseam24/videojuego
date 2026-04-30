@@ -86,6 +86,7 @@ public class Objeto : MonoBehaviour
 
                 Jugador.Instance.GetComponent<Animator>().SetBool("Pico", true);
                 yield return new WaitForSeconds(0.35f);
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.picarPiedra);
                 Jugador.Instance.GetComponent<Animator>().SetBool("Pico", false);
 
 
@@ -156,6 +157,7 @@ public class Objeto : MonoBehaviour
             Agua agua = hit.transform.gameObject.GetComponent<Agua>();
             Jugador.Instance.highlight.transform.position = posicion;
             Jugador.Instance.highlight.GetComponentInChildren<Animator>().Play("EfectoPesca");
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.pescar);
             Jugador.Instance.GetComponent<Movimiento>().enabled = false;
             await Task.Delay(600);
 

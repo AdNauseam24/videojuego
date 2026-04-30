@@ -209703,11 +209703,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2c9a10e60b0b14bafea3366dda7bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMultiplier: 0.3
+  audioMultiplier: 0.2
   musicSource: {fileID: 985080463}
   sfxSource: {fileID: 2101432055}
   musicaGranaja: {fileID: 8300000, guid: 7a34e49467080354eaa6e4ef264afa7a, type: 3}
   cortarMadera: {fileID: 8300000, guid: e16471bb2fd425e479863294f8efedc6, type: 3}
+  picarPiedra: {fileID: 8300000, guid: f5273ee40081c5944a6c6d60abf1e6c3, type: 3}
+  regarPlantas: {fileID: 8300000, guid: b5e1f623adba79e47986b87357d334f9, type: 3}
+  ararSuelo: {fileID: 8300000, guid: 64f8ba89ccdc9bb4ebe318271e47282d, type: 3}
+  pescar: {fileID: 8300000, guid: 6b39f0417bce90541969c5df6d849f2a, type: 3}
+  grassFootsteps:
+  - {fileID: 8300000, guid: fa814d67374ed744ea0b38a8d40b2057, type: 3}
+  - {fileID: 8300000, guid: 94694e45e6df53747989df08b65db81a, type: 3}
+  - {fileID: 8300000, guid: 54b9b74c6b0f18245844af77e67c69f4, type: 3}
+  - {fileID: 8300000, guid: fed97abe594138846b76967a2205680c, type: 3}
+  - {fileID: 8300000, guid: 7f77fe66c774635428ba17a7be808310, type: 3}
+  - {fileID: 8300000, guid: d71128f7ccd1d4d4892e48022796fe40, type: 3}
+  - {fileID: 8300000, guid: 2201223d0c3d98a4aa710cda9ab34c6b, type: 3}
 --- !u!1 &1477168589
 GameObject:
   m_ObjectHideFlags: 0

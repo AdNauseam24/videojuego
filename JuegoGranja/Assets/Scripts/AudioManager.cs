@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -26,6 +27,14 @@ public class AudioManager : MonoBehaviour
 
     [Header("---------Audio Clips SFX-----------")]
     public AudioClip cortarMadera;
+    public AudioClip picarPiedra;
+    public AudioClip regarPlantas;
+    public AudioClip ararSuelo;
+    public AudioClip pescar;
+
+    [Header("---------Audio Clips Footsteps-----------")]
+    private List<AudioClip> selectedFootsteps = new List<AudioClip>();
+    public AudioClip[] grassFootsteps;
 
     void Start()
     {  
@@ -33,10 +42,17 @@ public class AudioManager : MonoBehaviour
         musicSource.volume = StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
         musicSource.clip = musicaGranaja;
         musicSource.Play();
+
+        ChangeFootsteps(grassFootsteps);
     }
     public void PlaySFX(AudioClip audioClip)
     {
         sfxSource.PlayOneShot(audioClip,  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX);
+    }
+
+     public void PlaySFX(AudioClip audioClip, float multiplier)
+    {
+        sfxSource.PlayOneShot(audioClip,  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX * multiplier);
     }
     public void PlayMusic(AudioClip audioClip)
     {
@@ -78,5 +94,18 @@ public class AudioManager : MonoBehaviour
             musicSource.volume = Mathf.Lerp(0,finalVolume,timeElapsed/lerpDuration);
             yield return null;
         }
+    }
+
+    public void ChangeFootsteps(AudioClip[] audio)
+    {
+        selectedFootsteps.Clear();
+        selectedFootsteps.AddRange(audio);
+        Debug.Log(selectedFootsteps);
+    }
+
+    public void FootStep()
+    {
+        int r = Random.Range(0, selectedFootsteps.Count);
+        sfxSource.PlayOneShot(selectedFootsteps[r],  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX * 0.15f);
     }
 }

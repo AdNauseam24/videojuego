@@ -118,6 +118,10 @@ public class Movimiento : MonoBehaviour
             }
         }
     }
+    public void FootSteps()
+    {
+        AudioManager.Instance.FootStep();
+    }
 
     public static string GetUltimaDireccion()
     {
