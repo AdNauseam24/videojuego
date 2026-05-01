@@ -18,12 +18,13 @@ public class AudioManager : MonoBehaviour
 
     [Header("---------Audio Source-----------")]
     [SerializeField]
-   AudioSource musicSource;
+    AudioSource musicSource;
     [SerializeField]
     AudioSource sfxSource;
 
     [Header("---------Audio Clips Música-----------")]
-    public AudioClip musicaGranaja;
+    public AudioClip musicaGranja;
+    public AudioClip musicaBosque;
 
     [Header("---------Audio Clips SFX-----------")]
     public AudioClip cortarMadera;
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip regarPlantas;
     public AudioClip ararSuelo;
     public AudioClip pescar;
+    public AudioClip clickMenu;
 
     [Header("---------Audio Clips Footsteps-----------")]
     public AudioClip[] grassFootsteps;
@@ -45,7 +47,7 @@ public class AudioManager : MonoBehaviour
     {  
         musicSource.loop = true;
         musicSource.volume = StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
-        musicSource.clip = musicaGranaja;
+        musicSource.clip = musicaGranja;
         musicSource.Play();
 
         ChangeFootsteps(woodFootsteps);
@@ -112,5 +114,9 @@ public class AudioManager : MonoBehaviour
     {
         int r = Random.Range(0, selectedFootsteps.Count);
         sfxSource.PlayOneShot(selectedFootsteps[r],  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX * 0.15f);
+    }
+    public AudioClip GetMusicClip()
+    {
+        return musicSource.clip;
     }
 }

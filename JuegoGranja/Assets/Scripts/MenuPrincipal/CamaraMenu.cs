@@ -6,11 +6,15 @@ public class CamaraMenu : MonoBehaviour
 
     public AudioClip introMusica;
     public AudioClip loopMusica;
-    private new AudioSource audio;
+    public AudioSource audio1;
+    public AudioSource audio2;
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        GetComponent<AudioSource>().loop = false;
+        audio2.volume = 0;
+        audio2.loop = true;
+        audio1.loop = false;
+        audio1.clip = introMusica;
+        audio2.clip = loopMusica;
         StartCoroutine(PlayAudio());
         StartCoroutine(Movimiento());
     }
@@ -34,11 +38,10 @@ public class CamaraMenu : MonoBehaviour
     }
     public IEnumerator PlayAudio()
     {
-        audio.clip = introMusica;
-        audio.PlayOneShot(audio.clip);
-        yield return new WaitForSeconds(audio.clip.length-0.5f);
-        audio.clip = loopMusica;
-        GetComponent<AudioSource>().loop = true;
-        audio.Play();
+       
+        audio1.PlayOneShot(audio1.clip);
+        yield return new WaitForSeconds(audio1.clip.length-0.7f);
+        audio2.Play();
+        audio2.volume = 1;
     }
 }

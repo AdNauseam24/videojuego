@@ -21,6 +21,10 @@ public class CambioEscenaBosque : MonoBehaviour
     IEnumerator DelayFade()
     {
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaBosque)
+        {
+            AudioManager.Instance.FadeOutMusic(0.75f);
+        }
         while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
         {
             fadeimg.GetComponent<CanvasGroup>().alpha += 0.1f;
@@ -30,6 +34,13 @@ public class CambioEscenaBosque : MonoBehaviour
         jugador.position = nuevaPos;
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
+
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaBosque)
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaBosque);
+            AudioManager.Instance.FadeInMusic(1.5f);
+        }
+
         SceneManager.LoadScene("Bosque" + Random.Range(1,3));
     }
 }

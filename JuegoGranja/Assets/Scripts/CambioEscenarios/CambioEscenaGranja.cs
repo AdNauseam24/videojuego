@@ -20,6 +20,11 @@ public class CambioEscenaGranja : MonoBehaviour
 
     IEnumerator DelayFade()
     {
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaGranja)
+        {
+            AudioManager.Instance.FadeOutMusic(0.75f);
+        }
+
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
         {
@@ -30,6 +35,12 @@ public class CambioEscenaGranja : MonoBehaviour
         jugador.position = nuevaPos;
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
+
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaGranja)
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaGranja);
+            AudioManager.Instance.FadeInMusic(1.5f);
+        }
 
         AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.grassFootsteps);
         SceneManager.LoadScene(escenaObjetivo);
