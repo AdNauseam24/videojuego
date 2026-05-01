@@ -30,6 +30,7 @@ public class CambioEscenaPlayaCinematica : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
 
+        AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.sandFootsteps);
         if(StatsGenerales.Instance.capituloHistoria == 2)
             SceneManager.LoadScene("Capitulo4-1");
         else

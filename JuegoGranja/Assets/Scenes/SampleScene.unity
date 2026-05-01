@@ -209720,6 +209720,29 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7f77fe66c774635428ba17a7be808310, type: 3}
   - {fileID: 8300000, guid: d71128f7ccd1d4d4892e48022796fe40, type: 3}
   - {fileID: 8300000, guid: 2201223d0c3d98a4aa710cda9ab34c6b, type: 3}
+  woodFootsteps:
+  - {fileID: 8300000, guid: 03d7e27db02c5f64fa03f1b414fa96cb, type: 3}
+  - {fileID: 8300000, guid: f0261db310ab74f408b955664cbd3491, type: 3}
+  - {fileID: 8300000, guid: 78553622ae2b67b4d8dfdcf70ecbb282, type: 3}
+  - {fileID: 8300000, guid: 9f8067edd7d8dee458f05b7d244179f0, type: 3}
+  - {fileID: 8300000, guid: e6205621c1868c145b73949a857a982e, type: 3}
+  sandFootsteps:
+  - {fileID: 8300000, guid: 5eb7ee985c2493b48826d645569e2e5c, type: 3}
+  - {fileID: 8300000, guid: dc6b86e9bdcba814bb3079f70d898f39, type: 3}
+  - {fileID: 8300000, guid: 3e4761d98a2e6ae4a962b2e0b9f376de, type: 3}
+  - {fileID: 8300000, guid: 5d8d8966e97189e499620d64bf528145, type: 3}
+  - {fileID: 8300000, guid: e5a9f62497e6f014eb77c3b5702a7e1a, type: 3}
+  - {fileID: 8300000, guid: 4b0aff07ea8aab141962a8dfe0fbed02, type: 3}
+  - {fileID: 8300000, guid: dfc73d508072d2641b53ee44c06a4ba9, type: 3}
+  - {fileID: 8300000, guid: 185c08c0472583142a80472b01f2e1ea, type: 3}
+  rockFootsteps:
+  - {fileID: 8300000, guid: c9c4335209593f646b1d2d8f1465f7be, type: 3}
+  - {fileID: 8300000, guid: 9ae7c3d60f6fb3b45abebe8fdc831fac, type: 3}
+  - {fileID: 8300000, guid: a67715f73f72b164eba6f2c4f59cfee5, type: 3}
+  - {fileID: 8300000, guid: 15ff437831d076148934ab5c5f204ac4, type: 3}
+  - {fileID: 8300000, guid: 620cc173734a77040a02edea8046c28d, type: 3}
+  - {fileID: 8300000, guid: 53fc64ba926031140a94268f925b3c6d, type: 3}
+  - {fileID: 8300000, guid: 5bd5b76976c31714f9a33bde9ef6561a, type: 3}
 --- !u!1 &1477168589
 GameObject:
   m_ObjectHideFlags: 0

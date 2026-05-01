@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 public class TPInsideScene : MonoBehaviour
 {
-     public Vector2 nuevaPos;
+    public Vector2 nuevaPos;
     private Transform jugador;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -11,6 +11,14 @@ public class TPInsideScene : MonoBehaviour
         {
             jugador = collision.transform;
             StartCoroutine(DelayFade());
+            if(nuevaPos.x == 0.5)
+            {
+                AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.grassFootsteps);
+            }
+            else
+            {
+                AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.woodFootsteps);
+            }
         }
     }
 

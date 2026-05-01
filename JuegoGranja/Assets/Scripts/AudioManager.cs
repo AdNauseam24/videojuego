@@ -33,8 +33,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip pescar;
 
     [Header("---------Audio Clips Footsteps-----------")]
-    private List<AudioClip> selectedFootsteps = new List<AudioClip>();
     public AudioClip[] grassFootsteps;
+    public AudioClip[] woodFootsteps;
+    public AudioClip[] sandFootsteps;
+    public AudioClip[] rockFootsteps;
+
+    private List<AudioClip> selectedFootsteps = new List<AudioClip>();
+    
 
     void Start()
     {  
@@ -43,7 +48,7 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = musicaGranaja;
         musicSource.Play();
 
-        ChangeFootsteps(grassFootsteps);
+        ChangeFootsteps(woodFootsteps);
     }
     public void PlaySFX(AudioClip audioClip)
     {

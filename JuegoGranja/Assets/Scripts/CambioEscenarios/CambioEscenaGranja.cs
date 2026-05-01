@@ -31,6 +31,7 @@ public class CambioEscenaGranja : MonoBehaviour
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
 
+        AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.grassFootsteps);
         SceneManager.LoadScene(escenaObjetivo);
     }
 }

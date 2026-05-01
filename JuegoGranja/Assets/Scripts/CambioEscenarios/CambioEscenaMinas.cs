@@ -43,6 +43,7 @@ public class CambioEscenaMinas : MonoBehaviour
         jugador.position = nuevaPos;
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
+        AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.rockFootsteps);
         
         if(StatsGenerales.Instance.capituloHistoria < 1)
         {
