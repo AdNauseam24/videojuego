@@ -1,4 +1,6 @@
 using System.Collections;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,14 +10,24 @@ public class MenuOpciones : MonoBehaviour
     public Image panelOpciones;
     public Image panelConfirmacion;
 
+    public Slider sliderGeneral;
+    public Slider sliderMusica;
+    public Slider sliderSFX;
+
+    public TMP_Text textoGeneral;
+    public TMP_Text textoMusica;
+    public TMP_Text textoSFX;
+
     private bool opcionesAbierto;
 
     private bool menuPrincipal;
 
     void Start()
     {
+        UpdateUI();
         panelOpciones.gameObject.SetActive(false);
         panelConfirmacion.gameObject.SetActive(false);
+
     }
 
     public void BotonOpciones()
@@ -103,6 +115,43 @@ public class MenuOpciones : MonoBehaviour
         GameManager.Instance.Borrado();
         
     }
+
+
+
+    void OnEnable()
+    {
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        sliderGeneral.value = StatsGenerales.Instance.volumenGeneral;
+        sliderMusica.value = StatsGenerales.Instance.volumenMusica;
+        sliderSFX.value = StatsGenerales.Instance.volumenSFX;
+
+        textoGeneral.text = sliderGeneral.value == 0 ? "0" : (sliderGeneral.value*100).ToString("#");
+        textoMusica.text = sliderMusica.value == 0 ? "0" :  (sliderMusica.value*100).ToString("#");
+        textoSFX.text = sliderSFX.value == 0 ? "0" :  (sliderSFX.value*100).ToString("#");
+    }
+
+    public void ChangeGeneral()
+    {
+        StatsGenerales.Instance.volumenGeneral = sliderGeneral.value;
+        UpdateUI();
+    }
+
+    public void ChangeMusica()
+    {
+        StatsGenerales.Instance.volumenMusica = sliderMusica.value;
+        UpdateUI();
+    }
+
+    public void ChangeSFX()
+    {
+        StatsGenerales.Instance.volumenSFX = sliderSFX.value;
+        UpdateUI();
+    }
+
 
     void Update()
     {
