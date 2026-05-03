@@ -125,4 +125,9 @@ public class AudioManager : MonoBehaviour
     {
         return musicSource.clip;
     }
+
+    public void ChangeMusicVolume()
+    {
+        musicSource.volume =  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
+    }
 }

@@ -21,7 +21,7 @@ public class StatsGenerales : MonoBehaviour
     public float volumenMusica = 1f;
 
     public int capituloHistoria;
-
+    public int contadorTareas = 0;
     
     public int afinidadPueblo1 = 0;
     public int afinidadPueblo2 = 0;
@@ -78,7 +78,7 @@ public class StatsGenerales : MonoBehaviour
         "50 100 9", 
         "75 100 8",
         "300 50 23"
-    };
+        };
 
     originalPos = sliderEnergia.GetComponent<RectTransform>().localPosition;
     }
@@ -146,6 +146,7 @@ public class StatsGenerales : MonoBehaviour
     public void Save(ref StatsSavedata data)
     {
         data.capituloHistoria = capituloHistoria;
+        data.contadorTareas = contadorTareas;
         data.oro = oro;
         data.danioRocas = danioRocas;
         data.danioArboles = danioArboles;
@@ -171,6 +172,7 @@ public class StatsGenerales : MonoBehaviour
     public void Load(StatsSavedata data)
     {
         capituloHistoria = data.capituloHistoria;
+        contadorTareas = data.contadorTareas;
         oro = data.oro;
         UpdateOro();
 
@@ -216,6 +218,7 @@ public class StatsGenerales : MonoBehaviour
 public struct StatsSavedata
 {
     public int capituloHistoria;
+    public int contadorTareas;
     public int oro;
     public float danioRocas;
     public float danioArboles;

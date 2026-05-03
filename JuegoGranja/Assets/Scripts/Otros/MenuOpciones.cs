@@ -116,13 +116,6 @@ public class MenuOpciones : MonoBehaviour
         
     }
 
-
-
-    void OnEnable()
-    {
-        UpdateUI();
-    }
-
     private void UpdateUI()
     {
         sliderGeneral.value = StatsGenerales.Instance.volumenGeneral;
@@ -132,6 +125,8 @@ public class MenuOpciones : MonoBehaviour
         textoGeneral.text = sliderGeneral.value == 0 ? "0" : (sliderGeneral.value*100).ToString("#");
         textoMusica.text = sliderMusica.value == 0 ? "0" :  (sliderMusica.value*100).ToString("#");
         textoSFX.text = sliderSFX.value == 0 ? "0" :  (sliderSFX.value*100).ToString("#");
+
+        AudioManager.Instance.ChangeMusicVolume();
     }
 
     public void ChangeGeneral()
