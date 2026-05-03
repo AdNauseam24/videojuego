@@ -165,6 +165,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, 
 
     public void OnDrop(PointerEventData eventData)
     {
+        if(gestorInventario.GetMenuAbierto()){
 		//El game object que se suelta sobre el espacio
        GameObject dropped = eventData.pointerDrag;
        DraggingObjetos objetoDrop = dropped.GetComponent<DraggingObjetos>();
@@ -200,6 +201,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, 
 				marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;
 				this.seleccionado = true;
 			}
+        }
        
     }
 

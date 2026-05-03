@@ -33,6 +33,9 @@ public class DarAzadaYRegadera : ComportamientoBaseSO
 		drop2.SetCantidad(1);
 		drop2.SetId(5);
 		drop2.GetComponent<ObjetoDrop>().enabled = true;
+
+         StatsGenerales.Instance.menuTareas.ActualizarLista(7);
+
         GestorDIalogos.Instance.TerminarDialogo();
     }
 }

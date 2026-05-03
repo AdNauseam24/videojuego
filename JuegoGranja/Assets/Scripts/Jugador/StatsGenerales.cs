@@ -58,6 +58,7 @@ public class StatsGenerales : MonoBehaviour
     };
 
     public bool entregado;
+    public MenuTareas menuTareas;
 
    private void Awake()
     {

@@ -46,7 +46,7 @@ MonoBehaviour:
   opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 0
-  afinidadPueblo2: 1
+  afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 2
   entregado: 0

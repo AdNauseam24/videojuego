@@ -598988,7 +598988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bocadilloAnim: {fileID: 1072253730}
   conversaciones:
-  - {fileID: 11400000, guid: 6d0b942ec1a2b6d42a2c917a384f9a41, type: 2}
+  - {fileID: 11400000, guid: fbf81721bb43ac04882c3e3ff4057892, type: 2}
   - {fileID: 11400000, guid: f5f15d3ffd8d13f46be8fd4401a906a7, type: 2}
   - {fileID: 11400000, guid: f13bb51f6726ec5429b4d68e565645c7, type: 2}
   - {fileID: 11400000, guid: 909b066593710ce49aefdfb9963d1ded, type: 2}

@@ -19,6 +19,9 @@ public class DarPico : ComportamientoBaseSO
 		drop.SetCantidad(1);
 		drop.SetId(2);
 		drop.GetComponent<ObjetoDrop>().enabled = true;
+
+         StatsGenerales.Instance.menuTareas.ActualizarLista(4);
+
         GestorDIalogos.Instance.TerminarDialogo();
     }
 }

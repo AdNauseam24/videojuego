@@ -109,6 +109,8 @@ public class Gestor3_4 : MonoBehaviour
         Jugador.Instance.transform.position = new Vector3(-193.5f,26.5f,0);
         GameObject.FindGameObjectWithTag("MovePoint").transform.position =new Vector3(-193.5f,26.5f,0);
 
+        StatsGenerales.Instance.menuTareas.ActualizarLista(6);
+
         StatsGenerales.Instance.capituloHistoria = 2;
         StatsGenerales.Instance.entregado = false;
         DialogueHistoryTracker.Instance.LImpiarLista();

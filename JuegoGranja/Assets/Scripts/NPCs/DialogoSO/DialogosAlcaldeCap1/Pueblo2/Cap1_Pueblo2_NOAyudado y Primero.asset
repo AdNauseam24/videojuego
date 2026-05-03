@@ -44,7 +44,7 @@ MonoBehaviour:
     texto: Toma y vuelve cuando tengas lo que te he pedido
   opciones: []
   requisitoNPCs: []
-  afinidadPueblo1: 1
+  afinidadPueblo1: 0
   afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 1

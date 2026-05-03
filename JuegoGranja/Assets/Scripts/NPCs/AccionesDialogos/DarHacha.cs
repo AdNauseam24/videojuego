@@ -20,6 +20,7 @@ public class DarHacha : ComportamientoBaseSO
 		drop.SetCantidad(1);
 		drop.SetId(3);
 		drop.GetComponent<ObjetoDrop>().enabled = true;
+        StatsGenerales.Instance.menuTareas.ActualizarLista(1);
         GestorDIalogos.Instance.TerminarDialogo();
     }
 }

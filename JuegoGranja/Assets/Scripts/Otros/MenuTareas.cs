@@ -11,9 +11,11 @@ public class MenuTareas : MonoBehaviour
    private bool abierto;
 
    public Image panelTareas;
+   private CanvasGroup canvasGroup;
 
     void Start()
     {
+        canvasGroup = panelTareas.GetComponent<CanvasGroup>();
         tareas = new string[]
         {
             "Explora los alrededores",
@@ -28,31 +30,56 @@ public class MenuTareas : MonoBehaviour
             "Informa de tu victoria",
             "Disfruta el juego como más te guste :)"
         };
-        AnadirTarea();
-        panelTareas.gameObject.SetActive(false);
 
+        Debug.Log(StatsGenerales.Instance.contadorTareas);
+        AnadirTarea();
+
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+    }
+
+
+    public void ActualizarLista(int n)
+    {
+        StatsGenerales.Instance.contadorTareas = n;
+        AnadirTarea();
     }
 
     private void AnadirTarea()
     {
+        foreach (var tarea in contenido)
+        {
+            Destroy(tarea);
+        }
         contenido.Clear();
 
         for (int i = StatsGenerales.Instance.contadorTareas; i >= 0; i--)
         {
             Object prefab;
             #if UNITY_EDITOR
-            prefab = AssetDatabase.LoadAssetAtPath("Assets/Resources/Prefabs/TextoTareas.prefab", typeof(TMP_Text));
+
+                prefab = AssetDatabase.LoadAssetAtPath("Assets/Resources/Prefabs/TextoTareas.prefab", typeof(TMP_Text));
+
             #endif
+
             #if UNITY_STANDALONE
-            prefab = Resources.Load("Prefabs/TextoTareas", typeof(TMP_Text));
+
+                prefab = Resources.Load("Prefabs/TextoTareas", typeof(TMP_Text));
+
             #endif
+
             TMP_Text tarea = Instantiate(prefab,GameObject.FindGameObjectWithTag("Tareas").transform, false) as TMP_Text;
+
             tarea.text = tareas[i];
             tarea.fontStyle = FontStyles.Bold;
             if(i != StatsGenerales.Instance.contadorTareas)
             {
                 tarea.fontStyle = FontStyles.Strikethrough | FontStyles.Bold;
             }
+
+            contenido.Add(tarea);
         }
     }
 
@@ -62,8 +89,12 @@ public class MenuTareas : MonoBehaviour
         {
             Time.timeScale = 0;
             abierto = true;
-            panelTareas.gameObject.SetActive(true);
-             GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0.8f;
+
+            canvasGroup.alpha = 1;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;            
+
+            GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0.8f;
         }
     }
     private void CerrarTareas()
@@ -72,7 +103,10 @@ public class MenuTareas : MonoBehaviour
         {
             Time.timeScale = 1;
             abierto = false;
-            panelTareas.gameObject.SetActive(false);
+            
+            canvasGroup.alpha = 0;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
              GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0f;
         }
     }

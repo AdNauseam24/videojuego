@@ -45,9 +45,10 @@ MonoBehaviour:
   opciones: []
   requisitoNPCs: []
   afinidadPueblo1: 0
-  afinidadPueblo2: 1
+  afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 2
+  entregado: 0
   accion: {fileID: 11400000, guid: 22b874b3099455c4daebec524b3b42e3, type: 2}
   removeAfterPlay: 0
   removeListAfterPlay: []

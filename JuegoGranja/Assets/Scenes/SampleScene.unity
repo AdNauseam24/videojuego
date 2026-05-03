@@ -207297,7 +207297,7 @@ MonoBehaviour:
   volumenSFX: 1
   volumenMusica: 1
   capituloHistoria: 0
-  contadorTareas: 4
+  contadorTareas: 0
   afinidadPueblo1: 0
   afinidadPueblo2: 0
   dia: 1
@@ -207316,6 +207316,7 @@ MonoBehaviour:
   requisitosMisiones:
   - 50 100 9
   entregado: 0
+  menuTareas: {fileID: 1022646320}
 --- !u!1 &1308678321
 GameObject:
   m_ObjectHideFlags: 0
@@ -228726,6 +228727,7 @@ GameObject:
   - component: {fileID: 1644790426}
   - component: {fileID: 1644790428}
   - component: {fileID: 1644790427}
+  - component: {fileID: 1644790429}
   m_Layer: 5
   m_Name: PanelTareas
   m_TagString: Untagged
@@ -228792,6 +228794,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644790425}
   m_CullTransparentMesh: 1
+--- !u!225 &1644790429
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644790425}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1644921246
 GameObject:
   m_ObjectHideFlags: 0

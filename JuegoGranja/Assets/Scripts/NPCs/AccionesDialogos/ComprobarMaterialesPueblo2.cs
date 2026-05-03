@@ -32,9 +32,13 @@ public class ComprobarMatsPueblo2 : ComportamientoBaseSO
             {
                 StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
                 GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
+               
                 StatsGenerales.Instance.PuentePueblo2 = true;
+                 StatsGenerales.Instance.menuTareas.ActualizarLista(2);
+
                 GestorDIalogos.Instance.TerminarDialogoScripted();
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
+
                 StatsGenerales.Instance.afinidadPueblo2++;
                 StatsGenerales.Instance.ultimaAfinidad = 2;
                 StatsGenerales.Instance.entregado = true;
@@ -53,7 +57,10 @@ public class ComprobarMatsPueblo2 : ComportamientoBaseSO
             {
                 StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
                 GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
+               
                 StatsGenerales.Instance.vallaPueblo2 = true;
+                 StatsGenerales.Instance.menuTareas.ActualizarLista(5);
+
                 GestorDIalogos.Instance.TerminarDialogoScripted();
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
                 StatsGenerales.Instance.afinidadPueblo2++;
@@ -73,7 +80,10 @@ public class ComprobarMatsPueblo2 : ComportamientoBaseSO
             {
                 StatsGenerales.Instance.RestarOro(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[0]));
                 GestorInventario.Instance.RestarCantidad(int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[2]),int.Parse(StatsGenerales.Instance.requisitosMisiones[StatsGenerales.Instance.capituloHistoria].Split()[1]));
+               
                 StatsGenerales.Instance.playaDesbloqueada = true;
+                 StatsGenerales.Instance.menuTareas.ActualizarLista(8);
+
                 GestorDIalogos.Instance.TerminarDialogoScripted();
                 GestorDIalogos.Instance.EmpezarDialogo(dialogosCumplido[StatsGenerales.Instance.capituloHistoria]);
                 StatsGenerales.Instance.afinidadPueblo2++;

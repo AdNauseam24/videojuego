@@ -19,6 +19,9 @@ public class DarCania : ComportamientoBaseSO
 		drop.SetCantidad(1);
 		drop.SetId(6);
 		drop.GetComponent<ObjetoDrop>().enabled = true;
+
+         StatsGenerales.Instance.menuTareas.ActualizarLista(10);
+         
         GestorDIalogos.Instance.TerminarDialogo();
     }
 }

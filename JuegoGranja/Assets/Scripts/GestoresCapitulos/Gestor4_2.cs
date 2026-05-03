@@ -55,6 +55,8 @@ public class Gestor4_2 : MonoBehaviour
         Jugador.Instance.transform.position = new Vector3(-193.5f,26.5f,0);
         GameObject.FindGameObjectWithTag("MovePoint").transform.position =new Vector3(-193.5f,26.5f,0);
 
+         StatsGenerales.Instance.menuTareas.ActualizarLista(9);
+
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
         AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.woodFootsteps);
         SceneManager.LoadScene("SampleScene");

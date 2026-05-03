@@ -38,7 +38,7 @@ MonoBehaviour:
   opciones: []
   requisitoNPCs:
   - {fileID: 11400000, guid: b0e32e4342e6e784aaf3d8c83ea5ca63, type: 2}
-  afinidadPueblo1: 1
+  afinidadPueblo1: 0
   afinidadPueblo2: 0
   capituloHistoria: 0
   ultimaAfinidad: 1
