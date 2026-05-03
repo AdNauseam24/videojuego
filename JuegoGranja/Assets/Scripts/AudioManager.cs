@@ -113,7 +113,6 @@ public class AudioManager : MonoBehaviour
     {
         selectedFootsteps.Clear();
         selectedFootsteps.AddRange(audio);
-        Debug.Log(selectedFootsteps);
     }
 
     public void FootStep()

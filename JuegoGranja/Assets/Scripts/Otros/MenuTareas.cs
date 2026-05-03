@@ -31,7 +31,6 @@ public class MenuTareas : MonoBehaviour
             "Disfruta el juego como más te guste :)"
         };
 
-        Debug.Log(StatsGenerales.Instance.contadorTareas);
         AnadirTarea();
 
         canvasGroup.alpha = 0;

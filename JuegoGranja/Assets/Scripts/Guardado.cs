@@ -14,6 +14,7 @@ public class Guardado
         public InventorySaveData inventoryData;
         public DialogueTrackerSaveData dialogueData;
         public SueloSaveData sueloData;
+        public MenuNoteSaveData noteData;
     }
 
     public static string SaveFileName()
@@ -35,6 +36,7 @@ public class Guardado
         GestorInventario.Instance.Save(ref _saveData.inventoryData);
         DialogueHistoryTracker.Instance.Save(ref _saveData.dialogueData);
         Suelo.Instance.Save(ref _saveData.sueloData);
+        MenuNotas.Instance.Save(ref _saveData.noteData);
     }
 
     public static void Load()
@@ -50,5 +52,6 @@ public class Guardado
         GestorInventario.Instance.Load(_saveData.inventoryData);
         DialogueHistoryTracker.Instance.Load(_saveData.dialogueData);
         Suelo.Instance.Load(_saveData.sueloData);
+        MenuNotas.Instance.Load(_saveData.noteData);
     }
 }
