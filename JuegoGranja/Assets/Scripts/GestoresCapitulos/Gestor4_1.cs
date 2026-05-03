@@ -44,9 +44,9 @@ public class Gestor4_1 : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Por fin estás en la playa, así que toca ponerse a explorar...",3f);
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         jugadorAnim.SetFloat("Horizontal",0);
-        yield return new WaitForSeconds(1f);    
+        yield return new WaitForSeconds(0f);    
 
         exclamacionAnim.Play("Exclamacion");
         yield return new WaitForSeconds(0.5f);
@@ -70,8 +70,8 @@ public class Gestor4_1 : MonoBehaviour
          HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Decides acercate a ver qué pasa...",3f);
          HerramientasEscenasScript.Instance.AlejarCamara(camara,15,6f);
 
-         yield return new WaitForSeconds(3.5f);
-          jugadorAnim.SetFloat("Horizontal",0);
+        yield return new WaitForSeconds(3.5f);
+        jugadorAnim.SetFloat("Horizontal",0);
 
          yield return new WaitForSeconds(2.5f);
 

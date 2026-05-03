@@ -25,6 +25,10 @@ public class AudioManager : MonoBehaviour
     [Header("---------Audio Clips Música-----------")]
     public AudioClip musicaGranja;
     public AudioClip musicaBosque;
+    public AudioClip musicaPueblo1;
+    public AudioClip musicaPueblo2;
+    public AudioClip musicaCuevas;
+
 
     [Header("---------Audio Clips SFX-----------")]
     public AudioClip cortarMadera;
@@ -33,6 +37,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip ararSuelo;
     public AudioClip pescar;
     public AudioClip clickMenu;
+    public AudioClip menuDenied;
+    public AudioClip collectItem;
 
     [Header("---------Audio Clips Footsteps-----------")]
     public AudioClip[] grassFootsteps;

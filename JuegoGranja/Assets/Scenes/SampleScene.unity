@@ -209708,12 +209708,17 @@ MonoBehaviour:
   sfxSource: {fileID: 2101432055}
   musicaGranja: {fileID: 8300000, guid: 7a34e49467080354eaa6e4ef264afa7a, type: 3}
   musicaBosque: {fileID: 8300000, guid: 48816aa3a1dc8404390f7daae0765f99, type: 3}
+  musicaPueblo1: {fileID: 8300000, guid: 0b3ecb5fef4ec39408b1e87422be8732, type: 3}
+  musicaPueblo2: {fileID: 8300000, guid: 3ff5508bd0e2b9a4c9fd20fb95bd078c, type: 3}
+  musicaCuevas: {fileID: 8300000, guid: e62a8e6449073e240a6d78cc3c383277, type: 3}
   cortarMadera: {fileID: 8300000, guid: e16471bb2fd425e479863294f8efedc6, type: 3}
   picarPiedra: {fileID: 8300000, guid: f5273ee40081c5944a6c6d60abf1e6c3, type: 3}
   regarPlantas: {fileID: 8300000, guid: b5e1f623adba79e47986b87357d334f9, type: 3}
   ararSuelo: {fileID: 8300000, guid: 64f8ba89ccdc9bb4ebe318271e47282d, type: 3}
   pescar: {fileID: 8300000, guid: 6b39f0417bce90541969c5df6d849f2a, type: 3}
   clickMenu: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
+  menuDenied: {fileID: 0}
+  collectItem: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
   grassFootsteps:
   - {fileID: 8300000, guid: fa814d67374ed744ea0b38a8d40b2057, type: 3}
   - {fileID: 8300000, guid: 94694e45e6df53747989df08b65db81a, type: 3}

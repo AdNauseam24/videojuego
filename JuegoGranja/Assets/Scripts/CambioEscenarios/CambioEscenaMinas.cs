@@ -24,6 +24,10 @@ public class CambioEscenaMinas : MonoBehaviour
 
     IEnumerator DelayFade()
     {
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaCuevas)
+        {
+            AudioManager.Instance.FadeOutMusic(0.75f);
+        }
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
         {
@@ -44,6 +48,12 @@ public class CambioEscenaMinas : MonoBehaviour
         GameObject.FindGameObjectWithTag("MovePoint").transform.position = nuevaPos;
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().OcultarTiles();
         AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.rockFootsteps);
+
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaCuevas)
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaCuevas);
+            AudioManager.Instance.FadeInMusic(1.5f);
+        }
         
         if(StatsGenerales.Instance.capituloHistoria < 1)
         {

@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class CambioEscenaPlaya : MonoBehaviour
 {
@@ -21,11 +20,30 @@ public class CambioEscenaPlaya : MonoBehaviour
 
     IEnumerator DelayFade()
     {
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaPueblo1 || AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaPueblo2)
+        {
+            AudioManager.Instance.FadeOutMusic(0.75f);
+        }
+
         GameObject fadeimg = GameObject.FindGameObjectWithTag("Fade");
         while (fadeimg.GetComponent<CanvasGroup>().alpha < 1)
         {
             fadeimg.GetComponent<CanvasGroup>().alpha += 0.1f;
             yield return new WaitForSeconds(0.05f);
+        }
+
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaPueblo1 || AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaPueblo2)
+        {
+            if (escenaObjetivo.Equals("Pueblo1"))
+            {
+                AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaPueblo1);
+                AudioManager.Instance.FadeInMusic(1.5f);
+            }
+            else
+            {
+                AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaPueblo2);
+                AudioManager.Instance.FadeInMusic(1.5f);
+            }
         }
         yield return new WaitForSeconds(0.25f);
         jugador.position = nuevaPos;

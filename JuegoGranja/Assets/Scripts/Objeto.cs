@@ -116,9 +116,9 @@ public class Objeto : MonoBehaviour
                 
 
                 Jugador.Instance.GetComponent<Animator>().SetBool("Hacha", true);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.cortarMadera);
-                yield return new WaitForSeconds(0.15f);
+                yield return new WaitForSeconds(0.20f);
                 Jugador.Instance.GetComponent<Animator>().SetBool("Hacha", false);
 
                 arbol.RecibirDaño();

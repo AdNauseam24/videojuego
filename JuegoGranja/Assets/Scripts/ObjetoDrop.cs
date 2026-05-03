@@ -35,6 +35,7 @@ public class ObjetoDrop : Objeto
         {
             animator.SetBool("Recoger",true);
             gestorInventario.AddItem(id,nombre,cantidad,sprite);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectItem);
             Destroy(gameObject, .5f);
         }
     }
