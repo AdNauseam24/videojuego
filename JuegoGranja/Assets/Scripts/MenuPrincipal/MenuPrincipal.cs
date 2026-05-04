@@ -79,7 +79,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void RecogerNombre(string input)
     {
-        if(!input.Equals("") && Input.GetKeyDown(KeyCode.Return))
+        if(!input.Equals("") && Input.GetKeyDown(KeyCode.Return) && input.Length < 15)
         {
         nombreArchivo = input;
         SceneManager.LoadScene("Capitulo1-1");
