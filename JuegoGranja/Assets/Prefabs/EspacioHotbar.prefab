@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c9f7d972b831cd6449cf727f7fcab690, type: 2}
+  m_sharedMaterial: {fileID: 2428482912294859444, guid: c9f7d972b831cd6449cf727f7fcab690, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -267,6 +267,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3727008435969381683, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626239712360273886, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
+      propertyPath: m_margin.x
+      value: 74.57744
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626239712360273886, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9f7d972b831cd6449cf727f7fcab690, type: 2}
+    - target: {fileID: 7626239712360273886, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626239712360273886, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2428482912294859444, guid: c9f7d972b831cd6449cf727f7fcab690, type: 2}
+    - target: {fileID: 7626239712360273886, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7772757869642053242, guid: 3e27e96d0f0257446b815fbb2bc83c03, type: 3}

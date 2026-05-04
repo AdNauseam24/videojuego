@@ -14,6 +14,8 @@ public class MenuNotas : MonoBehaviour
     public TMP_InputField inputField;
     public List<Note> notas = new List<Note>();
 
+    private bool anadir;
+
     private bool abierto;
 
      private void Awake()
@@ -46,6 +48,7 @@ public class MenuNotas : MonoBehaviour
         GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0f;
 
         abierto = false;
+        anadir = false;
 
         inputField.text = "";
         inputFieldImage.gameObject.SetActive(false);
@@ -82,6 +85,7 @@ public class MenuNotas : MonoBehaviour
     public void AbrirInputField()
     {
         inputFieldImage.gameObject.SetActive(true);
+        anadir = true;
         AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
@@ -114,6 +118,7 @@ public class MenuNotas : MonoBehaviour
 
             inputField.text = "";
             inputFieldImage.gameObject.SetActive(false);
+            anadir = false;
 
             AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
@@ -185,7 +190,7 @@ public class MenuNotas : MonoBehaviour
             AbrirMenu();
             AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
-        else if(Input.GetKeyDown(KeyCode.F) && Time.timeScale == 0 && abierto)
+        else if(Input.GetKeyDown(KeyCode.F) && Time.timeScale == 0 && abierto && !anadir)
         {
             CerrarMenu();
             AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
