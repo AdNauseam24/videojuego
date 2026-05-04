@@ -20,6 +20,7 @@ public class Note : MonoBehaviour
             completada = true;
             GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Strikethrough;
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     public void SetTrue()
@@ -33,5 +34,6 @@ public class Note : MonoBehaviour
     {
         MenuNotas.Instance.notas.Remove(this);
         Destroy(gameObject);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 }

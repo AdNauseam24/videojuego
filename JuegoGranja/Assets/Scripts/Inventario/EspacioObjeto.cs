@@ -160,6 +160,7 @@ public class EspacioObjeto : MonoBehaviour, IPointerClickHandler, IDropHandler, 
 		gestorInventario.DeseleccionarTodo();
 		marcoSeleccion.GetComponent<UnityEngine.UI.Image>().enabled = true;
 		seleccionado = true;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
 

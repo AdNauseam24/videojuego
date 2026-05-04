@@ -120,5 +120,20 @@ public class MenuTareas : MonoBehaviour
         {
             CerrarTareas();
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
+    }
+
+     void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.T) && Time.timeScale == 1 && !abierto)
+        {
+            AbrirTareas();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
+        }
+        else if(Input.GetKeyDown(KeyCode.T) && Time.timeScale == 0 && abierto)
+        {
+            CerrarTareas();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
+        }
     }
 }

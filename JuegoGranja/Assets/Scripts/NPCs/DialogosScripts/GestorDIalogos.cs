@@ -158,6 +158,8 @@ public class GestorDIalogos : MonoBehaviour
         OcultarCorazones();
         GestorInventario.Instance.ActivarHotbar();
         Time.timeScale = 1;
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     private void ElegirOpcion(DialogoSO dialogoSO)
@@ -171,6 +173,7 @@ public class GestorDIalogos : MonoBehaviour
             LimpiarOpciones();
             EmpezarDialogo(dialogoSO);
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     private void LimpiarOpciones()

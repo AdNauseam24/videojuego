@@ -9,6 +9,7 @@ public class MenuOpciones : MonoBehaviour
 {
     public Image panelOpciones;
     public Image panelConfirmacion;
+    public Image panelControles;
 
     public Slider sliderGeneral;
     public Slider sliderMusica;
@@ -27,7 +28,19 @@ public class MenuOpciones : MonoBehaviour
         UpdateUI();
         panelOpciones.gameObject.SetActive(false);
         panelConfirmacion.gameObject.SetActive(false);
+        panelControles.gameObject.SetActive(false);
 
+    }
+
+    public void AbrirControles()
+    {
+        panelControles.gameObject.SetActive(true);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
+    }
+    public void CerrarControles()
+    {
+         panelControles.gameObject.SetActive(false);
+         AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     public void BotonOpciones()
@@ -40,6 +53,7 @@ public class MenuOpciones : MonoBehaviour
         {
             CerrarOpciones();
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
     public void AbrirOpciones()
     {
@@ -59,17 +73,20 @@ public class MenuOpciones : MonoBehaviour
             GameObject.FindGameObjectWithTag("Fade").GetComponent<CanvasGroup>().alpha = 0f;
             panelOpciones.gameObject.SetActive(false);
             panelConfirmacion.gameObject.SetActive(false);
+            panelControles.gameObject.SetActive(false);
             opcionesAbierto = false;
         }
     }
     public void MenuPrincipal()
     {
         menuPrincipal = true;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         AbrirConfirmar();
     }
     public void Escritorio()
     {
         menuPrincipal = false;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         AbrirConfirmar();
     }
     private void AbrirConfirmar()
@@ -79,9 +96,11 @@ public class MenuOpciones : MonoBehaviour
     public void CerrarConfirmar()
     {
         panelConfirmacion.gameObject.SetActive(false);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
     public void BotonConfirmar()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         if (menuPrincipal)
         {
            StartCoroutine(DelayFade());
@@ -153,10 +172,12 @@ public class MenuOpciones : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1 && !opcionesAbierto)
         {
             AbrirOpciones();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0 && opcionesAbierto)
         {
             CerrarOpciones();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
     }
 }

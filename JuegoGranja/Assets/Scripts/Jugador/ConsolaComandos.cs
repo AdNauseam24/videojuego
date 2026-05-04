@@ -10,7 +10,7 @@ public class ConsolaComandos : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && !abierto && Time.timeScale ==1)
+        if (Input.GetKeyDown(KeyCode.C) && !abierto && Time.timeScale ==1)
         {
             inputField.gameObject.SetActive(true);
             abierto = true;
@@ -18,7 +18,7 @@ public class ConsolaComandos : MonoBehaviour
             inputField.Select();
             Time.timeScale = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.T) && abierto && Time.timeScale ==0)
+        else if(Input.GetKeyDown(KeyCode.C) && abierto && Time.timeScale ==0)
         {
            closeInputField();
         }

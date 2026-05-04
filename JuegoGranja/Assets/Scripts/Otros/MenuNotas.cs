@@ -47,6 +47,9 @@ public class MenuNotas : MonoBehaviour
 
         abierto = false;
 
+        inputField.text = "";
+        inputFieldImage.gameObject.SetActive(false);
+
         Time.timeScale = 1;
     }
 
@@ -60,6 +63,7 @@ public class MenuNotas : MonoBehaviour
         {
             CerrarMenu();
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     private void AbrirMenu()
@@ -78,6 +82,7 @@ public class MenuNotas : MonoBehaviour
     public void AbrirInputField()
     {
         inputFieldImage.gameObject.SetActive(true);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
     public void NuevaNota()
@@ -109,6 +114,8 @@ public class MenuNotas : MonoBehaviour
 
             inputField.text = "";
             inputFieldImage.gameObject.SetActive(false);
+
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
 
     }
@@ -168,6 +175,20 @@ public class MenuNotas : MonoBehaviour
         for (int i = 0; i < noteArray.Length; i++)
         {
             NuevaNota(noteArray[i]);
+        }
+    }
+
+     void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1 && !abierto)
+        {
+            AbrirMenu();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
+        }
+        else if(Input.GetKeyDown(KeyCode.F) && Time.timeScale == 0 && abierto)
+        {
+            CerrarMenu();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
         }
     }
 

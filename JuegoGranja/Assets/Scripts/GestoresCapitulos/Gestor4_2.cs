@@ -58,6 +58,13 @@ public class Gestor4_2 : MonoBehaviour
          StatsGenerales.Instance.menuTareas.ActualizarLista(9);
 
         GameObject.FindGameObjectWithTag("Suelo").GetComponent<Suelo>().MostrarTiles();
+
+        if(AudioManager.Instance.GetMusicClip() != AudioManager.Instance.musicaGranja)
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaGranja);
+            AudioManager.Instance.FadeInMusic(1.5f);
+        }
+
         AudioManager.Instance.ChangeFootsteps(AudioManager.Instance.woodFootsteps);
         SceneManager.LoadScene("SampleScene");
 
