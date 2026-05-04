@@ -1,4 +1,5 @@
 using System.IO;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,6 +26,10 @@ public class MenuPrincipal : MonoBehaviour
    public Canvas IntroducirNombre;
    public Canvas borrarPartida;
    public string nombre;
+
+   public TMP_Text banner1;
+   public TMP_Text banner2;
+   public TMP_Text banner3;
 
    public bool modoCargar;
 
@@ -79,7 +84,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void RecogerNombre(string input)
     {
-        if(!input.Equals("") && Input.GetKeyDown(KeyCode.Return) && input.Length < 15)
+        if(!input.Equals("") && Input.GetKeyDown(KeyCode.Return) && input.Length < 15 && !input.Equals(banner1.text) && !input.Equals(banner2.text) && !input.Equals(banner3.text))
         {
         nombreArchivo = input;
         SceneManager.LoadScene("Capitulo1-1");
