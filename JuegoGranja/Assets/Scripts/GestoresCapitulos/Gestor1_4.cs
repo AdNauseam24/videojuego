@@ -51,7 +51,10 @@ private bool dialogosActivos;
 
     public IEnumerator Script1()
     {
+        AudioManager.Instance.StopMusic();
         yield return new WaitForSeconds(2f);
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.cuchicheo, 0.2f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba, textoArriba, "Oyes un cuchicheo", 3f);
         yield return new WaitForSeconds(4.5f);
@@ -70,6 +73,7 @@ private bool dialogosActivos;
         yield return new WaitForSeconds(2f);
 
         exclamacion.Play("Exclamacion");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sorpresa,0.05f);
 
         yield return new WaitForSeconds(2.5f);
 

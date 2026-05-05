@@ -216915,6 +216915,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMultiplier: 0.2
+  generalMultiplier: 1
+  musicMultiplier: 1
+  sfxMultiplier: 1
   musicSource: {fileID: 985080463}
   sfxSource: {fileID: 2101432055}
   musicaGranja: {fileID: 8300000, guid: 7a34e49467080354eaa6e4ef264afa7a, type: 3}
@@ -216922,6 +216925,7 @@ MonoBehaviour:
   musicaPueblo1: {fileID: 8300000, guid: 0b3ecb5fef4ec39408b1e87422be8732, type: 3}
   musicaPueblo2: {fileID: 8300000, guid: 3ff5508bd0e2b9a4c9fd20fb95bd078c, type: 3}
   musicaCuevas: {fileID: 8300000, guid: e62a8e6449073e240a6d78cc3c383277, type: 3}
+  musicaTenebrosa: {fileID: 8300000, guid: 198366e84a02a6c44b1503102d740b13, type: 3}
   cortarMadera: {fileID: 8300000, guid: e16471bb2fd425e479863294f8efedc6, type: 3}
   picarPiedra: {fileID: 8300000, guid: f5273ee40081c5944a6c6d60abf1e6c3, type: 3}
   regarPlantas: {fileID: 8300000, guid: b5e1f623adba79e47986b87357d334f9, type: 3}

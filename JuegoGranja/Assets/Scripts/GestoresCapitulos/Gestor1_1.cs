@@ -106,7 +106,7 @@ public class Gestor1_1 : MonoBehaviour
             camara.transform.position = Vector3.Lerp(posicionInicial,posicionObjetivo, timeElapsed/lerpDuration);
             yield return null;
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         timeElapsed = 0f;
         lerpDuration = 3f;
@@ -128,15 +128,19 @@ public class Gestor1_1 : MonoBehaviour
         textoArriba.GetComponent<CanvasGroup>().alpha = 1;
          yield return new WaitForSeconds(2.5f);
 
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rugidoMonstruo1);
+
         textoArriba.text = "Parece que está atacando a alguien";
         textoArriba.GetComponent<CanvasGroup>().alpha = 1;
-         yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         troll.GetComponent<Animator>().Play("New State");
         troll.transform.localScale = new Vector3(-2,2,1);
-         yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         textoArriba.text = "Parece que te ha visto";
         textoArriba.GetComponent<CanvasGroup>().alpha = 1;
-         troll.GetComponent<Animator>().Play("Troll_Caminar");
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rugidoMonstruo2);
+        troll.GetComponent<Animator>().Play("Troll_Caminar");
        
 
         float timeElapsed = 0f;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class AudioManager : MonoBehaviour
     }
     public float audioMultiplier = 0.5f;
 
+    public float generalMultiplier = 1;
+    public float musicMultiplier = 1;
+    public float sfxMultiplier = 1;
+
     [Header("---------Audio Source-----------")]
     [SerializeField]
     AudioSource musicSource;
@@ -28,6 +33,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip musicaPueblo1;
     public AudioClip musicaPueblo2;
     public AudioClip musicaCuevas;
+    public AudioClip musicaTenebrosa;
 
 
     [Header("---------Audio Clips SFX-----------")]
@@ -39,6 +45,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip clickMenu;
     public AudioClip menuDenied;
     public AudioClip collectItem;
+    public AudioClip treasureFound;
+    public AudioClip cuchicheo;
+    public AudioClip sorpresa;
+    public AudioClip caida;
+    public AudioClip derrumbe;
+    public AudioClip monstruoDormido;
+    public AudioClip rugidoMonstruo1;
+    public AudioClip rugidoMonstruo2;
+    public AudioClip rugidoLegendario;
 
     [Header("---------Audio Clips Footsteps-----------")]
     public AudioClip[] grassFootsteps;
@@ -51,26 +66,42 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {  
+        if(StatsGenerales.Instance != null)
+        {
+            generalMultiplier = StatsGenerales.Instance.volumenGeneral;
+            musicMultiplier = StatsGenerales.Instance.volumenMusica;
+            sfxMultiplier = StatsGenerales.Instance.volumenSFX;
+        }
         musicSource.loop = true;
-        musicSource.volume = StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
-        musicSource.clip = musicaGranja;
-        musicSource.Play();
+        musicSource.volume = generalMultiplier * musicMultiplier * audioMultiplier;
+       
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene"))
+        {
+            musicSource.clip = musicaGranja; 
+            ChangeFootsteps(woodFootsteps);
+        }
+        else if(SceneManager.GetActiveScene().name.Split("-")[0].Equals("Capitulo1"))
+        {
+            ChangeFootsteps(rockFootsteps);
+            musicSource.clip = musicaTenebrosa;
+        }
 
-        ChangeFootsteps(woodFootsteps);
+         musicSource.Play();
+      
     }
     public void PlaySFX(AudioClip audioClip)
     {
-        sfxSource.PlayOneShot(audioClip,  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX);
+        sfxSource.PlayOneShot(audioClip,  generalMultiplier * sfxMultiplier);
     }
 
      public void PlaySFX(AudioClip audioClip, float multiplier)
     {
-        sfxSource.PlayOneShot(audioClip,  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX * multiplier);
+        sfxSource.PlayOneShot(audioClip,  generalMultiplier * sfxMultiplier * multiplier);
     }
     public void PlayMusic(AudioClip audioClip)
     {
         musicSource.loop = true;
-        musicSource.volume = StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
+        musicSource.volume = generalMultiplier * musicMultiplier * audioMultiplier;
         musicSource.clip = audioClip;
         musicSource.Play();
     }
@@ -78,9 +109,13 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic(AudioClip audioClip, float multiplier)
     {
         musicSource.loop = true;
-        musicSource.volume = StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier * multiplier;
+        musicSource.volume = generalMultiplier * musicMultiplier * audioMultiplier * multiplier;
         musicSource.clip = audioClip;
         musicSource.Play();
+    }
+    public void StopMusic()
+    {
+        musicSource.Stop();
     }
 
     public IEnumerator FadeOutMusic(float t)
@@ -118,7 +153,7 @@ public class AudioManager : MonoBehaviour
     public void FootStep()
     {
         int r = Random.Range(0, selectedFootsteps.Count);
-        sfxSource.PlayOneShot(selectedFootsteps[r],  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenSFX * 0.15f);
+        sfxSource.PlayOneShot(selectedFootsteps[r],  generalMultiplier * sfxMultiplier * 0.15f);
     }
     public AudioClip GetMusicClip()
     {
@@ -127,6 +162,14 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMusicVolume()
     {
-        musicSource.volume =  StatsGenerales.Instance.volumenGeneral * StatsGenerales.Instance.volumenMusica * audioMultiplier;
+        generalMultiplier =  StatsGenerales.Instance.volumenGeneral;
+        musicMultiplier =  StatsGenerales.Instance.volumenMusica;
+        sfxMultiplier = StatsGenerales.Instance.volumenSFX;
+        musicSource.volume =  generalMultiplier * musicMultiplier * audioMultiplier;
+    }
+
+    public void ChangeMusicVolume(float f)
+    {
+        musicSource.volume = f;
     }
 }

@@ -12,6 +12,10 @@ public class TriggerTexto : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
              OnMandarTexto(texto);
+             if(texto.Equals("A lo lejos oyes una especie de rugido, y lo que parecen gritos de socorro"))
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.rugidoMonstruo1);
+            }
              Destroy(gameObject);
         }
     }
