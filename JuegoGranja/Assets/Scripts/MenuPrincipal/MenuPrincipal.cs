@@ -19,7 +19,10 @@ public class MenuPrincipal : MonoBehaviour
         }
         Instance = this;
     }
-   public SlotGuardado[] slots;
+
+    public AudioSource sfxAudio;
+    public AudioClip clickMenu;
+    public SlotGuardado[] slots;
 
    public Canvas botonesPrincipales;
    public Canvas menuSlots;
@@ -35,6 +38,7 @@ public class MenuPrincipal : MonoBehaviour
 
    public void ModoCargar()
     {
+        sfxAudio.PlayOneShot(clickMenu);
         botonesPrincipales.gameObject.SetActive(false);
         modoCargar = true;
         ModificarSlots();
@@ -42,6 +46,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void NuevaPartida()
     {
+        sfxAudio.PlayOneShot(clickMenu);
         botonesPrincipales.gameObject.SetActive(false);
         modoCargar = false;
         ModificarSlots();
@@ -50,8 +55,9 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CerrarSlots()
     {
-         botonesPrincipales.gameObject.SetActive(true);
-          menuSlots.gameObject.SetActive(false);
+        sfxAudio.PlayOneShot(clickMenu);
+        botonesPrincipales.gameObject.SetActive(true);
+        menuSlots.gameObject.SetActive(false);
     }
 
     public void ModificarSlots()
@@ -75,11 +81,13 @@ public class MenuPrincipal : MonoBehaviour
 
     public void ActivarInputField()
     {
+        sfxAudio.PlayOneShot(clickMenu);
         IntroducirNombre.gameObject.SetActive(true);
     }
     public void DesactivarInputField()
     {
-         IntroducirNombre.gameObject.SetActive(false);
+        sfxAudio.PlayOneShot(clickMenu);
+        IntroducirNombre.gameObject.SetActive(false);
     }
 
     public void RecogerNombre(string input)
@@ -93,11 +101,13 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CerrarBorrado()
     {
+        sfxAudio.PlayOneShot(clickMenu);
         borrarPartida.gameObject.SetActive(false);
     }
 
     public void BorrarGuardado()
     {
+        sfxAudio.PlayOneShot(clickMenu);
         Debug.Log(Application.persistentDataPath + "/" + slotBorrar.nombre.text + ".save");
         File.Delete(Application.persistentDataPath + "/" + slotBorrar.nombre.text + ".save");
         CerrarBorrado();
@@ -106,7 +116,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CerrarJuego()
     {
-
+        sfxAudio.PlayOneShot(clickMenu);
         #if UNITY_STANDALONE
         Application.Quit();
         #endif

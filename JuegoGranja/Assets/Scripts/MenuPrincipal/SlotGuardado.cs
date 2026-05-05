@@ -30,6 +30,7 @@ public class SlotGuardado : MonoBehaviour
 
     public void CLickSlot()
     {
+        MenuPrincipal.Instance.sfxAudio.PlayOneShot(MenuPrincipal.Instance.clickMenu);
         if(ocupado && MenuPrincipal.Instance.modoCargar)
         {
             Guardado.nombreArchivo = nombre.text;
@@ -49,6 +50,7 @@ public class SlotGuardado : MonoBehaviour
 
     public void ClickTrash()
     {
+        MenuPrincipal.Instance.sfxAudio.PlayOneShot(MenuPrincipal.Instance.clickMenu);
         MenuPrincipal.Instance.borrarPartida.gameObject.SetActive(true);
         MenuPrincipal.Instance.slotBorrar = this;
     }
