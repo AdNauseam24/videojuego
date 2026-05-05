@@ -189166,7 +189166,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7708333, y: 0.7083333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -209142,6 +209142,7 @@ MonoBehaviour:
   inventario: {fileID: 1645230157}
   highlight: {fileID: 321818582}
   compendio: {fileID: 1270555800}
+  movimiento: {fileID: 1223286302}
 --- !u!95 &1223286308
 Animator:
   serializedVersion: 7
@@ -216934,6 +216935,15 @@ MonoBehaviour:
   clickMenu: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
   menuDenied: {fileID: 0}
   collectItem: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+  treasureFound: {fileID: 0}
+  cuchicheo: {fileID: 0}
+  sorpresa: {fileID: 0}
+  caida: {fileID: 0}
+  derrumbe: {fileID: 0}
+  monstruoDormido: {fileID: 0}
+  rugidoMonstruo1: {fileID: 0}
+  rugidoMonstruo2: {fileID: 0}
+  rugidoLegendario: {fileID: 0}
   grassFootsteps:
   - {fileID: 8300000, guid: fa814d67374ed744ea0b38a8d40b2057, type: 3}
   - {fileID: 8300000, guid: 94694e45e6df53747989df08b65db81a, type: 3}

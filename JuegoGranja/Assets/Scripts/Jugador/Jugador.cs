@@ -13,6 +13,7 @@ public class Jugador : MonoBehaviour
     private Compendio compendio;
 
     private float contadorHerramienta;
+    public Movimiento movimiento;
 
     public static Jugador Instance;
     void Awake()
@@ -23,6 +24,19 @@ public class Jugador : MonoBehaviour
             return;
         }
         Instance = this;
+    }
+
+    public void DesactivarMovimiento()
+    {
+        movimiento.enabled = false;
+        Debug.Log("Desactivado");
+    }
+
+    public void ActivarMovimiento()
+    {
+        Debug.Log("Aquí");
+        movimiento.enabled = true;
+        Debug.Log("Activado");
     }
 
 

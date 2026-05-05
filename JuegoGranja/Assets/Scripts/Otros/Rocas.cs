@@ -83,9 +83,12 @@ public class Rocas : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         polvo.SetActive(true);
+        /*
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0);
         Time.timeScale = 1;
+        */
+        yield return null;
     }
 
     public void dropObjeto()
