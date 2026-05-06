@@ -71,6 +71,7 @@ public class Gestor3_4 : MonoBehaviour
                 encontrados.Add(n);
                 contador++;
                 tierra[n].GetComponent<SpriteRenderer>().sprite = tierra[n].sprites[1];
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.florPop, 0.2f);
             }
             yield return new WaitForSeconds(0.1f);
         }

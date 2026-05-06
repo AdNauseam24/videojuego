@@ -39,9 +39,13 @@ public class CambioEscenaPlaya : MonoBehaviour
                 AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaPueblo1);
                 AudioManager.Instance.FadeInMusic(1.5f);
             }
-            else
+            else if(escenaObjetivo.Equals("Pueblo2"))
             {
                 AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaPueblo2);
+                AudioManager.Instance.FadeInMusic(1.5f);
+            }else if (escenaObjetivo.Equals("Capitulo3-1"))
+            {
+                AudioManager.Instance.PlayMusic(AudioManager.Instance.musicaBosque);
                 AudioManager.Instance.FadeInMusic(1.5f);
             }
         }

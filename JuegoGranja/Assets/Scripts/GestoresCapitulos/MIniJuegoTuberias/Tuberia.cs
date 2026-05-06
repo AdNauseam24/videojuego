@@ -303,6 +303,7 @@ public class Tuberia : MonoBehaviour,  IPointerClickHandler
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.tuberia);
             RotarTuberia();
         }
     }

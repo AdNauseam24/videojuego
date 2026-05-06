@@ -55,6 +55,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip rugidoMonstruo1;
     public AudioClip rugidoMonstruo2;
     public AudioClip rugidoLegendario;
+    public AudioClip aullidoLobo;
+    public AudioClip florPop;
+    public AudioClip tuberia;
 
     [Header("---------Audio Clips Footsteps-----------")]
     public AudioClip[] grassFootsteps;

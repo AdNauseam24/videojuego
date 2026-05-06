@@ -86,9 +86,12 @@ public class Gestor3_1 : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
 
         loboGris.GetComponent<SpriteRenderer>().sprite = spritesLoboGris[0];
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.aullidoLobo);
+               
         yield return new WaitForSeconds(1.5f);
 
         loboMarron.GetComponent<SpriteRenderer>().sprite = spritesLoboMarron[0];
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.aullidoLobo);
         yield return new WaitForSeconds(2f);
 
         loboGris.GetComponent<SpriteRenderer>().sprite = spritesLoboGris[1];
@@ -99,12 +102,14 @@ public class Gestor3_1 : MonoBehaviour
         {
              exclamacion.Play("Exclamacion");
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sorpresa,0.1f);
 
         yield return new WaitForSeconds(1.5f);
         exclamaciones[0].Play("New State");
 
         loboGris.GetComponent<SpriteRenderer>().sprite = spritesLoboGris[2];
         loboMarron.GetComponent<SpriteRenderer>().sprite = spritesLoboMarron[2];
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.aullidoLobo);
         yield return new WaitForSeconds(1.5f);
 
         loboMarronAnim.enabled = true;
@@ -130,6 +135,7 @@ public class Gestor3_1 : MonoBehaviour
         HerramientasEscenasScript.Instance.MostrarYOcultarCanvasGroup(brilloBlanco,1,0,1.5f);
         yield return new WaitForSeconds(2f);
         exclamaciones[0].Play("Exclamacion");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sorpresa,0.1f);
         yield return new WaitForSeconds(1.5f);
 
         dialogosActivos = true;

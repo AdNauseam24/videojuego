@@ -216945,6 +216945,9 @@ MonoBehaviour:
   rugidoMonstruo1: {fileID: 0}
   rugidoMonstruo2: {fileID: 0}
   rugidoLegendario: {fileID: 8300000, guid: 98e09261f3a63460d93dda8792af907d, type: 3}
+  aullidoLobo: {fileID: 8300000, guid: 56bfc7599e602644582a50307951b84c, type: 3}
+  florPop: {fileID: 8300000, guid: b92c776cd2547894cbb11c0c3899ca10, type: 3}
+  tuberia: {fileID: 8300000, guid: 47e21bcc3dbf19040a350f366a6ae172, type: 3}
   grassFootsteps:
   - {fileID: 8300000, guid: fa814d67374ed744ea0b38a8d40b2057, type: 3}
   - {fileID: 8300000, guid: 94694e45e6df53747989df08b65db81a, type: 3}
