@@ -49,6 +49,7 @@ public class Gestor4_1 : MonoBehaviour
         yield return new WaitForSeconds(0f);    
 
         exclamacionAnim.Play("Exclamacion");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.sorpresa,0.1f);
         yield return new WaitForSeconds(0.5f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"¡Pero qué!",2f);
@@ -73,10 +74,11 @@ public class Gestor4_1 : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         jugadorAnim.SetFloat("Horizontal",0);
 
-         yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.5f);
 
-         StartCoroutine(camara.GetComponent<AgitarCamara>().Agitar(3.5f,3));
-         yield return new WaitForSeconds(4.5f);
+        StartCoroutine(camara.GetComponent<AgitarCamara>().Agitar(3.5f,3));
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rugidoLegendario);
+        yield return new WaitForSeconds(4.5f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"La criatura suelta un rugido que parece hacer temblar el mundo",3f);
         yield return new WaitForSeconds(4f);
@@ -145,10 +147,6 @@ public class Gestor4_1 : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Capitulo4-2");
-
-
-
-
 
     }
 

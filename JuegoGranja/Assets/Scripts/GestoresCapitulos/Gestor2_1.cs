@@ -172,8 +172,6 @@ void OnEnable()
 
         SceneManager.LoadScene("SampleScene");
 
-
-
     }
 
 }

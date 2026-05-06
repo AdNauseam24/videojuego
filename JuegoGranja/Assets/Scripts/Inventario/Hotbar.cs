@@ -138,6 +138,4 @@ public class Hotbar : MonoBehaviour
         }
         return -1;
     }
-
-    
 }
