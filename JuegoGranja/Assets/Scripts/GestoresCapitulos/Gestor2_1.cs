@@ -20,6 +20,9 @@ public GameObject jugador;
  public GameObject pocionGO;
  public Animator ciclope2;
 
+ public GameObject potionSplash;
+ private Animator splashAnimator;
+
 
 
 void OnEnable()
@@ -33,6 +36,7 @@ void OnEnable()
         GestorInventario.Instance.gameObject.SetActive(false);
         jugadorAnim = jugador.GetComponent<Animator>();
         ciclopeAnim = ciclope.GetComponent<Animator>();
+        splashAnimator = potionSplash.GetComponent<Animator>();
         canvasTextoArriba = textoArriba.GetComponent<CanvasGroup>();
         StartCoroutine(Script1());
     }
@@ -74,6 +78,9 @@ void OnEnable()
        ciclope.SetActive(false);
        HerramientasEscenasScript.Instance.MoverObjeto(camara,new Vector3(jugador.transform.position.x, jugador.transform.position.y,-10),3f);
        yield return new WaitForSeconds(3.2f);
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.derrumbe);
+
        StartCoroutine(camara.GetComponent<AgitarCamara>().Agitar(2.5f,1.5f));
        yield return new WaitForSeconds(3f);
 
@@ -107,14 +114,19 @@ void OnEnable()
         pocionGO.GetComponent<SpriteRenderer>().enabled = true;
         pocion.Play("LanzamientoPocion");
         yield return new WaitForSeconds(0.9f);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.pocion);
 
         Destroy(pocionGO);
+
+        splashAnimator.Play("PotionSplash");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.ararSuelo);
         yield return new WaitForSeconds(1f);
 
         exclamacion.Play("Exclamacion");
         yield return new WaitForSeconds(1.5f);
 
         ciclope2.Play("Caer_Ciclope");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.caida);
         yield return new WaitForSeconds(1f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"¡Ha funcionado!",3);
@@ -122,6 +134,8 @@ void OnEnable()
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Pero en ese momento...",3);
         yield return new WaitForSeconds(4f);
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rugidoLegendario);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Vuelves a escuchar el mismo rugido de la primera vez",3);
         yield return new WaitForSeconds(4f);
@@ -131,7 +145,7 @@ void OnEnable()
         yield return new WaitForSeconds(2.5f);
 
         HerramientasEscenasScript.Instance.MostrarYOcultarTexto(canvasTextoArriba,textoArriba,"Y otra vez pierdes la consciencia",3);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         
 
         Jugador.Instance.gameObject.SetActive(true);

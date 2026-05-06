@@ -216935,15 +216935,16 @@ MonoBehaviour:
   clickMenu: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
   menuDenied: {fileID: 0}
   collectItem: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
-  treasureFound: {fileID: 0}
+  treasureFound: {fileID: 8300000, guid: faa1dc5d7bcf7c244b4caca36176fcae, type: 3}
   cuchicheo: {fileID: 0}
-  sorpresa: {fileID: 0}
-  caida: {fileID: 0}
-  derrumbe: {fileID: 0}
-  monstruoDormido: {fileID: 0}
+  sorpresa: {fileID: 8300000, guid: 73b2cc3484c5400409e6a5590ebb3a4a, type: 3}
+  caida: {fileID: 8300000, guid: 960b24e1dba824f449586101cf1ef81d, type: 3}
+  derrumbe: {fileID: 8300000, guid: 117139cdf9248534a9855f85fa0d9af4, type: 3}
+  pocion: {fileID: 8300000, guid: aabfefc64387371449a42596411850dc, type: 3}
+  monstruoDormido: {fileID: 8300000, guid: a35a02c8c8e1548cc80eae2d2f5d6acf, type: 3}
   rugidoMonstruo1: {fileID: 0}
   rugidoMonstruo2: {fileID: 0}
-  rugidoLegendario: {fileID: 0}
+  rugidoLegendario: {fileID: 8300000, guid: 98e09261f3a63460d93dda8792af907d, type: 3}
   grassFootsteps:
   - {fileID: 8300000, guid: fa814d67374ed744ea0b38a8d40b2057, type: 3}
   - {fileID: 8300000, guid: 94694e45e6df53747989df08b65db81a, type: 3}

@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip sorpresa;
     public AudioClip caida;
     public AudioClip derrumbe;
+    public AudioClip pocion;
     public AudioClip monstruoDormido;
     public AudioClip rugidoMonstruo1;
     public AudioClip rugidoMonstruo2;
