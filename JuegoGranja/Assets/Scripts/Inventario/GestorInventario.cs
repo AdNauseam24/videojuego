@@ -44,7 +44,7 @@ public class GestorInventario : MonoBehaviour
     void Update()
     {
         //comprobamos si el menú está abierto para actiavrlo o desactivarlo
-        if (Input.GetButtonDown("Inventario") && menuAbierto)
+        if (Input.GetButtonDown("Inventario") && menuAbierto && Time.timeScale == 0)
         {
             //Reanudar juego
             Time.timeScale = 1;
@@ -211,6 +211,45 @@ public class GestorInventario : MonoBehaviour
     {
         panelInfo.transform.SetParent(this.transform);
         panelInfo.gameObject.SetActive(false);
+    }
+
+    public void clickBoton()
+    {
+        if(menuAbierto && Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+
+            //cambiamos el padre de la hotbar
+            hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Inventario").transform);
+            hotbar.transform.localPosition = new Vector3(-690,-400);
+            hotbar.ActivarHuecos();
+
+            //desactivamos y cerramos
+            DeseleccionarTodo();
+            MenuInventario.SetActive(false);
+            menuAbierto = false;
+
+            //Al cerrar reactivamos la casilla de la hotbar que estaba activada
+            hotbar.GetEspacioObjeto(hotbar.GetRememberSeleccionado()).SetSeleccionado(true);
+        }
+        else if(!menuAbierto && Time.timeScale == 1)
+        {
+             //Pausar el juego
+            Time.timeScale = 0;
+
+            //movemos la hotbar al menú
+            MenuInventario.SetActive(true);
+            hotbar.transform.SetParent(GameObject.FindGameObjectWithTag("Huecos").transform);
+            hotbar.DesactivarHUecos();
+
+            //para que sea la primera fila
+            hotbar.transform.SetSiblingIndex(0);
+
+            menuAbierto = true;
+
+            DeseleccionarTodo();
+        }
+         AudioManager.Instance.PlaySFX(AudioManager.Instance.clickMenu);
     }
 
 }

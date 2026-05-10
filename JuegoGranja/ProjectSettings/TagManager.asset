@@ -15,6 +15,7 @@ TagManager:
   - Activador
   - Tareas
   - Notas
+  - InfoUI
   layers:
   - Default
   - TransparentFX

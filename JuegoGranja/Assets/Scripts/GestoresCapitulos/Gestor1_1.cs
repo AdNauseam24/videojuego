@@ -25,6 +25,10 @@ public class Gestor1_1 : MonoBehaviour
         StartCoroutine(Script());
         TriggerTexto.OnMandarTexto+=MostrarTexto;
     }
+    void OnDisable()
+    {
+        TriggerTexto.OnMandarTexto-=MostrarTexto;
+    }
 
     public IEnumerator Script()
     {
