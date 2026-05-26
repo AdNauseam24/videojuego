@@ -61,12 +61,13 @@ public class Gestor1_2 : MonoBehaviour
             beatScroller.empezado = true;
             musica.Play();
         }
-        if(musica.time> 60 && reproducir)
+        if(musica.time> 10 && reproducir)
         {
             botones.SetActive(false);
+            flechas.SetActive(false);
             reproducir = false;
             musica.Stop();
-            if(puntuacion > 10000)
+            if(puntuacion > 100)
             {
                 StartCoroutine(Script6());
             }
@@ -147,7 +148,7 @@ public class Gestor1_2 : MonoBehaviour
            
             yield return null;
         }
-        if(puntuacion > 10000)
+        if(puntuacion > 100)
         {
             yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene("Capitulo1-3");
